@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title" data-i18n="tituloPagina">Ventas</h1>
+      <nav class="langs" aria-label="Idioma">
+        <button id="lang-es" class="lang is-active" type="button" lang="es">ES</button>
+        <button id="lang-pt" class="lang" type="button" lang="pt">PT</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <p class="subtitulo" data-i18n="subtitulo">Artículos usados en excelente estado</p>
+
+    <section class="aviso" aria-live="polite">
+      <p class="aviso__cotacao">
+        <strong data-i18n="avisoCotacao">Cotización de referencia (sujeta a variación):</strong>
+        <input id="cotacao" class="aviso__input" type="number" inputmode="decimal"
+               min="1" step="1" value="300" aria-label="Cotización BRL a ARS">
+        <button id="cotacao-reset" class="btn-link" type="button" data-i18n="avisoResetar">Restablecer</button>
+      </p>
+      <p><span aria-hidden="true">✅</span> <span data-i18n="avisoPix"></span></p>
+      <p><span aria-hidden="true">💳</span> <span data-i18n="avisoCredito"></span></p>
+      <p><span aria-hidden="true">🇦🇷</span> <span data-i18n="avisoMercadoPago"></span></p>
+      <p><span aria-hidden="true">📅</span> <span data-i18n="avisoAno"></span></p>
+    </section>
+
+    <section class="controles">
+      <input id="busca" class="busca" type="search" autocomplete="off">
+      <div id="chips" class="chips" role="group"></div>
+      <label class="ordem">
+        <span data-i18n="ordenar">Orden:</span>
+        <select id="ordem">
+          <option value="preco-asc"></option>
+          <option value="preco-desc"></option>
+          <option value="desconto-desc"></option>
+        </select>
+      </label>
+    </section>
+
+    <div id="grid" class="grid"></div>
+
+    <div id="vazio" class="vazio" hidden>
+      <p data-i18n="vazio">No se encontró nada.</p>
+      <button id="limpar" class="btn-link" type="button" data-i18n="limpar">Limpiar filtros</button>
+    </div>
+
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="lightbox__close" type="button">✕</button>
+    <button id="lightbox-prev" class="lightbox__nav lightbox__nav--prev" type="button">‹</button>
+    <img id="lightbox-img" class="lightbox__img" alt="">
+    <button id="lightbox-next" class="lightbox__nav lightbox__nav--next" type="button">›</button>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="items.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
