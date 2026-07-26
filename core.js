@@ -15,7 +15,7 @@ var Core = (function () {
   /* Intl usa espaço inquebrável entre símbolo e número; normaliza pra
      espaço comum para o texto ficar previsível em teste e em busca. */
   function nbsp(s) {
-    return s.replace(/ /g, ' ');
+    return s.replace(/\u00A0/g, ' ');
   }
 
   function formatBRL(brl) {
