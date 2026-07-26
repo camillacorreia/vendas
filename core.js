@@ -47,11 +47,27 @@ var Core = (function () {
     return n;
   }
 
+  function validateItems(items, categorias) {
+    var problemas = [];
+    items.forEach(function (item, i) {
+      var onde = 'item[' + i + '] ' + (item.id || '(sem id)');
+      if (!item.id) problemas.push(onde + ': falta id');
+      if (typeof item.preco !== 'number' || item.preco <= 0) problemas.push(onde + ': preco inválido');
+      if (categorias.indexOf(item.categoria) === -1) problemas.push(onde + ': categoria desconhecida "' + item.categoria + '"');
+      if (typeof item.vendido !== 'boolean') problemas.push(onde + ': vendido precisa ser true/false');
+      ['es', 'pt'].forEach(function (lang) {
+        if (!item[lang] || !item[lang].titulo) problemas.push(onde + ': falta titulo em ' + lang);
+      });
+    });
+    return problemas;
+  }
+
   return {
     formatBRL: formatBRL,
     formatARS: formatARS,
     calcDesconto: calcDesconto,
     medidasText: medidasText,
     parseCotacao: parseCotacao,
+    validateItems: validateItems,
   };
 })();

@@ -67,5 +67,27 @@
     eq('parseCotacao negativo', Core.parseCotacao('-5', 300), 300);
   }
 
-  runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao]);
+  function suiteI18n() {
+    var keys = Object.keys(I18N.es).sort();
+    var keysPt = Object.keys(I18N.pt).sort();
+    eq('i18n es e pt tem as mesmas chaves', keysPt, keys);
+    eq('i18n tem rotulo pra toda categoria',
+      CATEGORIAS.filter(function (c) { return !I18N.es.cat[c] || !I18N.pt.cat[c]; }),
+      []);
+    eq('i18n aviso es menciona PIX credito',
+      I18N.es.avisoCredito.indexOf('PIX crédito') >= 0, true);
+    eq('i18n aviso pt menciona PIX credito',
+      I18N.pt.avisoCredito.indexOf('PIX crédito') >= 0, true);
+  }
+
+  function suiteDados() {
+    eq('config whatsapp', CONFIG.whatsapp, '5493415827248');
+    eq('config cotacao padrao', CONFIG.cotacaoPadrao, 300);
+    eq('items validos', Core.validateItems(ITEMS, CATEGORIAS), []);
+    eq('ids unicos',
+      ITEMS.length,
+      new Set(ITEMS.map(function (i) { return i.id; })).size);
+  }
+
+  runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao, suiteI18n, suiteDados]);
 })();
