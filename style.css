@@ -7,6 +7,15 @@
   --accent: #25d366;
   --accent-ink: #0b3d1d;
   --danger: #dc2626;
+  --on-dark: #fff;
+  --header-bg: rgba(250,250,249,.9);
+  --invalid-bg: #fef2f2;
+  --placeholder-bg: #f5f5f4;
+  --placeholder-icon: #d6d3d1;
+  --overlay-md: rgba(0,0,0,.6);
+  --overlay-dark: rgba(0,0,0,.92);
+  --overlay-light: rgba(255,255,255,.12);
+  --focus: #2563eb;
   --radius: 12px;
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.06);
   --shadow-hover: 0 2px 4px rgba(0,0,0,.06), 0 12px 24px rgba(0,0,0,.10);
@@ -29,7 +38,7 @@ body {
 /* ---------- header ---------- */
 .header {
   position: sticky; top: 0; z-index: 10;
-  background: rgba(250,250,249,.9);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -45,7 +54,7 @@ body {
   border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 13px;
   cursor: pointer; transition: background .15s, color .15s;
 }
-.lang.is-active { background: var(--text); color: #fff; border-color: var(--text); }
+.lang.is-active { background: var(--text); color: var(--on-dark); border-color: var(--text); }
 
 .subtitulo { color: var(--muted); margin: 24px 0 16px; }
 
@@ -61,7 +70,7 @@ body {
   width: 96px; padding: 4px 8px; font: inherit;
   border: 1px solid var(--border); border-radius: 8px; background: var(--bg);
 }
-.aviso__input.is-invalid { border-color: var(--danger); background: #fef2f2; }
+.aviso__input.is-invalid { border-color: var(--danger); background: var(--invalid-bg); }
 
 .btn-link {
   background: none; border: none; padding: 0; font: inherit; font-size: 13px;
@@ -84,7 +93,7 @@ body {
   border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 13px;
   cursor: pointer; transition: background .15s, color .15s;
 }
-.chip.is-active { background: var(--text); color: #fff; border-color: var(--text); }
+.chip.is-active { background: var(--text); color: var(--on-dark); border-color: var(--text); }
 .ordem { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
 .ordem select {
   font: inherit; padding: 8px 10px; border-radius: 8px;
@@ -107,15 +116,15 @@ body {
 
 @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-.card__media { position: relative; aspect-ratio: 4 / 3; background: #f5f5f4; cursor: zoom-in; }
+.card__media { position: relative; aspect-ratio: 4 / 3; background: var(--placeholder-bg); cursor: zoom-in; }
 .card__img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card__placeholder {
   width: 100%; height: 100%; display: grid; place-items: center;
-  color: #d6d3d1; font-size: 40px;
+  color: var(--placeholder-icon); font-size: 40px;
 }
 .card__count {
   position: absolute; right: 8px; bottom: 8px;
-  background: rgba(0,0,0,.6); color: #fff; font-size: 12px;
+  background: var(--overlay-md); color: var(--on-dark); font-size: 12px;
   padding: 2px 8px; border-radius: 999px;
 }
 
@@ -126,7 +135,7 @@ body {
 .card__desc { font-size: 14px; color: var(--muted); margin: 0; }
 
 .badge {
-  flex: none; background: var(--danger); color: #fff;
+  flex: none; background: var(--danger); color: var(--on-dark);
   font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
 }
 
@@ -152,7 +161,7 @@ body {
   content: attr(data-vendido);
   position: absolute; top: 22px; left: -46px;
   transform: rotate(-38deg);
-  background: var(--danger); color: #fff;
+  background: var(--danger); color: var(--on-dark);
   font-size: 13px; font-weight: 800; letter-spacing: .08em;
   padding: 6px 60px;
 }
@@ -163,13 +172,13 @@ body {
 /* ---------- lightbox ---------- */
 .lightbox {
   position: fixed; inset: 0; z-index: 50;
-  background: rgba(0,0,0,.92);
+  background: var(--overlay-dark);
   display: flex; align-items: center; justify-content: center;
 }
 .lightbox[hidden] { display: none; }
 .lightbox__img { max-width: 92vw; max-height: 88vh; object-fit: contain; }
 .lightbox__close, .lightbox__nav {
-  position: absolute; background: rgba(255,255,255,.12); color: #fff;
+  position: absolute; background: var(--overlay-light); color: var(--on-dark);
   border: none; cursor: pointer; border-radius: 999px;
   width: 44px; height: 44px; font-size: 22px; line-height: 1;
 }
@@ -178,7 +187,7 @@ body {
 .lightbox__nav--next { right: 16px; }
 
 /* ---------- foco visível ---------- */
-:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
