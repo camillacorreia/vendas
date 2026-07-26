@@ -29,6 +29,7 @@
 - Create: `core.js`
 - Create: `tests.js`
 - Create: `tests.html`
+- Create: `run-tests.js`
 
 **Interfaces:**
 - Consumes: nothing.
@@ -141,8 +142,73 @@ Create `tests.js`:
 
 - [ ] **Step 2: Run test to verify it fails**
 
-Run: `open tests.html` (macOS) and look at the page.
-Expected: page shows a JS error in the console — `Core is not defined` — and the summary stays on "rodando…". `i18n.js` and `items.js` don't exist yet either; the 404s under `file://` are silent and harmless at this stage.
+Also create `run-tests.js`, so the same suite runs headlessly from a terminal.
+It stubs the handful of DOM calls `tests.js` makes; the site itself never
+loads it and stays dependency-free.
+
+```js
+#!/usr/bin/env node
+/* Roda a mesma suíte de tests.html fora do navegador, com um stub mínimo
+   de DOM. Só para desenvolvimento — o site não usa Node em momento algum.
+   Uso: node run-tests.js   (sai com código 1 se algum teste falhar) */
+const fs = require('fs');
+const vm = require('vm');
+
+function makeNode() {
+  return {
+    className: '',
+    textContent: '',
+    children: [],
+    appendChild(child) { this.children.push(child); },
+  };
+}
+
+const nodes = { results: makeNode(), summary: makeNode() };
+const linhas = [];
+
+const documentStub = {
+  getElementById: (id) => nodes[id],
+  createElement: () => {
+    const n = makeNode();
+    linhas.push(n);
+    return n;
+  },
+};
+
+const sandbox = { document: documentStub, console };
+sandbox.window = sandbox;
+vm.createContext(sandbox);
+
+const arquivos = ['i18n.js', 'items.js', 'core.js', 'tests.js'];
+for (const f of arquivos) {
+  if (!fs.existsSync(f)) {
+    console.error('faltando: ' + f);
+    process.exit(1);
+  }
+  vm.runInContext(fs.readFileSync(f, 'utf8'), sandbox, { filename: f });
+}
+
+for (const n of linhas) console.log(n.textContent);
+console.log(nodes.summary.textContent);
+process.exit(nodes.summary.className === 'fail' ? 1 : 0);
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `node run-tests.js`
+Expected: exits non-zero. Because `i18n.js`, `items.js` and `core.js` do not
+exist yet, the output is `faltando: i18n.js`.
+
+To keep the loop unblocked until Task 2 lands the data files, create two
+temporary stubs now and delete them at the start of Task 2:
+
+```bash
+printf 'var I18N = {};\n' > i18n.js
+printf 'var CONFIG = {}; var CATEGORIAS = []; var ITEMS = [];\n' > items.js
+node run-tests.js
+```
+
+Expected now: `ReferenceError: Core is not defined` thrown from `tests.js`.
 
 - [ ] **Step 3: Write minimal implementation**
 
@@ -210,14 +276,17 @@ var Core = (function () {
 
 - [ ] **Step 4: Run test to verify it passes**
 
-Run: reload `tests.html` in the browser.
-Expected: green summary `TUDO VERDE — 19 testes`, every line prefixed `PASS`.
+Run: `node run-tests.js`
+Expected: exit code 0, 19 lines prefixed `PASS`, last line `TUDO VERDE — 19 testes`.
+
+Then confirm the browser harness agrees: `open tests.html`
+Expected: green summary with the same 19 tests.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add core.js tests.js tests.html
-git commit -m "feat: add pure formatting helpers and browser test harness"
+git add core.js tests.js tests.html run-tests.js i18n.js items.js
+git commit -m "feat: add pure formatting helpers and test harness"
 ```
 
 ---
@@ -270,8 +339,9 @@ The `runSuites` call becomes:
 
 - [ ] **Step 2: Run test to verify it fails**
 
-Run: reload `tests.html`.
-Expected: red summary; console shows `I18N is not defined`.
+Run: `node run-tests.js`
+Expected: exit code 1. With the Task 1 stub files still in place, the failures
+are `i18n es e pt tem as mesmas chaves` and the rest of the two new suites.
 
 - [ ] **Step 3: Write minimal implementation**
 
@@ -440,8 +510,8 @@ and add it to the returned object:
 
 - [ ] **Step 4: Run test to verify it passes**
 
-Run: reload `tests.html`.
-Expected: green summary `TUDO VERDE — 27 testes`.
+Run: `node run-tests.js`
+Expected: exit code 0, last line `TUDO VERDE — 27 testes`.
 
 - [ ] **Step 5: Commit**
 
@@ -540,8 +610,8 @@ The `runSuites` call becomes:
 
 - [ ] **Step 2: Run test to verify it fails**
 
-Run: reload `tests.html`.
-Expected: red summary; the console shows `Core.normalize is not a function`.
+Run: `node run-tests.js`
+Expected: exit code 1, `TypeError: Core.normalize is not a function`.
 
 - [ ] **Step 3: Write minimal implementation**
 
@@ -605,8 +675,8 @@ and extend the returned object:
 
 - [ ] **Step 4: Run test to verify it passes**
 
-Run: reload `tests.html`.
-Expected: green summary `TUDO VERDE — 40 testes`.
+Run: `node run-tests.js`
+Expected: exit code 0, last line `TUDO VERDE — 40 testes`.
 
 - [ ] **Step 5: Commit**
 
@@ -654,8 +724,8 @@ The `runSuites` call becomes:
 
 - [ ] **Step 2: Run test to verify it fails**
 
-Run: reload `tests.html`.
-Expected: red summary; console shows `Core.waLink is not a function`.
+Run: `node run-tests.js`
+Expected: exit code 1, `TypeError: Core.waLink is not a function`.
 
 - [ ] **Step 3: Write minimal implementation**
 
@@ -678,8 +748,8 @@ and add to the returned object:
 
 - [ ] **Step 4: Run test to verify it passes**
 
-Run: reload `tests.html`.
-Expected: green summary `TUDO VERDE — 42 testes`.
+Run: `node run-tests.js`
+Expected: exit code 0, last line `TUDO VERDE — 42 testes`.
 
 - [ ] **Step 5: Commit**
 
@@ -1601,6 +1671,7 @@ já funciona.
 | `app.js` | Render e eventos. |
 | `style.css` | Estilos. |
 | `tests.html` | Abre no navegador e roda os testes de `core.js`. |
+| `run-tests.js` | Roda os mesmos testes pelo terminal (`node run-tests.js`). Só dev. |
 | `images/` | Fotos dos itens. |
 
 ## Adicionar um item
@@ -1661,6 +1732,10 @@ exigido pela WhatsApp para celulares argentinos.
 Abrir `tests.html` no navegador. Cabeçalho verde `TUDO VERDE` significa tudo
 certo. Vermelho lista o que quebrou.
 
+Quem preferir terminal: `node run-tests.js` roda a mesma coisa e sai com
+código 1 se algo falhar. O Node é usado só para isso — o site publicado não
+depende dele.
+
 Rode depois de mexer em `core.js`, `i18n.js` ou `items.js` — a suíte também
 valida os dados (id repetido, categoria inexistente, título faltando).
 
@@ -1699,7 +1774,7 @@ um minuto para atualizar.
 
 - [ ] **Step 4: Verify the acceptance criteria**
 
-Run: `open tests.html` then `open index.html`, and walk the full checklist in the README.
+Run: `node run-tests.js`, then `open tests.html` and `open index.html`, and walk the full checklist in the README.
 Expected: green test summary, every checklist line passes.
 
 Then publish:
@@ -1730,5 +1805,7 @@ into `core.js` (pure, unit-tested) and `app.js` (DOM, verified manually),
 which is what makes a zero-dependency test harness possible. The spec already
 anticipated a split once `app.js` grew; this does it up front for testability.
 
-The spec did not mention `tests.html` / `tests.js`. They add no runtime
-dependency and are not loaded by `index.html`.
+The spec did not mention `tests.html` / `tests.js` / `run-tests.js`. They add
+no runtime dependency and are not loaded by `index.html`. `run-tests.js` exists
+so the suite can run headlessly from a terminal; Node is a development
+convenience only and the published site never uses it.
