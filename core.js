@@ -62,6 +62,51 @@ var Core = (function () {
     return problemas;
   }
 
+  function normalize(s) {
+    return String(s || '')
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function filterItems(items, opts) {
+    var q = normalize(opts.query);
+    var cat = opts.categoria || 'todos';
+    var lang = opts.lang;
+    return items.filter(function (item) {
+      if (cat !== 'todos' && item.categoria !== cat) return false;
+      if (!q) return true;
+      var t = item[lang] || {};
+      var haystack = normalize([t.titulo, t.desc, item.modelo].join(' '));
+      return haystack.indexOf(q) !== -1;
+    });
+  }
+
+  function sortItems(items, mode) {
+    var copia = items.slice();
+    copia.sort(function (a, b) {
+      /* Vendido sempre por último, qualquer que seja a ordenação. */
+      if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
+      if (mode === 'preco-desc') return b.preco - a.preco;
+      if (mode === 'desconto-desc') {
+        var da = calcDesconto(a.preco, a.precoMercado) || 0;
+        var db = calcDesconto(b.preco, b.precoMercado) || 0;
+        return db - da;
+      }
+      return a.preco - b.preco; // 'preco-asc' é o padrão
+    });
+    return copia;
+  }
+
+  function categoriasUsadas(items) {
+    var vistas = [];
+    items.forEach(function (item) {
+      if (vistas.indexOf(item.categoria) === -1) vistas.push(item.categoria);
+    });
+    return vistas.sort();
+  }
+
   return {
     formatBRL: formatBRL,
     formatARS: formatARS,
@@ -69,5 +114,9 @@ var Core = (function () {
     medidasText: medidasText,
     parseCotacao: parseCotacao,
     validateItems: validateItems,
+    normalize: normalize,
+    filterItems: filterItems,
+    sortItems: sortItems,
+    categoriasUsadas: categoriasUsadas,
   };
 })();

@@ -89,5 +89,69 @@
       new Set(ITEMS.map(function (i) { return i.id; })).size);
   }
 
-  runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao, suiteI18n, suiteDados]);
+  var FIXTURES = [
+    { id: 'a', preco: 100, precoMercado: 200, categoria: 'casa',   vendido: false,
+      modelo: 'ACME X1', es: { titulo: 'Silla café', desc: '' }, pt: { titulo: 'Cadeira café', desc: '' } },
+    { id: 'b', preco: 300, precoMercado: 350, categoria: 'moveis', vendido: false,
+      modelo: '',        es: { titulo: 'Mesa', desc: 'de madera' }, pt: { titulo: 'Mesa', desc: 'de madeira' } },
+    { id: 'c', preco: 50,  categoria: 'casa', vendido: true,
+      modelo: '',        es: { titulo: 'Lámpara', desc: '' }, pt: { titulo: 'Luminária', desc: '' } },
+  ];
+
+  function suiteBusca() {
+    eq('normalize tira acento e caixa', Core.normalize('Lámpara CAFÉ'), 'lampara cafe');
+
+    eq('filtro vazio devolve tudo',
+      Core.filterItems(FIXTURES, { query: '', categoria: 'todos', lang: 'es' }).map(function (i) { return i.id; }),
+      ['a', 'b', 'c']);
+
+    eq('busca sem acento acha com acento',
+      Core.filterItems(FIXTURES, { query: 'lampara', categoria: 'todos', lang: 'es' }).map(function (i) { return i.id; }),
+      ['c']);
+
+    eq('busca usa titulo do idioma ativo',
+      Core.filterItems(FIXTURES, { query: 'luminaria', categoria: 'todos', lang: 'pt' }).map(function (i) { return i.id; }),
+      ['c']);
+
+    eq('busca nao acha titulo do outro idioma',
+      Core.filterItems(FIXTURES, { query: 'luminaria', categoria: 'todos', lang: 'es' }).map(function (i) { return i.id; }),
+      []);
+
+    eq('busca casa com modelo',
+      Core.filterItems(FIXTURES, { query: 'acme', categoria: 'todos', lang: 'es' }).map(function (i) { return i.id; }),
+      ['a']);
+
+    eq('busca casa com descricao',
+      Core.filterItems(FIXTURES, { query: 'madera', categoria: 'todos', lang: 'es' }).map(function (i) { return i.id; }),
+      ['b']);
+
+    eq('filtro por categoria',
+      Core.filterItems(FIXTURES, { query: '', categoria: 'casa', lang: 'es' }).map(function (i) { return i.id; }),
+      ['a', 'c']);
+
+    eq('categoriasUsadas ignora as sem item',
+      Core.categoriasUsadas(FIXTURES),
+      ['casa', 'moveis']);
+  }
+
+  function suiteOrdem() {
+    eq('ordena por menor preco, vendido no fim',
+      Core.sortItems(FIXTURES, 'preco-asc').map(function (i) { return i.id; }),
+      ['a', 'b', 'c']);
+
+    eq('ordena por maior preco, vendido no fim',
+      Core.sortItems(FIXTURES, 'preco-desc').map(function (i) { return i.id; }),
+      ['b', 'a', 'c']);
+
+    eq('ordena por maior desconto, vendido no fim',
+      Core.sortItems(FIXTURES, 'desconto-desc').map(function (i) { return i.id; }),
+      ['a', 'b', 'c']);
+
+    eq('sortItems nao muta o array original',
+      FIXTURES.map(function (i) { return i.id; }),
+      ['a', 'b', 'c']);
+  }
+
+  runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
+             suiteI18n, suiteDados, suiteBusca, suiteOrdem]);
 })();
