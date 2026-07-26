@@ -152,6 +152,18 @@
       ['a', 'b', 'c']);
   }
 
+  function suiteWhats() {
+    var item = { preco: 3100, es: { titulo: 'Heladera No Frost' }, pt: { titulo: 'Geladeira No Frost' } };
+
+    eq('link es',
+      Core.waLink(item, 'es', '5493415827248'),
+      'https://wa.me/5493415827248?text=' + encodeURIComponent('Hola! Me interesa: Heladera No Frost (R$ 3.100)'));
+
+    eq('link pt',
+      Core.waLink(item, 'pt', '5493415827248'),
+      'https://wa.me/5493415827248?text=' + encodeURIComponent('Olá! Tenho interesse em: Geladeira No Frost (R$ 3.100)'));
+  }
+
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
-             suiteI18n, suiteDados, suiteBusca, suiteOrdem]);
+             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats]);
 })();

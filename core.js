@@ -107,6 +107,13 @@ var Core = (function () {
     return vistas.sort();
   }
 
+  function waLink(item, lang, phone) {
+    var t = I18N[lang];
+    var titulo = (item[lang] || {}).titulo || '';
+    var msg = t.msgWhats + titulo + ' (' + formatBRL(item.preco) + ')';
+    return 'https://wa.me/' + phone + '?text=' + encodeURIComponent(msg);
+  }
+
   return {
     formatBRL: formatBRL,
     formatARS: formatARS,
@@ -118,5 +125,6 @@ var Core = (function () {
     filterItems: filterItems,
     sortItems: sortItems,
     categoriasUsadas: categoriasUsadas,
+    waLink: waLink,
   };
 })();
