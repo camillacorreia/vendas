@@ -716,17 +716,23 @@ var ITEMS = [
   },
   {
     id: 'planta-7',
+    preco: 17,                      // AR$ 5.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-7/1.jpeg',
       'images/planta-7/2.jpeg',
       'images/planta-7/3.jpeg',
     ],
-    es: { titulo: 'Planta 7', desc: '' },
-    pt: { titulo: 'Planta 7', desc: '' },
+    es: {
+      titulo: 'Malvón florecido (Pelargonium hortorum)',
+      desc: 'La planta de balcón más clásica que hay. Se reconoce por la mancha oscura en forma de herradura en las hojas. Florecida en rojo. Va con la maceta, que está algo descascarada.',
+    },
+    pt: {
+      titulo: 'Gerânio florido (Pelargonium hortorum)',
+      desc: 'Na Argentina chamam de malvón, e é a planta de sacada mais clássica que existe por lá. Reconhece-se pela mancha escura em forma de ferradura nas folhas. Florida em vermelho. Vai com o vaso, que está um pouco descascado.',
+    },
   },
 
   /* ---- MODELO PARA COPIAR ----
