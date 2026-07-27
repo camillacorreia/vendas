@@ -66,7 +66,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: medidas
+    medidas: { f: 62, a: 160 },
     fotos: [
       'images/cabideiro/1.webp',
       'images/cabideiro/2.jpeg',
