@@ -385,6 +385,26 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'comedor-escandinavo',
+    preco: 350,
+    precoMercado: 1000,             // AR$ 300.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
+    fotos: [],
+    linkMercado: 'https://articulo.mercadolibre.com.ar/MLA-1384569291-juego-comedor-nordico-mesa-escandinava-120-4-sillas-eames-_JM',
+    es: {
+      titulo: 'Juego de comedor escandinavo: mesa + 4 sillas',
+      desc: 'Blanco, mesa de 120 cm, sillas Eames. Atención: las sillas están un poco desgastadas.',
+    },
+    pt: {
+      titulo: 'Conjunto de jantar escandinavo: mesa + 4 cadeiras',
+      desc: 'Branco, mesa de 120 cm, cadeiras Eames. Atenção: as cadeiras estão um pouco desgastadas.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
