@@ -8,7 +8,7 @@ var CONFIG = {
   cotacaoPadrao: 310,         // 1 BRL = N ARS
 };
 
-var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'outros'];
+var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'plantas', 'outros'];
 
 var ITEMS = [
   {
@@ -609,7 +609,7 @@ var ITEMS = [
     id: 'planta-1',
     preco: 70,
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     // FALTA: altura (do chão até a folha mais alta)
     fotos: [
@@ -628,7 +628,7 @@ var ITEMS = [
     id: 'planta-2',
     preco: 40,                      // AR$ 12.000 na cotação de referência de 300
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     fotos: [
       'images/planta-2/1.jpeg',
@@ -646,7 +646,7 @@ var ITEMS = [
     id: 'planta-3',
     preco: 40,                      // AR$ 12.000 na cotação de referência de 300
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     fotos: [
       'images/planta-3/1.jpeg',
@@ -664,7 +664,7 @@ var ITEMS = [
     id: 'planta-4',
     preco: 20,                      // AR$ 6.000 na cotação de referência de 300
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: true,
     fotos: [
       'images/planta-4/1.jpeg',
@@ -682,7 +682,7 @@ var ITEMS = [
     id: 'planta-5',
     preco: 95,
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     fotos: [
       'images/planta-5/1.jpeg',
@@ -700,7 +700,7 @@ var ITEMS = [
     id: 'planta-6',
     preco: 95,
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     fotos: [
       'images/planta-6/1.jpeg',
@@ -718,7 +718,7 @@ var ITEMS = [
     id: 'planta-7',
     preco: 20,
     ano: 2024,
-    categoria: 'casa',
+    categoria: 'plantas',
     vendido: false,
     fotos: [
       'images/planta-7/1.jpeg',
