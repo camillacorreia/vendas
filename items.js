@@ -716,7 +716,7 @@ var ITEMS = [
   },
   {
     id: 'planta-7',
-    preco: 17,                      // AR$ 5.000 na cotação de referência de 300
+    preco: 20,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
