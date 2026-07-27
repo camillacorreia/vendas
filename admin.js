@@ -99,7 +99,7 @@
       var tr_ = Core.totais(reservados);
       el['resumo'].appendChild(cartao(
         'Reservado', Core.formatBRL(tr_.bruto),
-        reservados.map(function (i) { return RESERVAS[i.id].por; }).join(', ')));
+        Core.formatARS(tr_.bruto, taxa) + ' · ' + tr_.qtd + ' item(ns)'));
     }
 
     var abatimento = t.mercado > 0 ? Math.round((t.economia / t.mercado) * 100) : 0;
