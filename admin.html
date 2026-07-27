@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel — Vendas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div id="gate" class="gate">
+    <form id="gate-form" class="gate__box">
+      <h1 class="gate__titulo">Painel</h1>
+      <label class="gate__label" for="gate-senha">Senha</label>
+      <input id="gate-senha" class="gate__input" type="password"
+             inputmode="numeric" autocomplete="off" autofocus>
+      <p id="gate-erro" class="gate__erro" role="alert" hidden>Senha incorreta.</p>
+      <button class="gate__btn" type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <main id="painel" class="wrap" hidden>
+
+    <header class="painel__topo">
+      <h1 class="painel__titulo">Painel de vendas</h1>
+      <a class="painel__voltar" href="index.html">← Ver o site</a>
+    </header>
+
+    <section class="resumo" id="resumo"></section>
+
+    <section class="painel__cotacao">
+      <label for="admin-cotacao">Cotação (1 BRL = N ARS):</label>
+      <input id="admin-cotacao" type="number" min="1" step="1" value="300">
+    </section>
+
+    <div class="tabela-scroll">
+      <table class="tabela" id="tabela">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Categoria</th>
+            <th class="num">Preço (R$)</th>
+            <th class="num">Preço (AR$)</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-corpo"></tbody>
+      </table>
+    </div>
+
+    <p class="painel__aviso">
+      Esta página não é protegida de verdade: o site é estático, então a senha
+      fica visível para quem abrir o código-fonte, e os preços já estão
+      públicos em <code>items.js</code>. Ela serve para não deixar o painel à
+      vista, não para guardar segredo.
+    </p>
+
+  </main>
+
+  <script src="items.js"></script>
+  <script src="core.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

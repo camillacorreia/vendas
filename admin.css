@@ -1,0 +1,86 @@
+/* Painel do dono. Reaproveita as variáveis de style.css. */
+
+.gate {
+  position: fixed; inset: 0; z-index: 20;
+  display: grid; place-items: center;
+  background: var(--bg);
+  padding: 16px;
+}
+.gate[hidden] { display: none; }
+
+.gate__box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 28px; width: 100%; max-width: 320px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.gate__titulo { margin: 0 0 4px; font-size: 20px; }
+.gate__label { font-size: 13px; color: var(--muted); }
+.gate__input {
+  font: inherit; font-size: 20px; letter-spacing: .2em; text-align: center;
+  padding: 10px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg);
+}
+.gate__erro { margin: 0; color: var(--danger); font-size: 13px; }
+.gate__btn {
+  font: inherit; font-weight: 600; cursor: pointer;
+  background: var(--text); color: var(--on-dark);
+  border: none; border-radius: 999px; padding: 10px 16px;
+}
+
+.painel__topo {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin: 32px 0 20px;
+}
+.painel__titulo { margin: 0; font-size: 22px; }
+.painel__voltar { color: var(--muted); font-size: 14px; }
+
+.resumo {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-bottom: 24px;
+}
+.resumo__cartao {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px;
+}
+.resumo__rotulo { font-size: 12px; color: var(--muted); margin: 0 0 4px; }
+.resumo__valor { font-size: 20px; font-weight: 700; margin: 0; }
+.resumo__sub { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+
+.painel__cotacao {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--muted); margin-bottom: 16px;
+}
+.painel__cotacao input {
+  width: 96px; font: inherit; padding: 4px 8px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--surface);
+}
+
+.tabela-scroll { overflow-x: auto; }
+.tabela {
+  width: 100%; border-collapse: collapse;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; font-size: 14px;
+}
+.tabela th, .tabela td {
+  text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.tabela th { font-size: 12px; color: var(--muted); font-weight: 600; }
+.tabela tr:last-child td { border-bottom: none; }
+.tabela .num { text-align: right; }
+.tabela__vendido { color: var(--muted); }
+.tabela__vendido .tabela__nome { text-decoration: line-through; }
+
+.selo {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px;
+}
+.selo--disponivel { background: var(--ok-bg); color: var(--ok-ink); }
+.selo--vendido { background: var(--border); color: var(--muted); }
+
+.painel__aviso {
+  margin: 28px 0 0; font-size: 12px; color: var(--muted);
+  border-top: 1px solid var(--border); padding-top: 14px;
+}

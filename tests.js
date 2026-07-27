@@ -198,7 +198,31 @@
     eq('verFull pt', I18N.pt.verFull, 'Ver em tela cheia');
   }
 
+  function suiteTotais() {
+    var lote = [
+      { id: 'a', preco: 100, vendido: false },
+      { id: 'b', preco: 300, vendido: true },
+      { id: 'c', preco: 50,  vendido: false, qtd: 2 },
+    ];
+
+    eq('totais bruto conta unidades', Core.totais(lote).bruto, 500);
+    eq('totais vendido', Core.totais(lote).vendido, 300);
+    eq('totais a vender', Core.totais(lote).aVender, 200);
+    eq('totais quantidade conta unidades', Core.totais(lote).qtd, 4);
+    eq('totais quantidade vendida', Core.totais(lote).qtdVendida, 1);
+    eq('qtd ausente vale um', Core.totais([{ id: 'z', preco: 10, vendido: false }]).qtd, 1);
+    eq('precoCombo nao entra no total',
+      Core.totais([{ id: 'z', preco: 10, qtd: 2, precoCombo: 15, vendido: false }]).bruto, 20);
+    eq('bruto e a soma das partes',
+      Core.totais(lote).vendido + Core.totais(lote).aVender,
+      Core.totais(lote).bruto);
+    eq('totais de lista vazia',
+      Core.totais([]),
+      { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0 });
+    eq('totais ignora preco invalido', Core.totais([{ id: 'x', vendido: false }]).bruto, 0);
+  }
+
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
              suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo,
-             suiteControles]);
+             suiteControles, suiteTotais]);
 })();
