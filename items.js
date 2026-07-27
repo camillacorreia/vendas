@@ -144,6 +144,29 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'rack-tv-delos',
+    modelo: 'Delos Steel DST03',
+    preco: 350,
+    precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos
+    // A largura veio do anúncio como "2,2 cm", que não fecha com um rack de 65".
+    medidas: { f: 2.2, p: 40, a: 60 },
+    fotos: [],
+    linkMercado: 'https://www.megatone.net/producto/rack-para-tv-steel-dst03-dst03rnn-delos_RAC3031DEL/',
+    es: {
+      titulo: 'Rack de TV industrial hasta 65"',
+      desc: 'Una puerta, dos estantes y dos cajones. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Rack de TV industrial até 65"',
+      desc: 'Uma porta, duas prateleiras e duas gavetas. Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
