@@ -794,7 +794,7 @@ var ITEMS = [
   {
     id: 'pratos-vajilla',
     modelo: 'Camicado',
-    preco: 95,
+    preco: 60,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
