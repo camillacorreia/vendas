@@ -166,6 +166,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'aire-bgh-bs35wcat',
+    modelo: 'BGH BS35WCAT',
+    preco: 1500,
+    precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.mercadolibre.com.ar/aire-acondicionado-bgh-split-frio-y-calor-bs35wcat-blanco/p/MLA18705457',
+    es: {
+      titulo: 'Aire acondicionado split frío/calor',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Ar-condicionado split quente/frio',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
