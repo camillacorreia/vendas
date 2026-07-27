@@ -9,7 +9,7 @@ var App = (function () {
     cotacao: CONFIG.cotacaoPadrao,
     query: '',
     categoria: 'todos',
-    ordem: 'preco-asc',
+    ordem: 'preco-desc',
   };
 
   var el = {};
