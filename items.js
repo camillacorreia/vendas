@@ -106,7 +106,7 @@ var ITEMS = [
 
   {
     id: 'impressora-epson-m1180',
-    modelo: 'Epson EcoTank M1180',
+    modelo: 'Epson EcoTank M1120',
     preco: 875,
     precoMercado: 1333,             // AR$ 400.000 na cotação de referência de 300
     ano: 2024,
@@ -116,6 +116,7 @@ var ITEMS = [
     fotos: [
       'images/impressora/1.jpeg',
     ],
+    // CONFERIR: este anúncio e o valor de mercado são do M1180, não do M1120.
     linkMercado: 'https://www.mercadolibre.com.ar/impresora-epson-ecotank-m1180-monocromatica-11k-color-blanconegro/p/MLA28464465',
     es: {
       titulo: 'Impresora monocromática EcoTank',
