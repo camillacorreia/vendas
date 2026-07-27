@@ -141,11 +141,11 @@ var ITEMS = [
     linkMercado: 'https://www.mercadolibre.com.ar/escritorio-muebles-hierro-y-madera-natural-120cmx55cmx76cm/up/MLAU3827890139',
     es: {
       titulo: 'Escritorio de hierro y madera natural',
-      desc: 'En perfecto estado.',
+      desc: '',
     },
     pt: {
       titulo: 'Escrivaninha de ferro e madeira natural',
-      desc: 'Em perfeito estado.',
+      desc: '',
     },
   },
 
