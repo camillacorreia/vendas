@@ -116,7 +116,7 @@ var ITEMS = [
     fotos: [
       'images/impressora/1.jpeg',
     ],
-    linkMercado: 'https://www.mercadolibre.com.ar/impresora-epson-ecotank-m1120-monocromatica-usb-wifi-tintas/up/MLAU310575970',
+    linkMercado: 'https://www.mercadolibre.com.ar/impresora-monocromatica-epson-ecotank-m1120-con-wi-fi/p/MLA44409423',
     es: {
       titulo: 'Impresora monocromática EcoTank',
       desc: 'En perfecto estado de funcionamiento. Ya viene con tinta.',
