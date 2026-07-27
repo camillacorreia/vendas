@@ -320,6 +320,62 @@ var App = (function () {
     render();
   }
 
+  /* ---------- lightbox ---------- */
+
+  var lightbox = { fotos: [], idx: 0 };
+
+  function abrirLightbox(fotos, idx) {
+    lightbox.fotos = fotos;
+    lightbox.idx = idx || 0;
+    el['lightbox'].hidden = false;
+    document.body.classList.add('is-locked');
+    var sozinha = fotos.length < 2;
+    el['lightbox-prev'].hidden = sozinha;
+    el['lightbox-next'].hidden = sozinha;
+    mostrarFoto();
+    el['lightbox-close'].focus();
+  }
+
+  function fecharLightbox() {
+    el['lightbox'].hidden = true;
+    document.body.classList.remove('is-locked');
+  }
+
+  function mostrarFoto() {
+    el['lightbox-img'].src = lightbox.fotos[lightbox.idx];
+  }
+
+  function passarFoto(delta) {
+    var n = lightbox.fotos.length;
+    lightbox.idx = (lightbox.idx + delta + n) % n;
+    mostrarFoto();
+  }
+
+  function bindLightbox() {
+    el['grid'].addEventListener('click', function (ev) {
+      var media = ev.target.closest('.card__media');
+      if (!media || !media.dataset.lightbox) return;
+      var item = ITEMS.filter(function (i) { return i.id === media.dataset.lightbox; })[0];
+      if (!item || !item.fotos || item.fotos.length === 0) return;
+      abrirLightbox(item.fotos, 0);
+    });
+
+    el['lightbox-close'].addEventListener('click', fecharLightbox);
+    el['lightbox-prev'].addEventListener('click', function () { passarFoto(-1); });
+    el['lightbox-next'].addEventListener('click', function () { passarFoto(1); });
+
+    el['lightbox'].addEventListener('click', function (ev) {
+      if (ev.target === el['lightbox']) fecharLightbox();
+    });
+
+    document.addEventListener('keydown', function (ev) {
+      if (el['lightbox'].hidden) return;
+      if (ev.key === 'Escape') fecharLightbox();
+      if (ev.key === 'ArrowLeft' && lightbox.fotos.length > 1) passarFoto(-1);
+      if (ev.key === 'ArrowRight' && lightbox.fotos.length > 1) passarFoto(1);
+    });
+  }
+
   /* ---------- init ---------- */
 
   function init() {
@@ -331,6 +387,7 @@ var App = (function () {
 
     el['cotacao'].value = state.cotacao;
     bindEvents();
+    bindLightbox();
     render();
   }
 
