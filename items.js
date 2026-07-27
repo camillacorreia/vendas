@@ -414,11 +414,11 @@ var ITEMS = [
       'images/lampara-colgador/2.jpeg',
     ],
     es: {
-      titulo: 'Lámpara colgante vintage jaula diamante',
+      titulo: 'Lámpara colgante vintage jaula diamante + lámpara de filamento',
       desc: 'Ya viene con la lámpara. En perfecto estado de funcionamiento.',
     },
     pt: {
-      titulo: 'Luminária pendente vintage gaiola diamante',
+      titulo: 'Luminária pendente vintage gaiola diamante + lâmpada de filamento',
       desc: 'Já vem com a lâmpada. Em perfeito estado de funcionamento.',
     },
   },
