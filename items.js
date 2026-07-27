@@ -662,15 +662,21 @@ var ITEMS = [
   },
   {
     id: 'planta-4',
+    preco: 20,                      // AR$ 6.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-4/1.jpeg',
     ],
-    es: { titulo: 'Planta 4', desc: '' },
-    pt: { titulo: 'Planta 4', desc: '' },
+    es: {
+      titulo: 'Palo de agua (Dracaena fragrans)',
+      desc: 'También conocido como tronco de Brasil. Va con la maceta. Algunas puntas de las hojas están secas.',
+    },
+    pt: {
+      titulo: "Pau-d'água (Dracaena fragrans)",
+      desc: 'Vai com o vaso. Algumas pontas das folhas estão secas.',
+    },
   },
   {
     id: 'planta-5',
