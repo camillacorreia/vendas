@@ -96,11 +96,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Apoyapiés ergonómico para escritorio',
-      desc: 'En perfecto estado.',
+      desc: '',
     },
     pt: {
       titulo: 'Apoio de pés ergonômico para escritório',
-      desc: 'Em perfeito estado.',
+      desc: '',
     },
   },
 
