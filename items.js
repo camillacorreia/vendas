@@ -291,7 +291,8 @@ var ITEMS = [
 
   {
     id: 'sofa-cama',
-    preco: 250,
+    preco: 350,
+    precoMercado: 1200,
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
