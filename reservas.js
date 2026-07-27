@@ -20,4 +20,7 @@ var RESERVAS = {
   'respaldo-de-cama':         { por: 'Nanda', em: '2026-07-27' },
   'floreros-vidrio':          { por: 'Nanda', em: '2026-07-27' },
   'licuadora-top-house-l900fb': { por: 'Itauana', em: '2026-07-27' },
+  'aire-bgh-bs35wcat':        { por: 'Ivan', em: '2026-07-27' },
+  'comedor-escandinavo':      { por: 'Ivan', em: '2026-07-27' },
+  'freidora-kanji-kjhaf1404': { por: 'Ivan', em: '2026-07-27' },
 };
