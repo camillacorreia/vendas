@@ -345,11 +345,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Lámpara de pie',
-      desc: 'En perfecto estado de funcionamiento.',
+      desc: 'Ya viene con la lámpara. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Luminária de piso',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: 'Já vem com a lâmpada. Em perfeito estado de funcionamento.',
     },
   },
 
