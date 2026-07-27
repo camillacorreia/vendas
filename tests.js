@@ -164,6 +164,30 @@
       'https://wa.me/5493415827248?text=' + encodeURIComponent('Olá! Tenho interesse em: Geladeira No Frost (R$ 3.100)'));
   }
 
+  function suiteConteudo() {
+    eq('mercado tem rotulo novo', I18N.es.mercado, 'Valor de mercado:');
+    eq('referencia es', I18N.es.referencia, 'referencia');
+    eq('referencia pt', I18N.pt.referencia, 'referência');
+
+    eq('aviso es cita Brubank', I18N.es.avisoMercadoPago.indexOf('Brubank') >= 0, true);
+    eq('aviso pt cita Brubank', I18N.pt.avisoMercadoPago.indexOf('Brubank') >= 0, true);
+
+    eq('toda foto e um caminho relativo dentro de images/',
+      ITEMS.flatMap(function (i) { return i.fotos || []; })
+        .filter(function (f) { return typeof f !== 'string' || f.indexOf('images/') !== 0; }),
+      []);
+
+    eq('linkMercado, quando presente, e https',
+      ITEMS.filter(function (i) { return i.linkMercado !== undefined; })
+        .filter(function (i) { return String(i.linkMercado).indexOf('https://') !== 0; })
+        .map(function (i) { return i.id; }),
+      []);
+
+    eq('geladeira tem 3 fotos',
+      (ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].fotos || []).length,
+      3);
+  }
+
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
-             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats]);
+             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo]);
 })();

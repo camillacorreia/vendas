@@ -143,6 +143,7 @@ body {
 .preco__ars { font-size: 15px; font-weight: 500; color: var(--muted); }
 .mercado { font-size: 13px; color: var(--muted); margin: 0; }
 .mercado s { opacity: .8; }
+.mercado__ref { color: var(--muted); }
 .meta { font-size: 12px; color: var(--muted); margin: 0; }
 
 .btn-whats {

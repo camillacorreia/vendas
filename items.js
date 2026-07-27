@@ -20,7 +20,8 @@ var ITEMS = [
     categoria: 'eletrodomesticos',
     vendido: false,
     medidas: { f: 70, p: 74, a: 160 },
-    fotos: ['images/heladera-drean-1.jpg'],
+    fotos: ['images/geladeira/1.webp', 'images/geladeira/2.jpeg', 'images/geladeira/3.jpeg'],
+    linkMercado: 'https://www.mercadolibre.com.ar/heladera-no-frost-420-lts-blanca-drean-hdr420n30b-blanco/p/MLA22452572',
     es: {
       titulo: 'Heladera No Frost 420 Lts Blanca',
       desc: 'Comprada en 2024, en perfecto estado de funcionamiento.',
@@ -41,7 +42,8 @@ var ITEMS = [
     categoria: 'outros',               // ver CATEGORIAS acima
     vendido: false,
     medidas: { f: 0, p: 0, a: 0 },     // cm, opcional
-    fotos: ['images/arquivo.jpg'],     // opcional
+    fotos: ['images/pasta-do-item/1.jpg'],   // opcional, uma pasta por item
+    linkMercado: 'https://…',          // opcional, anúncio de referência do preço de mercado
     es: { titulo: '', desc: '' },
     pt: { titulo: '', desc: '' },
   },

@@ -44,8 +44,8 @@ var App = (function () {
     el['lightbox-close'].setAttribute('aria-label', dict.fecharFoto);
     el['lightbox-prev'].setAttribute('aria-label', dict.fotoAnterior);
     el['lightbox-next'].setAttribute('aria-label', dict.fotoSeguinte);
-    el['lang-es'].setAttribute('aria-label', dict.trocarIdioma + ': español');
-    el['lang-pt'].setAttribute('aria-label', dict.trocarIdioma + ': português');
+    el['lang-es'].setAttribute('aria-label', dict.trocarIdioma + ': ' + dict.idiomaEs);
+    el['lang-pt'].setAttribute('aria-label', dict.trocarIdioma + ': ' + dict.idiomaPt);
 
     var opts = el['ordem'].options;
     opts[0].textContent = dict.ordPrecoAsc;
@@ -95,7 +95,10 @@ var App = (function () {
       img.alt = (item[state.lang] || {}).titulo || '';
       img.loading = 'lazy';
       img.onerror = function () {
-        media.innerHTML = '<div class="card__placeholder">🖼</div>';
+        var ph = document.createElement('div');
+        ph.className = 'card__placeholder';
+        ph.textContent = '🖼';
+        media.replaceChild(ph, img);
       };
       media.appendChild(img);
 
@@ -165,6 +168,18 @@ var App = (function () {
       s.textContent = Core.formatBRL(item.precoMercado) +
         ' (' + Core.formatARS(item.precoMercado, state.cotacao) + ')';
       mercado.appendChild(s);
+
+      if (item.linkMercado) {
+        mercado.appendChild(document.createTextNode(' '));
+        var ref = document.createElement('a');
+        ref.className = 'mercado__ref';
+        ref.href = item.linkMercado;
+        ref.target = '_blank';
+        ref.rel = 'noopener';
+        ref.textContent = dict.referencia;
+        mercado.appendChild(ref);
+      }
+
       body.appendChild(mercado);
     }
 
