@@ -296,7 +296,6 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: medidas
     medidas: { f: 200, p: 90 },
     fotos: [
       'images/sofa-cama/1.jpeg',
@@ -382,18 +381,18 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: medidas
+    medidas: { f: 57, a: 200 },
     fotos: [
       'images/armario-cozinha/1.jpeg',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/mueble-columna-de-cocina-despensero-blanco-10155-color-10155-blanco/p/MLA26320551',
     es: {
       titulo: 'Mueble columna de cocina blanco',
-      desc: 'Despensero. En perfecto estado.',
+      desc: 'Despensero. Profundidad entre 53 y 57 cm. En perfecto estado.',
     },
     pt: {
       titulo: 'Armário coluna de cozinha branco',
-      desc: 'Tipo despenseiro. Em perfeito estado.',
+      desc: 'Tipo despenseiro. Profundidade entre 53 e 57 cm. Em perfeito estado.',
     },
   },
 
