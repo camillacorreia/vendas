@@ -197,7 +197,9 @@ var App = (function () {
         ref.href = item.linkMercado;
         ref.target = '_blank';
         ref.rel = 'noopener';
-        ref.textContent = dict.referencia;
+        ref.textContent = dict.referencia + ' ↗';
+        ref.setAttribute('aria-label',
+          dict.referencia + ' (' + (item.modelo || texto.titulo || '') + ')');
         mercado.appendChild(ref);
       }
 
@@ -207,7 +209,7 @@ var App = (function () {
     var metaPartes = [];
     if (item.ano) metaPartes.push(dict.comprado + ' ' + item.ano);
     var med = Core.medidasText(item.medidas);
-    if (med) metaPartes.push(med);
+    if (med) metaPartes.push(dict.medidasRotulo + ' ' + med);
     if (metaPartes.length) {
       var meta = document.createElement('p');
       meta.className = 'meta';
@@ -343,11 +345,12 @@ var App = (function () {
 
   /* ---------- lightbox ---------- */
 
-  var lightbox = { fotos: [], idx: 0 };
+  var lightbox = { fotos: [], idx: 0, origem: null };
 
-  function abrirLightbox(fotos, idx) {
+  function abrirLightbox(fotos, idx, origem) {
     lightbox.fotos = fotos;
     lightbox.idx = idx || 0;
+    lightbox.origem = origem || null;
     el['lightbox'].hidden = false;
     document.body.classList.add('is-locked');
     var sozinha = fotos.length < 2;
@@ -360,6 +363,10 @@ var App = (function () {
   function fecharLightbox() {
     el['lightbox'].hidden = true;
     document.body.classList.remove('is-locked');
+
+    var origem = lightbox.origem;
+    lightbox.origem = null;
+    if (origem && document.contains(origem) && origem.focus) origem.focus();
   }
 
   function mostrarFoto() {
@@ -370,6 +377,25 @@ var App = (function () {
     var n = lightbox.fotos.length;
     lightbox.idx = (lightbox.idx + delta + n) % n;
     mostrarFoto();
+  }
+
+  /* Mantém o Tab preso dentro do lightbox enquanto ele está aberto. */
+  function prenderFoco(ev) {
+    var focaveis = [el['lightbox-close'], el['lightbox-prev'], el['lightbox-next']]
+      .filter(function (b) { return !b.hidden; });
+    if (focaveis.length === 0) return;
+
+    var primeiro = focaveis[0];
+    var ultimo = focaveis[focaveis.length - 1];
+    var atual = document.activeElement;
+
+    if (ev.shiftKey && (atual === primeiro || !el['lightbox'].contains(atual))) {
+      ev.preventDefault();
+      ultimo.focus();
+    } else if (!ev.shiftKey && (atual === ultimo || !el['lightbox'].contains(atual))) {
+      ev.preventDefault();
+      primeiro.focus();
+    }
   }
 
   function passarFotoNoCard(media, fotos, delta) {
@@ -400,7 +426,7 @@ var App = (function () {
         return;
       }
 
-      abrirLightbox(item.fotos, Number(media.dataset.idx) || 0);
+      abrirLightbox(item.fotos, Number(media.dataset.idx) || 0, ev.target);
     });
 
     el['lightbox-close'].addEventListener('click', fecharLightbox);
@@ -414,6 +440,7 @@ var App = (function () {
     document.addEventListener('keydown', function (ev) {
       if (el['lightbox'].hidden) return;
       if (ev.key === 'Escape') fecharLightbox();
+      if (ev.key === 'Tab') prenderFoco(ev);
       if (ev.key === 'ArrowLeft' && lightbox.fotos.length > 1) passarFoto(-1);
       if (ev.key === 'ArrowRight' && lightbox.fotos.length > 1) passarFoto(1);
     });

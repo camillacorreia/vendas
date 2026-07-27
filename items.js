@@ -24,11 +24,11 @@ var ITEMS = [
     linkMercado: 'https://www.mercadolibre.com.ar/heladera-no-frost-420-lts-blanca-drean-hdr420n30b-blanco/p/MLA22452572',
     es: {
       titulo: 'Heladera No Frost 420 Lts Blanca',
-      desc: 'Comprada en 2024, en perfecto estado de funcionamiento.',
+      desc: 'En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Geladeira No Frost 420 Lts Branca',
-      desc: 'Comprada em 2024, em perfeito estado de funcionamento.',
+      desc: 'Em perfeito estado de funcionamento.',
     },
   },
 

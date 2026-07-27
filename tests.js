@@ -166,8 +166,13 @@
 
   function suiteConteudo() {
     eq('mercado tem rotulo novo', I18N.es.mercado, 'Valor de mercado:');
-    eq('referencia es', I18N.es.referencia, 'referencia');
-    eq('referencia pt', I18N.pt.referencia, 'referência');
+    eq('referencia es', I18N.es.referencia, 'Ver referencia');
+    eq('referencia pt', I18N.pt.referencia, 'Ver referência');
+
+    eq('medidas rotulo es', I18N.es.medidasRotulo, 'Medidas:');
+    eq('descricao da geladeira es',
+      ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].es.desc,
+      'En perfecto estado de funcionamiento.');
 
     eq('aviso es cita Brubank', I18N.es.avisoMercadoPago.indexOf('Brubank') >= 0, true);
     eq('aviso pt cita Brubank', I18N.pt.avisoMercadoPago.indexOf('Brubank') >= 0, true);
