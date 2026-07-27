@@ -727,11 +727,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Malvón florecido (Pelargonium hortorum)',
-      desc: 'La planta de balcón más clásica que hay. Se reconoce por la mancha oscura en forma de herradura en las hojas. Florecida en rojo. Va con la maceta, que está algo descascarada.',
+      desc: 'La planta de balcón más clásica que hay. Se reconoce por la mancha oscura en forma de herradura en las hojas. Florecida en rojo. Va con la maceta.',
     },
     pt: {
       titulo: 'Gerânio florido (Pelargonium hortorum)',
-      desc: 'Na Argentina chamam de malvón, e é a planta de sacada mais clássica que existe por lá. Reconhece-se pela mancha escura em forma de ferradura nas folhas. Florida em vermelho. Vai com o vaso, que está um pouco descascado.',
+      desc: 'Na Argentina chamam de malvón, e é a planta de sacada mais clássica que existe por lá. Reconhece-se pela mancha escura em forma de ferradura nas folhas. Florida em vermelho. Vai com o vaso.',
     },
   },
 
