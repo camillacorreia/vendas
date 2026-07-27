@@ -230,6 +230,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'microondas-bgh-b120ds20i',
+    modelo: 'BGH B120DS20I',
+    preco: 380,
+    precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.cetrogar.com.ar/microondas-bgh-digital-b120ds20i-20lt-700w-lb3891/p',
+    es: {
+      titulo: 'Microondas digital 20 L plata',
+      desc: '700 W, modo eco. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Micro-ondas digital 20 L prata',
+      desc: '700 W, modo eco. Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
