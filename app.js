@@ -247,15 +247,90 @@ var App = (function () {
     }
   }
 
+  /* ---------- prefs & eventos ---------- */
+
+  function loadPrefs() {
+    try {
+      var lang = localStorage.getItem(LS_LANG);
+      if (lang === 'es' || lang === 'pt') state.lang = lang;
+
+      var cot = localStorage.getItem(LS_COTACAO);
+      if (cot !== null) state.cotacao = Core.parseCotacao(cot, CONFIG.cotacaoPadrao);
+    } catch (e) {
+      /* Safari em modo privado pode barrar localStorage. Segue no padrão. */
+    }
+  }
+
+  function savePref(key, value) {
+    try { localStorage.setItem(key, String(value)); } catch (e) { /* ignora */ }
+  }
+
+  function bindEvents() {
+    el['lang-es'].addEventListener('click', function () { setLang('es'); });
+    el['lang-pt'].addEventListener('click', function () { setLang('pt'); });
+
+    el['cotacao'].addEventListener('input', function () {
+      var bruto = el['cotacao'].value;
+      var valor = Core.parseCotacao(bruto, null);
+      var valida = valor !== null;
+      el['cotacao'].classList.toggle('is-invalid', !valida);
+      if (!valida) return;
+      state.cotacao = valor;
+      savePref(LS_COTACAO, valor);
+      render();
+    });
+
+    el['cotacao-reset'].addEventListener('click', function () {
+      state.cotacao = CONFIG.cotacaoPadrao;
+      el['cotacao'].value = CONFIG.cotacaoPadrao;
+      el['cotacao'].classList.remove('is-invalid');
+      savePref(LS_COTACAO, CONFIG.cotacaoPadrao);
+      render();
+    });
+
+    el['busca'].addEventListener('input', function () {
+      state.query = el['busca'].value;
+      render();
+    });
+
+    el['chips'].addEventListener('click', function (ev) {
+      var chip = ev.target.closest('.chip');
+      if (!chip) return;
+      state.categoria = chip.dataset.cat;
+      render();
+    });
+
+    el['ordem'].addEventListener('change', function () {
+      state.ordem = el['ordem'].value;
+      render();
+    });
+
+    el['limpar'].addEventListener('click', function () {
+      state.query = '';
+      state.categoria = 'todos';
+      el['busca'].value = '';
+      render();
+    });
+  }
+
+  function setLang(lang) {
+    if (state.lang === lang) return;
+    state.lang = lang;
+    savePref(LS_LANG, lang);
+    render();
+  }
+
   /* ---------- init ---------- */
 
   function init() {
     cacheEls();
+    loadPrefs();
 
     var problemas = Core.validateItems(ITEMS, CATEGORIAS);
     if (problemas.length) console.warn('items.js com problemas:\n' + problemas.join('\n'));
 
     el['cotacao'].value = state.cotacao;
+    bindEvents();
     render();
   }
 
