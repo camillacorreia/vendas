@@ -567,7 +567,7 @@ var ITEMS = [
 
   {
     id: 'pava-electrica',
-    preco: 33,                      // AR$ 10.000 na cotação de referência de 300
+    preco: 30,
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
