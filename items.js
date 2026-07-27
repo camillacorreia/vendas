@@ -425,6 +425,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'freidora-kanji-kjhaf1404',
+    modelo: 'Kanji Home KJHAF1404',
+    preco: 95,
+    precoMercado: 233,              // AR$ 70.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.mercadolibre.com.ar/freidora-de-aire-4-litros-digital-kanjihome-kjhaf1404/p/MLA57822248',
+    es: {
+      titulo: 'Freidora de aire digital 4 L',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Air fryer digital 4 L',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
