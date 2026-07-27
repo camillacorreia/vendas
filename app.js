@@ -149,6 +149,13 @@ var App = (function () {
     h2.textContent = texto.titulo || '';
     head.appendChild(h2);
 
+    if (item.reservado && !item.vendido) {
+      var res = document.createElement('span');
+      res.className = 'badge badge--reservado';
+      res.textContent = dict.reservado;
+      head.appendChild(res);
+    }
+
     var desconto = Core.calcDesconto(item.preco, item.precoMercado);
     if (desconto !== null) {
       var badge = document.createElement('span');

@@ -167,6 +167,8 @@ body {
   font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
 }
 
+.badge--reservado { background: var(--aviso-bg); color: var(--aviso-ink); }
+
 .preco { font-size: 20px; font-weight: 700; margin: 4px 0 0; }
 .preco--aberto { font-size: 16px; color: var(--muted); font-weight: 600; }
 .preco__ars { font-size: 15px; font-weight: 700; color: var(--text); }

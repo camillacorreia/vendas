@@ -93,7 +93,8 @@
       Core.formatARS(t.mercado, taxa)));
 
     var reservados = ITEMS.filter(function (i) {
-      return !i.vendido && typeof RESERVAS === 'object' && RESERVAS[i.id];
+      return !i.vendido && (i.reservado === true ||
+        (typeof RESERVAS === 'object' && RESERVAS[i.id]));
     });
     if (reservados.length) {
       var tr_ = Core.totais(reservados);
@@ -140,12 +141,13 @@
     tr.appendChild(celula(desconto === null ? '—' : '−' + desconto + '%', 'num'));
 
     var reserva = typeof RESERVAS === 'object' ? RESERVAS[item.id] : null;
+    var reservado = !!reserva || item.reservado === true;
 
     var td = document.createElement('td');
     var selo = document.createElement('span');
-    var estado = item.vendido ? 'vendido' : (reserva ? 'reservado' : 'disponivel');
+    var estado = item.vendido ? 'vendido' : (reservado ? 'reservado' : 'disponivel');
     selo.className = 'selo selo--' + estado;
-    selo.textContent = item.vendido ? 'Vendido' : (reserva ? 'Reservado' : 'Disponível');
+    selo.textContent = item.vendido ? 'Vendido' : (reservado ? 'Reservado' : 'Disponível');
     td.appendChild(selo);
 
     if (reserva) {
@@ -154,6 +156,13 @@
       quem.textContent = reserva.por + (reserva.em ? ' · ' + reserva.em : '');
       if (reserva.nota) quem.title = reserva.nota;
       td.appendChild(quem);
+    } else if (item.reservado && !item.vendido) {
+      /* Flag no items.js sem linha correspondente em reservas.js: o selo
+         aparece pro comprador mas você não sabe de quem é. */
+      var semNome = document.createElement('span');
+      semNome.className = 'reserva__quem';
+      semNome.textContent = 'sem nome registrado';
+      td.appendChild(semNome);
     }
     tr.appendChild(td);
 

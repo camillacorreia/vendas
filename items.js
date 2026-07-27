@@ -182,6 +182,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas
     fotos: [
       'images/ar-condicionado/1.jpeg',
@@ -251,6 +252,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas
     fotos: [
       'images/microondas/1.jpeg',
@@ -363,6 +365,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: link de referência
     medidas: { f: 145, a: 120 },
     fotos: [
@@ -430,6 +433,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
     fotos: [
       'images/mesa-com-4-cadeiras/1.jpeg',
@@ -457,6 +461,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/vaso-de-vidro/1.jpeg',
@@ -479,6 +484,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas
     fotos: [
       'images/air-fryer/1.jpeg',
@@ -503,6 +509,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas e link de referência
     fotos: [
       'images/liquificador/1.jpeg',
@@ -748,6 +755,7 @@ var ITEMS = [
     ano: 2024,                         // opcional
     categoria: 'outros',               // ver CATEGORIAS acima
     vendido: false,
+    reservado: false,                  // opcional, mostra o selo RESERVADO
     medidas: { f: 0, p: 0, a: 0 },     // cm, opcional
     medidasTexto: '',                  // opcional, sobrescreve o texto das medidas
     fotos: ['images/pasta-do-item/1.jpg'],   // opcional, uma pasta por item
