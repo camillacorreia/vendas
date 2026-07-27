@@ -367,6 +367,24 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'lampara-colgante-jaula',
+    preco: 55,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: fotos, medidas, valor de mercado e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Lámpara colgante vintage jaula diamante',
+      desc: 'Ya viene con la lámpara. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Luminária pendente vintage gaiola diamante',
+      desc: 'Já vem com a lâmpada. Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
