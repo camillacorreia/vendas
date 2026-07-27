@@ -363,7 +363,8 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: medidas e link de referência
+    // FALTA: link de referência
+    medidas: { f: 145, a: 120 },
     fotos: [
       'images/respaldo/1.jpeg',
     ],
