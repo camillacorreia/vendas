@@ -209,6 +209,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'silla-delphi-premium',
+    modelo: 'Delphi Premium',
+    preco: 380,
+    precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.mercadolibre.com.ar/silla-de-oficina-para-escritorio-ergonomica-delphi-premium-ejecutiva-color-negro-material-del-tapizado-mesh/p/MLA35729287',
+    es: {
+      titulo: 'Silla de oficina ergonómica negra',
+      desc: 'Ejecutiva, tapizado mesh. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Cadeira de escritório ergonômica preta',
+      desc: 'Executiva, encosto em tela. Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
