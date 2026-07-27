@@ -787,6 +787,7 @@ var ITEMS = [
 
   {
     id: 'pratos-vajilla',
+    modelo: 'Camicado',
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -795,12 +796,12 @@ var ITEMS = [
       'images/pratos/1.jpeg',
     ],
     es: {
-      titulo: 'Juego de vajilla con tazas y platos',
-      desc: 'Blanco con filete fino. En perfecto estado.',
+      titulo: 'Juego de tazas y platos, 24 piezas',
+      desc: '4 tazas, 3 pocillos, 4 platitos, 4 platitos de café, 3 platos playos, 3 platos hondos y 3 platos de postre. Tiene algunas marcas de uso.',
     },
     pt: {
-      titulo: 'Aparelho de jantar com xícaras e pratos',
-      desc: 'Branco com friso fino. Em perfeito estado.',
+      titulo: 'Jogo de xícaras e pratos, 24 peças',
+      desc: '4 xícaras, 3 xícaras pequenas, 4 pires, 4 pires de cafezinho, 3 pratos rasos, 3 pratos fundos e 3 pratos de sobremesa. Tem algumas marcas de uso.',
     },
   },
 
