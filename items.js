@@ -405,6 +405,26 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'floreros-vidrio',
+    preco: 30,                      // por unidade
+    qtd: 2,
+    precoCombo: 50,                 // os dois juntos
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: fotos, medidas, valor de mercado e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Florero de vidrio',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Vaso de vidro',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
