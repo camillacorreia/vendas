@@ -130,7 +130,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    medidas: { f: 120, p: 55, a: 76 },   // CONFERIR: vieram do anúncio de referência
+    medidas: { f: 120, p: 50, a: 75 },
     // FALTA: fotos
     fotos: [],
     linkMercado: 'https://www.mercadolibre.com.ar/escritorio-muebles-hierro-y-madera-natural-120cmx55cmx76cm/up/MLAU3827890139',
