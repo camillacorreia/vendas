@@ -445,7 +445,9 @@ var ITEMS = [
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas, valor de mercado e link de referência
-    fotos: [],
+    fotos: [
+      'images/vaso-de-vidro/1.jpeg',
+    ],
     es: {
       titulo: 'Florero de vidrio',
       desc: 'En perfecto estado.',
@@ -532,7 +534,10 @@ var ITEMS = [
     categoria: 'eletrodomesticos',
     vendido: false,
     // FALTA: medidas, valor de mercado e link de referência
-    fotos: [],
+    fotos: [
+      'images/ferro-de-passar/1.jpeg',
+      'images/ferro-de-passar/2.jpeg',
+    ],
     es: {
       titulo: 'Plancha seca con suela de cerámica',
       desc: 'Con rociador. En perfecto estado de funcionamiento.',
