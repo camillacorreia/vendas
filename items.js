@@ -466,6 +466,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'cafeteira-mondial-15-max',
+    modelo: 'Mondial 15 Max',
+    preco: 55,
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos, medidas, valor de mercado e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Cafetera eléctrica 15 tazas',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Cafeteira elétrica 15 xícaras',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
