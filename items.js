@@ -446,6 +446,26 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'licuadora-top-house-l900fb',
+    modelo: 'Top House L-900FB',
+    preco: 75,
+    precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos, medidas e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Licuadora 900 W, jarra de 1,75 L',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Liquidificador 900 W, copo de 1,75 L',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
