@@ -339,7 +339,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: medidas e link de referência
+    // FALTA: link de referência
     medidas: { a: 165 },
     fotos: [
       'images/abajur-de-pe/1.jpeg',
