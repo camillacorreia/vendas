@@ -111,11 +111,11 @@ var ITEMS = [
     linkMercado: 'https://www.mercadolibre.com.ar/impresora-epson-ecotank-m1180-monocromatica-11k-color-blanconegro/p/MLA28464465',
     es: {
       titulo: 'Impresora monocromática EcoTank',
-      desc: 'En perfecto estado de funcionamiento.',
+      desc: 'En perfecto estado de funcionamiento. Ya viene con tinta.',
     },
     pt: {
       titulo: 'Impressora monocromática EcoTank',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: 'Em perfeito estado de funcionamento. Já vem com tinta.',
     },
   },
 
