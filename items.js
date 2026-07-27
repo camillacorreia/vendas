@@ -42,14 +42,18 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     medidas: { f: 43, p: 37 },
-    fotos: ['images/mesas-de-luz/1.png'],
+    fotos: [
+      'images/mesas-de-luz/1.png',
+      'images/mesas-de-luz/2.png',
+      'images/mesas-de-luz/3.png',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
     es: {
-      titulo: 'Mesa de luz blanca con estante',
+      titulo: 'Mesa de luz blanca con desayunador',
       desc: 'En perfecto estado.',
     },
     pt: {
-      titulo: 'Mesa de cabeceira branca com prateleira',
+      titulo: 'Mesa de cabeceira branca com bandeja',
       desc: 'Em perfeito estado.',
     },
   },
