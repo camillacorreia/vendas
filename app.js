@@ -185,10 +185,10 @@ var App = (function () {
       var mercado = document.createElement('p');
       mercado.className = 'mercado';
       mercado.textContent = dict.mercado + ' ';
-      var s = document.createElement('s');
-      s.textContent = Core.formatBRL(item.precoMercado) +
+      var valores = document.createElement('span');
+      valores.textContent = Core.formatBRL(item.precoMercado) +
         ' (' + Core.formatARS(item.precoMercado, state.cotacao) + ')';
-      mercado.appendChild(s);
+      mercado.appendChild(valores);
       body.appendChild(mercado);
 
       if (item.linkMercado) {
@@ -202,6 +202,19 @@ var App = (function () {
           dict.referencia + ' (' + (item.modelo || texto.titulo || '') + ')');
         body.appendChild(ref);
       }
+    }
+
+    if (item.qtd > 1) {
+      var combo = document.createElement('p');
+      combo.className = 'combo';
+      var partes = [item.qtd + ' ' + dict.unidades];
+      if (item.precoCombo) {
+        partes.push(dict.combo.replace('{n}', item.qtd) + ' ' +
+          Core.formatBRL(item.precoCombo) + ' ≈ ' +
+          Core.formatARS(item.precoCombo, state.cotacao));
+      }
+      combo.textContent = partes.join(' · ');
+      body.appendChild(combo);
     }
 
     var metaPartes = [];

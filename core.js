@@ -55,6 +55,13 @@ var Core = (function () {
       if (typeof item.preco !== 'number' || item.preco <= 0) problemas.push(onde + ': preco inválido');
       if (categorias.indexOf(item.categoria) === -1) problemas.push(onde + ': categoria desconhecida "' + item.categoria + '"');
       if (typeof item.vendido !== 'boolean') problemas.push(onde + ': vendido precisa ser true/false');
+      if (item.qtd !== undefined &&
+          (typeof item.qtd !== 'number' || item.qtd < 1 || item.qtd % 1 !== 0)) {
+        problemas.push(onde + ': qtd precisa ser um inteiro >= 1');
+      }
+      if (item.precoCombo !== undefined && !(item.qtd > 1)) {
+        problemas.push(onde + ': precoCombo só faz sentido com qtd > 1');
+      }
       ['es', 'pt'].forEach(function (lang) {
         if (!item[lang] || !item[lang].titulo) problemas.push(onde + ': falta titulo em ' + lang);
       });

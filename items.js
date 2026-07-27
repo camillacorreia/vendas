@@ -32,11 +32,35 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'mesa-de-luz-blanca',
+    preco: 170,                     // por unidade
+    qtd: 2,
+    precoCombo: 300,                // as duas juntas
+    precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    medidas: { f: 43, p: 37 },
+    fotos: ['images/mesas-de-luz/1.png'],
+    linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
+    es: {
+      titulo: 'Mesa de luz blanca con estante',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Mesa de cabeceira branca com prateleira',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
     modelo: 'Marca Modelo',            // opcional
     preco: 0,                          // BRL, obrigatório
+    qtd: 1,                            // opcional, unidades idênticas nesta entrada
+    precoCombo: 0,                     // opcional, preço levando todas as unidades
     precoMercado: 0,                   // BRL, opcional
     ano: 2024,                         // opcional
     categoria: 'outros',               // ver CATEGORIAS acima

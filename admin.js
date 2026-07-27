@@ -106,8 +106,12 @@
     tr.appendChild(nome);
 
     tr.appendChild(celula(item.categoria));
-    tr.appendChild(celula(Core.formatBRL(item.preco), 'num'));
-    tr.appendChild(celula(Core.formatARS(item.preco, taxa), 'num'));
+
+    var unidades = typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
+    tr.appendChild(celula(String(unidades), 'num'));
+
+    tr.appendChild(celula(Core.formatBRL(item.preco * unidades), 'num'));
+    tr.appendChild(celula(Core.formatARS(item.preco * unidades, taxa), 'num'));
 
     var td = document.createElement('td');
     var selo = document.createElement('span');

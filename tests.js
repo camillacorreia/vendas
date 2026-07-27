@@ -222,7 +222,36 @@
     eq('totais ignora preco invalido', Core.totais([{ id: 'x', vendido: false }]).bruto, 0);
   }
 
+  function suiteItens() {
+    var mesa = ITEMS.filter(function (i) { return i.id === 'mesa-de-luz-blanca'; })[0];
+
+    eq('mesa de luz existe', !!mesa, true);
+    eq('mesa de luz tem duas unidades', mesa.qtd, 2);
+    eq('mesa de luz tem preco de combo', mesa.precoCombo, 300);
+    eq('mesa de luz e movel', mesa.categoria, 'moveis');
+    eq('medidas sem altura', Core.medidasText(mesa.medidas), 'F 43 × P 37 cm');
+
+    eq('unidades es', I18N.es.unidades, 'unidades disponibles');
+    eq('combo pt', I18N.pt.combo, 'As {n} juntas:');
+
+    eq('catalogo continua valido', Core.validateItems(ITEMS, CATEGORIAS), []);
+
+    eq('qtd fracionaria e rejeitada',
+      Core.validateItems([{ id: 'x', preco: 1, categoria: 'casa', vendido: false, qtd: 1.5,
+        es: { titulo: 'x' }, pt: { titulo: 'x' } }], CATEGORIAS).length,
+      1);
+
+    eq('precoCombo sem qtd e rejeitado',
+      Core.validateItems([{ id: 'y', preco: 1, categoria: 'casa', vendido: false, precoCombo: 5,
+        es: { titulo: 'y' }, pt: { titulo: 'y' } }], CATEGORIAS).length,
+      1);
+
+    eq('totais contam as duas mesas',
+      Core.totais([mesa]).bruto,
+      340);
+  }
+
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
              suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo,
-             suiteControles, suiteTotais]);
+             suiteControles, suiteTotais, suiteItens]);
 })();
