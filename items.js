@@ -195,7 +195,8 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos e medidas
+    // FALTA: fotos
+    medidas: { f: 62, p: 49, a: 86 },
     fotos: [],
     linkMercado: 'https://www.mercadolibre.com.ar/lavarropas-carga-frontal-7-kg-blanco-drean-next-709-eco-blanco/p/MLA72845638',
     es: {
