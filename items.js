@@ -402,7 +402,7 @@ var ITEMS = [
 
   {
     id: 'lampara-colgante-jaula',
-    preco: 55,
+    preco: 45,
     precoMercado: 67,               // AR$ 20.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
