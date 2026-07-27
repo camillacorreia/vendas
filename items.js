@@ -518,22 +518,24 @@ var ITEMS = [
 
   {
     id: 'cafeteira-mondial-15-max',
-    modelo: 'Mondial 15 Max',
+    modelo: 'Electrolux ECM10',
     preco: 55,
+    precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
+    // FALTA: medidas
+    linkMercado: 'https://www.tienda.electrolux.com.ar/cafetera-electrica-electrolux-inox-ecm10-600ml-1/p',
     fotos: [
       'images/cafeteira/1.jpeg',
       'images/cafeteira/2.jpeg',
     ],
     es: {
-      titulo: 'Cafetera eléctrica 15 tazas',
+      titulo: 'Cafetera eléctrica inox 600 ml',
       desc: 'En perfecto estado de funcionamiento.',
     },
     pt: {
-      titulo: 'Cafeteira elétrica 15 xícaras',
+      titulo: 'Cafeteira elétrica inox 600 ml',
       desc: 'Em perfeito estado de funcionamento.',
     },
   },
