@@ -893,20 +893,21 @@ var ITEMS = [
 
   {
     id: 'secador-pelo',
+    preco: 40,
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: valor de mercado e link de referência
     fotos: [
       'images/secador/1.jpeg',
     ],
     es: {
       titulo: 'Secador de pelo',
-      desc: 'En perfecto estado de funcionamiento.',
+      desc: 'Incluye difusor. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Secador de cabelo',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: 'Acompanha difusor. Em perfeito estado de funcionamento.',
     },
   },
 
