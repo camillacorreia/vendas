@@ -771,19 +771,22 @@ var ITEMS = [
 
   {
     id: 'tacas-de-vinho',
+    preco: 8,                       // por unidade
+    qtd: 8,
+    precoCombo: 60,                 // levando as oito
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/tacas-de-vinho/1.jpeg',
     ],
     es: {
-      titulo: '8 copas de vino',
+      titulo: 'Copas de vino',
       desc: 'En perfecto estado.',
     },
     pt: {
-      titulo: '8 taças de vinho',
+      titulo: 'Taças de vinho',
       desc: 'Em perfeito estado.',
     },
   },
