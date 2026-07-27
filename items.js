@@ -135,7 +135,9 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     medidas: { f: 120, p: 50, a: 75 },
-    fotos: [],
+    fotos: [
+      'images/mesa-escritorio/1.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/escritorio-muebles-hierro-y-madera-natural-120cmx55cmx76cm/up/MLAU3827890139',
     es: {
       titulo: 'Escritorio de hierro y madera natural',
@@ -358,7 +360,9 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     // FALTA: medidas e link de referência
-    fotos: [],
+    fotos: [
+      'images/respaldo/1.jpeg',
+    ],
     es: {
       titulo: 'Respaldo de cama',
       desc: 'En perfecto estado.',
@@ -377,7 +381,9 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     // FALTA: medidas
-    fotos: [],
+    fotos: [
+      'images/armario-cozinha/1.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/mueble-columna-de-cocina-despensero-blanco-10155-color-10155-blanco/p/MLA26320551',
     es: {
       titulo: 'Mueble columna de cocina blanco',
