@@ -175,9 +175,10 @@ var ITEMS = [
 
   {
     id: 'aire-bgh-bs35wcat',
-    modelo: 'BGH BS35WCAT',
+    modelo: 'BGH Silent Air BSE35WCCR',
     preco: 1500,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
+                                // (mercado em jul/2026: AR$ 700.000 a 895.000)
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
@@ -186,14 +187,14 @@ var ITEMS = [
       'images/ar-condicionado/1.jpeg',
       'images/ar-condicionado/2.jpeg',
     ],
-    linkMercado: 'https://www.mercadolibre.com.ar/aire-acondicionado-bgh-split-frio-y-calor-bs35wcat-blanco/p/MLA18705457',
+    linkMercado: 'https://www.fravega.com/p/aire-acondicionado-bgh-silent-air-3450w-f-c-bse35wccr-21198160/',
     es: {
       titulo: 'Aire acondicionado split frío/calor',
-      desc: 'En perfecto estado de funcionamiento.',
+      desc: '12.000 BTU (3000 frigorías, 3450 W), clase A. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Ar-condicionado split quente/frio',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: '12.000 BTU (3000 frigorias, 3450 W), classe A. Em perfeito estado de funcionamento.',
     },
   },
 
