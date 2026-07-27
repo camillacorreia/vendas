@@ -58,6 +58,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'perchero-oliver',
+    modelo: 'Oliver',
+    preco: 300,
+    precoMercado: 963,              // AR$ 289.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://articulo.mercadolibre.com.ar/MLA-1137845696-perchero-de-pie-oliver-escandinavo-moderno-melamina-roble-_JM',
+    es: {
+      titulo: 'Perchero de pie escandinavo',
+      desc: 'Melamina roble. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Cabideiro de pé escandinavo',
+      desc: 'Melamina carvalho. Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
