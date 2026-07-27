@@ -116,7 +116,7 @@ body {
 
 @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-.card__media { position: relative; aspect-ratio: 4 / 3; background: var(--placeholder-bg); cursor: zoom-in; }
+.card__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--placeholder-bg); cursor: zoom-in; }
 .card__img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card__placeholder {
   width: 100%; height: 100%; display: grid; place-items: center;
@@ -127,6 +127,30 @@ body {
   background: var(--overlay-md); color: var(--on-dark); font-size: 12px;
   padding: 2px 8px; border-radius: 999px;
 }
+
+.card__ctrl {
+  position: absolute;
+  background: var(--overlay-md);
+  color: var(--on-dark);
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity .15s;
+}
+.card:hover .card__ctrl,
+.card__ctrl:focus-visible { opacity: 1; }
+@media (hover: none) { .card__ctrl { opacity: 1; } }
+
+.card__ctrl--prev { left: 8px;  top: 50%; transform: translateY(-50%); }
+.card__ctrl--next { right: 8px; top: 50%; transform: translateY(-50%); }
+.card__ctrl--full { right: 8px; top: 8px; }
 
 .card__body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .card__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }

@@ -188,6 +188,12 @@
       3);
   }
 
+  function suiteControles() {
+    eq('verFull es', I18N.es.verFull, 'Ver en pantalla completa');
+    eq('verFull pt', I18N.pt.verFull, 'Ver em tela cheia');
+  }
+
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
-             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo]);
+             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo,
+             suiteControles]);
 })();

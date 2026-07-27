@@ -102,17 +102,38 @@ var App = (function () {
       };
       media.appendChild(img);
 
+      var count = null;
       if (fotos.length > 1) {
-        var count = document.createElement('span');
+        count = document.createElement('span');
         count.className = 'card__count';
         count.textContent = '1 / ' + fotos.length;
         media.appendChild(count);
       }
-      if (!item.vendido) media.dataset.lightbox = item.id;
+
+      if (!item.vendido) {
+        media.dataset.lightbox = item.id;
+        media.dataset.idx = '0';
+
+        if (fotos.length > 1) {
+          media.appendChild(botaoFoto('prev', '‹', dict.fotoAnterior));
+          media.appendChild(botaoFoto('next', '›', dict.fotoSeguinte));
+        }
+        media.appendChild(botaoFoto('full', '⛶', dict.verFull));
+      }
     }
 
     if (item.vendido) media.dataset.vendido = dict.vendido;
     return media;
+  }
+
+  function botaoFoto(acao, glifo, rotulo) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'card__ctrl card__ctrl--' + acao;
+    b.dataset.foto = acao;
+    b.textContent = glifo;
+    b.setAttribute('aria-label', rotulo);
+    return b;
   }
 
   function cardBody(item, dict) {
@@ -351,13 +372,35 @@ var App = (function () {
     mostrarFoto();
   }
 
+  function passarFotoNoCard(media, fotos, delta) {
+    var n = fotos.length;
+    var idx = ((Number(media.dataset.idx) || 0) + delta + n) % n;
+    media.dataset.idx = String(idx);
+
+    var img = media.querySelector('.card__img');
+    if (img) img.src = fotos[idx];
+
+    var count = media.querySelector('.card__count');
+    if (count) count.textContent = (idx + 1) + ' / ' + n;
+  }
+
   function bindLightbox() {
     el['grid'].addEventListener('click', function (ev) {
       var media = ev.target.closest('.card__media');
       if (!media || !media.dataset.lightbox) return;
       var item = ITEMS.filter(function (i) { return i.id === media.dataset.lightbox; })[0];
       if (!item || !item.fotos || item.fotos.length === 0) return;
-      abrirLightbox(item.fotos, 0);
+
+      var botao = ev.target.closest('.card__ctrl');
+      var acao = botao && botao.dataset.foto;
+
+      if (acao === 'prev' || acao === 'next') {
+        ev.stopPropagation();
+        passarFotoNoCard(media, item.fotos, acao === 'next' ? 1 : -1);
+        return;
+      }
+
+      abrirLightbox(item.fotos, Number(media.dataset.idx) || 0);
     });
 
     el['lightbox-close'].addEventListener('click', fecharLightbox);
