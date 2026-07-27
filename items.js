@@ -290,6 +290,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'espelho',
+    preco: 200,
+    precoMercado: 500,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: fotos, medidas e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Espejo',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Espelho',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
