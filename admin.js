@@ -124,6 +124,8 @@
     var desconto = Core.calcDesconto(item.preco, item.precoMercado);
     tr.appendChild(celula(
       item.precoMercado ? Core.formatBRL(item.precoMercado * unidades) : '—', 'num'));
+    tr.appendChild(celula(
+      item.precoMercado ? Core.formatARS(item.precoMercado * unidades, taxa) : '—', 'num'));
     tr.appendChild(celula(desconto === null ? '—' : '−' + desconto + '%', 'num'));
 
     var td = document.createElement('td');
