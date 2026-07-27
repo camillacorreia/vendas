@@ -297,6 +297,7 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     medidas: { f: 200, p: 90 },
+    medidasTexto: '2 metros × 90 cm',
     fotos: [
       'images/sofa-cama/1.jpeg',
     ],
@@ -694,6 +695,7 @@ var ITEMS = [
     categoria: 'outros',               // ver CATEGORIAS acima
     vendido: false,
     medidas: { f: 0, p: 0, a: 0 },     // cm, opcional
+    medidasTexto: '',                  // opcional, sobrescreve o texto das medidas
     fotos: ['images/pasta-do-item/1.jpg'],   // opcional, uma pasta por item
     linkMercado: 'https://…',          // opcional, anúncio de referência do preço de mercado
     es: { titulo: '', desc: '' },

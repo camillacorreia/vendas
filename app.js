@@ -225,7 +225,9 @@ var App = (function () {
     /* O ano de compra não vai no card: o aviso do topo já diz que tudo
        foi comprado em 2024. O campo `ano` segue nos dados. */
     var metaPartes = [];
-    var med = Core.medidasText(item.medidas);
+    /* `medidasTexto` sobrescreve o formato padrão quando o item pede
+       outra redação (ex: metros em vez de centímetros). */
+    var med = item.medidasTexto || Core.medidasText(item.medidas);
     if (med) metaPartes.push(dict.medidasRotulo + ' ' + med);
     if (metaPartes.length) {
       var meta = document.createElement('p');
