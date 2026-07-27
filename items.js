@@ -187,6 +187,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'lavarropas-drean-next-709',
+    modelo: 'Drean Next 7.09 Eco',
+    preco: 1500,
+    precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.mercadolibre.com.ar/lavarropas-carga-frontal-7-kg-blanco-drean-next-709-eco-blanco/p/MLA72845638',
+    es: {
+      titulo: 'Lavarropas carga frontal 7 kg',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Máquina de lavar frontal 7 kg',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
