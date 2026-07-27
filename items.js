@@ -223,7 +223,6 @@ var ITEMS = [
 
   {
     id: 'silla-delphi-premium',
-    modelo: 'Delphi Premium',
     preco: 380,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
     ano: 2024,
