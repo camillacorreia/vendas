@@ -626,27 +626,39 @@ var ITEMS = [
   },
   {
     id: 'planta-2',
+    preco: 40,                      // AR$ 12.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-2/1.jpeg',
     ],
-    es: { titulo: 'Planta 2', desc: '' },
-    pt: { titulo: 'Planta 2', desc: '' },
+    es: {
+      titulo: 'Potus en maceta de cerámica blanca',
+      desc: 'Frondosa y bien tupida. Va con la maceta.',
+    },
+    pt: {
+      titulo: 'Jiboia em vaso de cerâmica branca',
+      desc: 'Cheia e bem fechada. Vai com o vaso.',
+    },
   },
   {
     id: 'planta-3',
+    preco: 40,                      // AR$ 12.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-3/1.jpeg',
     ],
-    es: { titulo: 'Planta 3', desc: '' },
-    pt: { titulo: 'Planta 3', desc: '' },
+    es: {
+      titulo: 'Potus con guías largas',
+      desc: 'Guías largas, ya lista para colgar o guiar por la pared. Va con la maceta.',
+    },
+    pt: {
+      titulo: 'Jiboia com ramos longos',
+      desc: 'Ramos longos, já pronta para pendurar ou guiar pela parede. Vai com o vaso.',
+    },
   },
   {
     id: 'planta-4',
