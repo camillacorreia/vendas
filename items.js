@@ -272,6 +272,24 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'sofa-cama',
+    preco: 250,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    es: {
+      titulo: 'Sofá cama de dos plazas',
+      desc: 'Atención: el tapizado tiene dos agujeros en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones.',
+    },
+    pt: {
+      titulo: 'Sofá-cama de casal',
+      desc: 'Atenção: o estofado tem dois furos no meio. Como cama está perfeito e vira uma cama de casal espaçosa. Inclui 5 almofadas.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
