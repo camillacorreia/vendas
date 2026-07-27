@@ -167,9 +167,9 @@ body {
 
 .preco { font-size: 20px; font-weight: 700; margin: 4px 0 0; }
 .preco--aberto { font-size: 16px; color: var(--muted); font-weight: 600; }
-.preco__ars { font-size: 15px; font-weight: 500; color: var(--muted); }
+.preco__ars { font-size: 15px; font-weight: 700; color: var(--text); }
 .mercado { font-size: 15px; color: var(--text); margin: 0; }
-.mercado span { font-weight: 700; }
+.mercado span { font-weight: 400; }
 .mercado__ref { color: var(--muted); display: inline-block; margin-top: 2px; font-size: 13px; }
 .combo { font-size: 13px; color: var(--accent-ink); margin: 0; font-weight: 600; }
 .meta { font-size: 12px; color: var(--muted); margin: 0; }
