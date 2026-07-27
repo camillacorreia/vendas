@@ -671,11 +671,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Palo de agua (Dracaena fragrans)',
-      desc: 'También conocido como tronco de Brasil. Va con la maceta. Algunas puntas de las hojas están secas.',
+      desc: 'También conocido como tronco de Brasil. Va con la maceta y el trípode de madera. Algunas puntas de las hojas están secas.',
     },
     pt: {
       titulo: "Pau-d'água (Dracaena fragrans)",
-      desc: 'Vai com o vaso. Algumas pontas das folhas estão secas.',
+      desc: 'Vai com o vaso e o tripé de madeira. Algumas pontas das folhas estão secas.',
     },
   },
   {
