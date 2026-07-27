@@ -297,6 +297,7 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     // FALTA: medidas
+    medidas: { f: 200, p: 90 },
     fotos: [
       'images/sofa-cama/1.jpeg',
     ],
