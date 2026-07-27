@@ -607,15 +607,22 @@ var ITEMS = [
 
   {
     id: 'planta-1',
+    preco: 70,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
+    // FALTA: altura (do chão até a folha mais alta)
     fotos: [
       'images/planta-1/1.jpeg',
     ],
-    es: { titulo: 'Planta 1', desc: '' },
-    pt: { titulo: 'Planta 1', desc: '' },
+    es: {
+      titulo: 'Sansevieria Laurentii adulta, con maceta',
+      desc: 'Variedad Laurentii, la de bordes amarillos. Es un ejemplar adulto: una planta chica tarda años en llegar a este porte y adultas casi no se consiguen. Va con la maceta.',
+    },
+    pt: {
+      titulo: 'Espada-de-são-jorge Laurentii adulta, com vaso',
+      desc: 'Variedade Laurentii, a de bordas amarelas. É um exemplar adulto: uma planta pequena leva anos para chegar nesse porte e adultas quase não se acham. Vai com o vaso.',
+    },
   },
   {
     id: 'planta-2',
