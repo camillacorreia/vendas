@@ -291,7 +291,7 @@ var ITEMS = [
 
   {
     id: 'sofa-cama',
-    preco: 350,
+    preco: 500,
     precoMercado: 1200,
     ano: 2024,
     categoria: 'moveis',
@@ -302,11 +302,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Sofá cama de dos plazas',
-      desc: 'Atención: el tapizado tiene dos agujeros en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones.',
+      desc: 'Atención: el tapizado tiene dos agujeros en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones. Precio negociable.',
     },
     pt: {
       titulo: 'Sofá-cama de casal',
-      desc: 'Atenção: o estofado tem dois furos no meio. Como cama está perfeito e vira uma cama de casal espaçosa. Inclui 5 almofadas.',
+      desc: 'Atenção: o estofado tem dois furos no meio. Como cama está perfeito e vira uma cama de casal espaçosa. Inclui 5 almofadas. Preço negociável.',
     },
   },
 
