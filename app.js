@@ -217,8 +217,9 @@ var App = (function () {
       body.appendChild(combo);
     }
 
+    /* O ano de compra não vai no card: o aviso do topo já diz que tudo
+       foi comprado em 2024. O campo `ano` segue nos dados. */
     var metaPartes = [];
-    if (item.ano) metaPartes.push(dict.comprado + ' ' + item.ano);
     var med = Core.medidasText(item.medidas);
     if (med) metaPartes.push(dict.medidasRotulo + ' ' + med);
     if (metaPartes.length) {
