@@ -403,10 +403,11 @@ var ITEMS = [
   {
     id: 'lampara-colgante-jaula',
     preco: 55,
+    precoMercado: 67,               // AR$ 20.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
+    // FALTA: medidas e link de referência
     fotos: [
       'images/lampara-colgador/1.jpeg',
       'images/lampara-colgador/2.jpeg',
