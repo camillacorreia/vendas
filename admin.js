@@ -139,7 +139,7 @@
       item.precoMercado ? Core.formatARS(item.precoMercado * unidades, taxa) : '—', 'num'));
     tr.appendChild(celula(desconto === null ? '—' : '−' + desconto + '%', 'num'));
 
-    var reserva = !item.vendido && typeof RESERVAS === 'object' ? RESERVAS[item.id] : null;
+    var reserva = typeof RESERVAS === 'object' ? RESERVAS[item.id] : null;
 
     var td = document.createElement('td');
     var selo = document.createElement('span');

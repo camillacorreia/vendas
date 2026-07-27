@@ -23,4 +23,5 @@ var RESERVAS = {
   'aire-bgh-bs35wcat':        { por: 'Ivan', em: '2026-07-27' },
   'comedor-escandinavo':      { por: 'Ivan', em: '2026-07-27' },
   'freidora-kanji-kjhaf1404': { por: 'Ivan', em: '2026-07-27' },
+  'planta-4':                 { por: 'Gladys', em: '2026-07-27' },
 };
