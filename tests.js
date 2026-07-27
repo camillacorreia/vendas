@@ -218,7 +218,11 @@
       Core.totais(lote).bruto);
     eq('totais de lista vazia',
       Core.totais([]),
-      { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0 });
+      { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0, mercado: 0, economia: 0 });
+    eq('economia soma a diferenca pro mercado',
+      Core.totais([{ id: 'm', preco: 100, precoMercado: 250, vendido: false }]).economia, 150);
+    eq('item sem mercado nao gera economia',
+      Core.totais([{ id: 'm', preco: 100, vendido: false }]).economia, 0);
     eq('totais ignora preco invalido', Core.totais([{ id: 'x', vendido: false }]).bruto, 0);
   }
 

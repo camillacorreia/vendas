@@ -88,6 +88,14 @@
     el['resumo'].appendChild(cartao(
       'Total do acervo', Core.formatBRL(t.bruto),
       Core.formatARS(t.bruto, taxa) + ' · ' + t.qtd + ' item(ns)'));
+    el['resumo'].appendChild(cartao(
+      'Valor de mercado', Core.formatBRL(t.mercado),
+      Core.formatARS(t.mercado, taxa)));
+
+    var abatimento = t.mercado > 0 ? Math.round((t.economia / t.mercado) * 100) : 0;
+    el['resumo'].appendChild(cartao(
+      'Abaixo do mercado', Core.formatBRL(t.economia),
+      '−' + abatimento + '% no total'));
   }
 
   function celula(texto, classe) {
@@ -112,6 +120,11 @@
 
     tr.appendChild(celula(Core.formatBRL(item.preco * unidades), 'num'));
     tr.appendChild(celula(Core.formatARS(item.preco * unidades, taxa), 'num'));
+
+    var desconto = Core.calcDesconto(item.preco, item.precoMercado);
+    tr.appendChild(celula(
+      item.precoMercado ? Core.formatBRL(item.precoMercado * unidades) : '—', 'num'));
+    tr.appendChild(celula(desconto === null ? '—' : '−' + desconto + '%', 'num'));
 
     var td = document.createElement('td');
     var selo = document.createElement('span');

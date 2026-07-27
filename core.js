@@ -122,13 +122,17 @@ var Core = (function () {
   }
 
   function totais(items) {
-    var t = { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0 };
+    var t = { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0, mercado: 0, economia: 0 };
     items.forEach(function (item) {
       var preco = typeof item.preco === 'number' ? item.preco : 0;
       var unidades = typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
       var valor = preco * unidades;
+      /* Item sem valor de mercado conta pelo próprio preço, então não infla
+         a economia com um desconto que ninguém mediu. */
+      var mercado = typeof item.precoMercado === 'number' ? item.precoMercado : preco;
       t.qtd += unidades;
       t.bruto += valor;
+      t.mercado += mercado * unidades;
       if (item.vendido) {
         t.qtdVendida += unidades;
         t.vendido += valor;
@@ -136,6 +140,7 @@ var Core = (function () {
         t.aVender += valor;
       }
     });
+    t.economia = t.mercado - t.bruto;
     return t;
   }
 
