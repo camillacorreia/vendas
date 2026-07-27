@@ -115,7 +115,7 @@
 
     tr.appendChild(celula(item.categoria));
 
-    var unidades = typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
+    var unidades = unidadesDe(item);
     tr.appendChild(celula(String(unidades), 'num'));
 
     tr.appendChild(celula(Core.formatBRL(item.preco * unidades), 'num'));
@@ -138,9 +138,20 @@
     return tr;
   }
 
+  function unidadesDe(item) {
+    return typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
+  }
+
+  /* A tabela mostra o total da linha, então ordena por total — não por preço
+     unitário, senão uma linha de 2 unidades aparece fora de lugar. */
+  function porTotalDesc(a, b) {
+    if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
+    return (b.preco * unidadesDe(b)) - (a.preco * unidadesDe(a));
+  }
+
   function render() {
     var taxa = cotacao();
-    var lista = Core.sortItems(ITEMS, 'preco-desc');
+    var lista = ITEMS.slice().sort(porTotalDesc);
 
     renderResumo(Core.totais(ITEMS), taxa);
 
