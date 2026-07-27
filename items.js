@@ -251,6 +251,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'smart-tv-tcl-43s5k',
+    modelo: 'TCL 43S5K',
+    preco: 1200,
+    precoMercado: 1833,             // AR$ 550.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletronicos',
+    vendido: false,
+    // FALTA: fotos e medidas
+    fotos: [],
+    linkMercado: 'https://www.cetrogar.com.ar/smart-tv-tcl-qled-43-43s5k-google-tv-tv3261/p',
+    es: {
+      titulo: 'Smart TV QLED 43" Google TV',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Smart TV QLED 43" Google TV',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
