@@ -174,11 +174,16 @@ var App = (function () {
 
     var preco = document.createElement('p');
     preco.className = 'preco';
-    preco.textContent = Core.formatBRL(item.preco) + ' ';
-    var ars = document.createElement('span');
-    ars.className = 'preco__ars';
-    ars.textContent = '≈ ' + Core.formatARS(item.preco, state.cotacao);
-    preco.appendChild(ars);
+    if (Core.temPreco(item)) {
+      preco.textContent = Core.formatBRL(item.preco) + ' ';
+      var ars = document.createElement('span');
+      ars.className = 'preco__ars';
+      ars.textContent = '≈ ' + Core.formatARS(item.preco, state.cotacao);
+      preco.appendChild(ars);
+    } else {
+      preco.classList.add('preco--aberto');
+      preco.textContent = dict.aConsultar;
+    }
     body.appendChild(preco);
 
     if (desconto !== null) {

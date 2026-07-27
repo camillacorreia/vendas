@@ -166,6 +166,7 @@ body {
 }
 
 .preco { font-size: 20px; font-weight: 700; margin: 4px 0 0; }
+.preco--aberto { font-size: 16px; color: var(--muted); font-weight: 600; }
 .preco__ars { font-size: 15px; font-weight: 500; color: var(--muted); }
 .mercado { font-size: 15px; color: var(--text); margin: 0; }
 .mercado span { font-weight: 700; }

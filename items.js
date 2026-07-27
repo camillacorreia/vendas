@@ -85,13 +85,15 @@ var ITEMS = [
 
   {
     id: 'apoya-pies',
-    preco: 80,
+    preco: 45,
     precoMercado: 150,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: fotos, medidas e link de referência
-    fotos: [],
+    // FALTA: medidas e link de referência
+    fotos: [
+      'images/apoio-de-pes/1.jpeg',
+    ],
     es: {
       titulo: 'Apoyapiés ergonómico para escritorio',
       desc: 'En perfecto estado.',
@@ -110,8 +112,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/impressora/1.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/impresora-epson-ecotank-m1180-monocromatica-11k-color-blanconegro/p/MLA28464465',
     es: {
       titulo: 'Impresora monocromática EcoTank',
@@ -131,7 +135,6 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     medidas: { f: 120, p: 50, a: 75 },
-    // FALTA: fotos
     fotos: [],
     linkMercado: 'https://www.mercadolibre.com.ar/escritorio-muebles-hierro-y-madera-natural-120cmx55cmx76cm/up/MLAU3827890139',
     es: {
@@ -154,7 +157,9 @@ var ITEMS = [
     vendido: false,
     // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
     medidas: { f: 166, p: 37, a: 60 },
-    fotos: [],
+    fotos: [
+      'images/rack/1.jpeg',
+    ],
     linkMercado: 'https://www.megatone.net/producto/rack-para-tv-steel-dst03-dst03rnn-delos_RAC3031DEL/',
     es: {
       titulo: 'Rack de TV industrial hasta 65"',
@@ -174,8 +179,11 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/ar-condicionado/1.jpeg',
+      'images/ar-condicionado/2.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/aire-acondicionado-bgh-split-frio-y-calor-bs35wcat-blanco/p/MLA18705457',
     es: {
       titulo: 'Aire acondicionado split frío/calor',
@@ -195,9 +203,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos
     medidas: { f: 62, p: 49, a: 86 },
-    fotos: [],
+    fotos: [
+      'images/maquina-de-lavar/1.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/lavarropas-carga-frontal-7-kg-blanco-drean-next-709-eco-blanco/p/MLA72845638',
     es: {
       titulo: 'Lavarropas carga frontal 7 kg',
@@ -217,8 +226,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/cadeira-escritorio/1.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/silla-de-oficina-para-escritorio-ergonomica-delphi-premium-ejecutiva-color-negro-material-del-tapizado-mesh/p/MLA35729287',
     es: {
       titulo: 'Silla de oficina ergonómica negra',
@@ -238,8 +249,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/microondas/1.jpeg',
+    ],
     linkMercado: 'https://www.cetrogar.com.ar/microondas-bgh-digital-b120ds20i-20lt-700w-lb3891/p',
     es: {
       titulo: 'Microondas digital 20 L plata',
@@ -259,8 +272,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/smart-tv/1.jpeg',
+    ],
     linkMercado: 'https://www.cetrogar.com.ar/smart-tv-tcl-qled-43-43s5k-google-tv-tv3261/p',
     es: {
       titulo: 'Smart TV QLED 43" Google TV',
@@ -278,8 +293,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/sofa-cama/1.jpeg',
+    ],
     es: {
       titulo: 'Sofá cama de dos plazas',
       desc: 'Atención: el tapizado tiene dos agujeros en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones.',
@@ -297,8 +314,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: fotos, medidas e link de referência
-    fotos: [],
+    // FALTA: medidas e link de referência
+    fotos: [
+      'images/espelho/1.jpeg',
+    ],
     es: {
       titulo: 'Espejo',
       desc: 'En perfecto estado.',
@@ -316,8 +335,11 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: fotos, medidas e link de referência
-    fotos: [],
+    // FALTA: medidas e link de referência
+    fotos: [
+      'images/abajur-de-pe/1.jpeg',
+      'images/abajur-de-pe/2.jpeg',
+    ],
     es: {
       titulo: 'Lámpara de pie',
       desc: 'En perfecto estado de funcionamiento.',
@@ -335,7 +357,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: fotos, medidas e link de referência
+    // FALTA: medidas e link de referência
     fotos: [],
     es: {
       titulo: 'Respaldo de cama',
@@ -354,7 +376,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: fotos e medidas
+    // FALTA: medidas
     fotos: [],
     linkMercado: 'https://www.mercadolibre.com.ar/mueble-columna-de-cocina-despensero-blanco-10155-color-10155-blanco/p/MLA26320551',
     es: {
@@ -373,8 +395,11 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: fotos, medidas, valor de mercado e link de referência
-    fotos: [],
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/lampara-colgador/1.jpeg',
+      'images/lampara-colgador/2.jpeg',
+    ],
     es: {
       titulo: 'Lámpara colgante vintage jaula diamante',
       desc: 'Ya viene con la lámpara. En perfecto estado de funcionamiento.',
@@ -393,7 +418,13 @@ var ITEMS = [
     categoria: 'moveis',
     vendido: false,
     // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
-    fotos: [],
+    fotos: [
+      'images/mesa-com-4-cadeiras/1.jpeg',
+      'images/mesa-com-4-cadeiras/2.jpeg',
+      'images/mesa-com-4-cadeiras/3.jpeg',
+      'images/mesa-com-4-cadeiras/4.jpeg',
+      'images/mesa-com-4-cadeiras/5.jpeg',
+    ],
     linkMercado: 'https://articulo.mercadolibre.com.ar/MLA-1384569291-juego-comedor-nordico-mesa-escandinava-120-4-sillas-eames-_JM',
     es: {
       titulo: 'Juego de comedor escandinavo: mesa + 4 sillas',
@@ -413,7 +444,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: fotos, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [],
     es: {
       titulo: 'Florero de vidrio',
@@ -433,8 +464,11 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos e medidas
-    fotos: [],
+    // FALTA: medidas
+    fotos: [
+      'images/air-fryer/1.jpeg',
+      'images/air-fryer/2.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/freidora-de-aire-4-litros-digital-kanjihome-kjhaf1404/p/MLA57822248',
     es: {
       titulo: 'Freidora de aire digital 4 L',
@@ -454,8 +488,10 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos, medidas e link de referência
-    fotos: [],
+    // FALTA: medidas e link de referência
+    fotos: [
+      'images/liquificador/1.jpeg',
+    ],
     es: {
       titulo: 'Licuadora 900 W, jarra de 1,75 L',
       desc: 'En perfecto estado de funcionamiento.',
@@ -473,8 +509,11 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos, medidas, valor de mercado e link de referência
-    fotos: [],
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/cafeteira/1.jpeg',
+      'images/cafeteira/2.jpeg',
+    ],
     es: {
       titulo: 'Cafetera eléctrica 15 tazas',
       desc: 'En perfecto estado de funcionamiento.',
@@ -492,7 +531,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: fotos, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [],
     es: {
       titulo: 'Plancha seca con suela de cerámica',
@@ -502,6 +541,131 @@ var ITEMS = [
       titulo: 'Ferro de passar a seco com base cerâmica',
       desc: 'Com borrifador. Em perfeito estado de funcionamento.',
     },
+  },
+
+  {
+    id: 'pava-electrica',
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/chaleira-eletrica/1.jpeg',
+    ],
+    es: {
+      titulo: 'Pava eléctrica',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Chaleira elétrica',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'tostadora',
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/torradeira/1.jpeg',
+    ],
+    es: {
+      titulo: 'Tostadora',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Torradeira',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'planta-1',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-1/1.jpeg',
+    ],
+    es: { titulo: 'Planta 1', desc: '' },
+    pt: { titulo: 'Planta 1', desc: '' },
+  },
+  {
+    id: 'planta-2',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-2/1.jpeg',
+    ],
+    es: { titulo: 'Planta 2', desc: '' },
+    pt: { titulo: 'Planta 2', desc: '' },
+  },
+  {
+    id: 'planta-3',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-3/1.jpeg',
+    ],
+    es: { titulo: 'Planta 3', desc: '' },
+    pt: { titulo: 'Planta 3', desc: '' },
+  },
+  {
+    id: 'planta-4',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-4/1.jpeg',
+    ],
+    es: { titulo: 'Planta 4', desc: '' },
+    pt: { titulo: 'Planta 4', desc: '' },
+  },
+  {
+    id: 'planta-5',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-5/1.jpeg',
+    ],
+    es: { titulo: 'Planta 5', desc: '' },
+    pt: { titulo: 'Planta 5', desc: '' },
+  },
+  {
+    id: 'planta-6',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-6/1.jpeg',
+    ],
+    es: { titulo: 'Planta 6', desc: '' },
+    pt: { titulo: 'Planta 6', desc: '' },
+  },
+  {
+    id: 'planta-7',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço
+    fotos: [
+      'images/planta-7/1.jpeg',
+      'images/planta-7/2.jpeg',
+      'images/planta-7/3.jpeg',
+    ],
+    es: { titulo: 'Planta 7', desc: '' },
+    pt: { titulo: 'Planta 7', desc: '' },
   },
 
   /* ---- MODELO PARA COPIAR ----

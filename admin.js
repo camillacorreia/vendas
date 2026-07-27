@@ -118,8 +118,9 @@
     var unidades = unidadesDe(item);
     tr.appendChild(celula(String(unidades), 'num'));
 
-    tr.appendChild(celula(Core.formatBRL(item.preco * unidades), 'num'));
-    tr.appendChild(celula(Core.formatARS(item.preco * unidades, taxa), 'num'));
+    var temPreco = Core.temPreco(item);
+    tr.appendChild(celula(temPreco ? Core.formatBRL(item.preco * unidades) : '—', 'num'));
+    tr.appendChild(celula(temPreco ? Core.formatARS(item.preco * unidades, taxa) : '—', 'num'));
 
     var desconto = Core.calcDesconto(item.preco, item.precoMercado);
     tr.appendChild(celula(

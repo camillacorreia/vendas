@@ -47,12 +47,24 @@ var Core = (function () {
     return n;
   }
 
+  /* Item sem preço definido ainda: o card mostra "a combinar" em vez de um
+     valor, e ele vale zero em qualquer soma ou ordenação. */
+  function temPreco(item) {
+    return typeof item.preco === 'number' && item.preco > 0;
+  }
+
+  function precoDe(item) {
+    return temPreco(item) ? item.preco : 0;
+  }
+
   function validateItems(items, categorias) {
     var problemas = [];
     items.forEach(function (item, i) {
       var onde = 'item[' + i + '] ' + (item.id || '(sem id)');
       if (!item.id) problemas.push(onde + ': falta id');
-      if (typeof item.preco !== 'number' || item.preco <= 0) problemas.push(onde + ': preco inválido');
+      if (item.preco !== undefined && (typeof item.preco !== 'number' || item.preco <= 0)) {
+        problemas.push(onde + ': preco inválido');
+      }
       if (categorias.indexOf(item.categoria) === -1) problemas.push(onde + ': categoria desconhecida "' + item.categoria + '"');
       if (typeof item.vendido !== 'boolean') problemas.push(onde + ': vendido precisa ser true/false');
       if (item.qtd !== undefined &&
@@ -95,13 +107,13 @@ var Core = (function () {
     copia.sort(function (a, b) {
       /* Vendido sempre por último, qualquer que seja a ordenação. */
       if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
-      if (mode === 'preco-desc') return b.preco - a.preco;
+      if (mode === 'preco-desc') return precoDe(b) - precoDe(a);
       if (mode === 'desconto-desc') {
         var da = calcDesconto(a.preco, a.precoMercado) || 0;
         var db = calcDesconto(b.preco, b.precoMercado) || 0;
         return db - da;
       }
-      return a.preco - b.preco; // 'preco-asc' é o padrão
+      return precoDe(a) - precoDe(b); // 'preco-asc' é o padrão
     });
     return copia;
   }
@@ -117,14 +129,15 @@ var Core = (function () {
   function waLink(item, lang, phone) {
     var t = I18N[lang];
     var titulo = (item[lang] || {}).titulo || '';
-    var msg = t.msgWhats + titulo + ' (' + formatBRL(item.preco) + ')';
+    var msg = t.msgWhats + titulo;
+    if (temPreco(item)) msg += ' (' + formatBRL(item.preco) + ')';
     return 'https://wa.me/' + phone + '?text=' + encodeURIComponent(msg);
   }
 
   function totais(items) {
     var t = { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0, mercado: 0, economia: 0 };
     items.forEach(function (item) {
-      var preco = typeof item.preco === 'number' ? item.preco : 0;
+      var preco = precoDe(item);
       var unidades = typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
       var valor = preco * unidades;
       /* Item sem valor de mercado conta pelo próprio preço, então não infla
@@ -151,6 +164,8 @@ var Core = (function () {
     medidasText: medidasText,
     parseCotacao: parseCotacao,
     validateItems: validateItems,
+    temPreco: temPreco,
+    precoDe: precoDe,
     normalize: normalize,
     filterItems: filterItems,
     sortItems: sortItems,
