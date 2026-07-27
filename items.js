@@ -680,7 +680,7 @@ var ITEMS = [
   },
   {
     id: 'planta-5',
-    preco: 93,                      // AR$ 28.000 na cotação de referência de 300
+    preco: 95,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -698,7 +698,7 @@ var ITEMS = [
   },
   {
     id: 'planta-6',
-    preco: 93,                      // AR$ 28.000 na cotação de referência de 300
+    preco: 95,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
