@@ -318,6 +318,7 @@ var ITEMS = [
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas e link de referência
+    medidas: { f: 62, a: 155 },
     fotos: [
       'images/espelho/1.jpeg',
     ],
