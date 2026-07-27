@@ -187,6 +187,7 @@ var ITEMS = [
     fotos: [
       'images/ar-condicionado/1.jpeg',
       'images/ar-condicionado/2.jpeg',
+      'images/ar-condicionado/3.jpeg',
     ],
     linkMercado: 'https://www.fravega.com/p/aire-acondicionado-bgh-silent-air-3450w-f-c-bse35wccr-21198160/',
     es: {
@@ -621,6 +622,7 @@ var ITEMS = [
     // FALTA: altura (do chão até a folha mais alta)
     fotos: [
       'images/planta-1/1.jpeg',
+      'images/planta-1/2.jpeg',
     ],
     es: {
       titulo: 'Sansevieria Laurentii adulta, con maceta',
@@ -741,6 +743,199 @@ var ITEMS = [
     pt: {
       titulo: 'Gerânio florido (Pelargonium hortorum)',
       desc: 'Na Argentina chamam de malvón, e é a planta de sacada mais clássica que existe por lá. Reconhece-se pela mancha escura em forma de ferradura nas folhas. Florida em vermelho. Vai com o vaso.',
+    },
+  },
+
+  {
+    id: 'assadeira-marinex',
+    modelo: 'Marinex',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/assadeira-marinex/1.jpeg',
+    ],
+    es: {
+      titulo: 'Fuente de vidrio para horno',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Assadeira de vidro',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'tacas-de-vinho',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/tacas-de-vinho/1.jpeg',
+    ],
+    es: {
+      titulo: 'Copas de vino',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Taças de vinho',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'pratos-vajilla',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/pratos/1.jpeg',
+    ],
+    es: {
+      titulo: 'Juego de vajilla con tazas y platos',
+      desc: 'Blanco con filete fino. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Aparelho de jantar com xícaras e pratos',
+      desc: 'Branco com friso fino. Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'pratos-brancos',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/pratos-2/1.jpeg',
+    ],
+    es: {
+      titulo: 'Platos blancos, playos y hondos',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Pratos brancos, rasos e fundos',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'bowl',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/bowl/1.jpeg',
+    ],
+    es: {
+      titulo: 'Bowl',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Bowl',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'plafon-led',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/plafon-de-led/1.jpeg',
+    ],
+    es: {
+      titulo: 'Plafón LED de techo',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Plafon de LED de teto',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'balanza-digital',
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/balanca/1.jpeg',
+    ],
+    es: {
+      titulo: 'Balanza digital de baño, vidrio',
+      desc: 'Hasta 180 kg. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Balança digital de banheiro, vidro',
+      desc: 'Até 180 kg. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'secador-pelo',
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/secador/1.jpeg',
+    ],
+    es: {
+      titulo: 'Secador de pelo',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Secador de cabelo',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'planchita-pelo',
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/prancha/1.jpeg',
+    ],
+    es: {
+      titulo: 'Planchita de pelo',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Prancha de cabelo',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'babyliss',
+    modelo: 'Babyliss',
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: preço, medidas, valor de mercado e link de referência
+    fotos: [
+      'images/babyliss/1.jpeg',
+      'images/babyliss/2.jpeg',
+    ],
+    es: {
+      titulo: 'Rizador de pelo',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Modelador de cachos',
+      desc: 'Em perfeito estado de funcionamento.',
     },
   },
 
