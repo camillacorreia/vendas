@@ -548,7 +548,7 @@ var ITEMS = [
     precoMercado: 123,              // AR$ 37.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas
     linkMercado: 'https://www.fravega.com/p/plancha-seca-con-rociador-1200w-suela-ceramica-atma-pas1217n--22841812/',
     fotos: [
@@ -719,7 +719,7 @@ var ITEMS = [
     preco: 20,
     ano: 2024,
     categoria: 'plantas',
-    vendido: false,
+    vendido: true,
     fotos: [
       'images/planta-7/1.jpeg',
       'images/planta-7/2.jpeg',
