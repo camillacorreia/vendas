@@ -152,9 +152,8 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    // FALTA: fotos
-    // A largura veio do anúncio como "2,2 cm", que não fecha com um rack de 65".
-    medidas: { f: 2.2, p: 40, a: 60 },
+    // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
+    medidas: { f: 166, p: 37, a: 60 },
     fotos: [],
     linkMercado: 'https://www.megatone.net/producto/rack-para-tv-steel-dst03-dst03rnn-delos_RAC3031DEL/',
     es: {
