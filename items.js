@@ -402,8 +402,9 @@ var ITEMS = [
 
   {
     id: 'lampara-colgante-jaula',
-    preco: 45,
-    precoMercado: 67,               // AR$ 20.000 na cotação de referência de 300
+    preco: 55,
+    precoMercado: 90,               // AR$ 27.000: 20.000 da luminária + ~7.000 da lâmpada
+                                // de filamento, na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -542,23 +543,25 @@ var ITEMS = [
 
   {
     id: 'plancha-atma',
-    modelo: 'Atma',
+    modelo: 'Atma PAS1217N',
     preco: 35,
+    precoMercado: 123,              // AR$ 37.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
+    // FALTA: medidas
+    linkMercado: 'https://www.fravega.com/p/plancha-seca-con-rociador-1200w-suela-ceramica-atma-pas1217n--22841812/',
     fotos: [
       'images/ferro-de-passar/1.jpeg',
       'images/ferro-de-passar/2.jpeg',
     ],
     es: {
       titulo: 'Plancha seca con suela de cerámica',
-      desc: 'Con rociador. En perfecto estado de funcionamiento.',
+      desc: '1200 W, con rociador. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Ferro de passar a seco com base cerâmica',
-      desc: 'Com borrifador. Em perfeito estado de funcionamento.',
+      desc: '1200 W, com borrifador. Em perfeito estado de funcionamento.',
     },
   },
 
