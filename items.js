@@ -309,6 +309,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'lampara-de-pie',
+    preco: 250,
+    precoMercado: 400,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: fotos, medidas e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Lámpara de pie',
+      desc: 'En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Luminária de piso',
+      desc: 'Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
