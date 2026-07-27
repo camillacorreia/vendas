@@ -485,6 +485,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'plancha-atma',
+    modelo: 'Atma',
+    preco: 35,
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: fotos, medidas, valor de mercado e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Plancha seca con suela de cerámica',
+      desc: 'Con rociador. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Ferro de passar a seco com base cerâmica',
+      desc: 'Com borrifador. Em perfeito estado de funcionamento.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
