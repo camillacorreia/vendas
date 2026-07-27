@@ -17,4 +17,6 @@
 var RESERVAS = {
   // 'id-do-item': { por: 'Nome', em: '2026-07-27', nota: '' },
   'microondas-bgh-b120ds20i': { por: 'Sarah', em: '2026-07-27' },
+  'respaldo-de-cama':         { por: 'Nanda', em: '2026-07-27' },
+  'floreros-vidrio':          { por: 'Nanda', em: '2026-07-27' },
 };
