@@ -233,7 +233,7 @@ var ITEMS = [
   {
     id: 'microondas-bgh-b120ds20i',
     modelo: 'BGH B120DS20I',
-    preco: 380,
+    preco: 400,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
