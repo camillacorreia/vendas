@@ -684,6 +684,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'plantas',
     vendido: false,
+    medidas: { a: 100 },
     fotos: [
       'images/planta-5/1.jpeg',
     ],
@@ -702,6 +703,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'plantas',
     vendido: false,
+    medidas: { a: 90 },
     fotos: [
       'images/planta-6/1.jpeg',
     ],
