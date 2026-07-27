@@ -749,10 +749,13 @@ var ITEMS = [
   {
     id: 'assadeira-marinex',
     modelo: 'Marinex',
+    preco: 25,                      // por unidade
+    qtd: 4,
+    precoCombo: 90,                 // levando as quatro
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/assadeira-marinex/1.jpeg',
     ],
