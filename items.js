@@ -794,10 +794,11 @@ var ITEMS = [
   {
     id: 'pratos-vajilla',
     modelo: 'Camicado',
+    preco: 95,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: valor de mercado e link de referência
     fotos: [
       'images/pratos/1.jpeg',
     ],
