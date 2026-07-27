@@ -119,6 +119,27 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'escritorio-hierro-madera',
+    preco: 300,
+    precoMercado: 533,              // AR$ 160.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    medidas: { f: 120, p: 55, a: 76 },   // CONFERIR: vieram do anúncio de referência
+    // FALTA: fotos
+    fotos: [],
+    linkMercado: 'https://www.mercadolibre.com.ar/escritorio-muebles-hierro-y-madera-natural-120cmx55cmx76cm/up/MLAU3827890139',
+    es: {
+      titulo: 'Escritorio de hierro y madera natural',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Escrivaninha de ferro e madeira natural',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
