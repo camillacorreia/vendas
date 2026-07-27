@@ -913,20 +913,22 @@ var ITEMS = [
 
   {
     id: 'planchita-pelo',
+    modelo: 'Mondial Twist P-29',
+    preco: 100,
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: valor de mercado e link de referência
     fotos: [
       'images/prancha/1.jpeg',
     ],
     es: {
       titulo: 'Planchita de pelo',
-      desc: 'En perfecto estado de funcionamiento.',
+      desc: 'Bivolt. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Prancha de cabelo',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: 'Bivolt. Em perfeito estado de funcionamento.',
     },
   },
 
