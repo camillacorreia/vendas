@@ -376,7 +376,7 @@ var ITEMS = [
   {
     id: 'mueble-columna-cocina',
     preco: 480,
-    precoMercado: 1000,             // AR$ 300.000 na cotação de referência de 300
+    precoMercado: 833,              // AR$ 250.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
