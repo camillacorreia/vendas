@@ -813,29 +813,31 @@ var ITEMS = [
 
   {
     id: 'pratos-brancos',
+    preco: 10,                      // os dois juntos
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/pratos-2/1.jpeg',
     ],
     es: {
-      titulo: 'Platos blancos, playos y hondos',
-      desc: 'En perfecto estado.',
+      titulo: '2 platos playos rectangulares',
+      desc: 'Blancos, de esquinas redondeadas. Se venden los dos juntos.',
     },
     pt: {
-      titulo: 'Pratos brancos, rasos e fundos',
-      desc: 'Em perfeito estado.',
+      titulo: '2 pratos rasos retangulares',
+      desc: 'Brancos, de cantos arredondados. Vendidos os dois juntos.',
     },
   },
 
   {
     id: 'bowl',
+    preco: 10,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/bowl/1.jpeg',
     ],
