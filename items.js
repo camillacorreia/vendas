@@ -873,10 +873,11 @@ var ITEMS = [
 
   {
     id: 'balanza-digital',
+    preco: 30,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: valor de mercado e link de referência
     fotos: [
       'images/balanca/1.jpeg',
     ],
