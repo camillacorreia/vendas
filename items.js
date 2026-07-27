@@ -776,11 +776,11 @@ var ITEMS = [
       'images/tacas-de-vinho/1.jpeg',
     ],
     es: {
-      titulo: 'Copas de vino',
+      titulo: '8 copas de vino',
       desc: 'En perfecto estado.',
     },
     pt: {
-      titulo: 'Taças de vinho',
+      titulo: '8 taças de vinho',
       desc: 'Em perfeito estado.',
     },
   },
