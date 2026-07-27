@@ -328,6 +328,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'respaldo-de-cama',
+    preco: 100,
+    precoMercado: 300,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: fotos, medidas e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Respaldo de cama',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Cabeceira de cama',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
