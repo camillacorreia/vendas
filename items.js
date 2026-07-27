@@ -698,15 +698,21 @@ var ITEMS = [
   },
   {
     id: 'planta-6',
+    preco: 93,                      // AR$ 28.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-6/1.jpeg',
     ],
-    es: { titulo: 'Planta 6', desc: '' },
-    pt: { titulo: 'Planta 6', desc: '' },
+    es: {
+      titulo: 'Gomero Ruby, el rosado (Ficus elastica Ruby)',
+      desc: 'Hojas verdes con variegación rosa y crema en estilo camuflaje y nervaduras rojizas, como se ve en las hojas nuevas de arriba. Va con la maceta.',
+    },
+    pt: {
+      titulo: 'Seringueira Ruby, a rosada (Ficus elastica Ruby)',
+      desc: 'Folhas verdes com variegação rosa e creme em estilo camuflagem e nervuras avermelhadas, como aparece nas folhas novas do topo. Vai com o vaso.',
+    },
   },
   {
     id: 'planta-7',
