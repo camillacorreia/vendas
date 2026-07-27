@@ -581,10 +581,11 @@ var ITEMS = [
 
   {
     id: 'tostadora',
+    preco: 25,
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/torradeira/1.jpeg',
     ],
