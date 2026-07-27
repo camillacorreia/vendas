@@ -680,15 +680,21 @@ var ITEMS = [
   },
   {
     id: 'planta-5',
+    preco: 93,                      // AR$ 28.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço
     fotos: [
       'images/planta-5/1.jpeg',
     ],
-    es: { titulo: 'Planta 5', desc: '' },
-    pt: { titulo: 'Planta 5', desc: '' },
+    es: {
+      titulo: 'Gomero variegado (Ficus elastica Tineke)',
+      desc: 'Se reconoce por los bordes crema anchos, el centro en tonos verde grisáceo y la vaina rojiza de la hoja nueva asomando arriba. Va con la maceta.',
+    },
+    pt: {
+      titulo: 'Seringueira variegada (Ficus elastica Tineke)',
+      desc: 'Reconhece-se pelas bordas creme largas, o miolo em tons de verde-acinzentado e a bainha avermelhada da folha nova saindo no topo. Vai com o vaso.',
+    },
   },
   {
     id: 'planta-6',
