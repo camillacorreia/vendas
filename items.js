@@ -853,10 +853,11 @@ var ITEMS = [
 
   {
     id: 'plafon-led',
+    preco: 30,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/plafon-de-led/1.jpeg',
     ],
