@@ -561,10 +561,11 @@ var ITEMS = [
 
   {
     id: 'pava-electrica',
+    preco: 33,                      // AR$ 10.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/chaleira-eletrica/1.jpeg',
     ],
