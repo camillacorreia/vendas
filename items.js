@@ -934,22 +934,23 @@ var ITEMS = [
 
   {
     id: 'babyliss',
-    modelo: 'Babyliss',
+    modelo: 'Winco W195',
+    preco: 30,
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
-    // FALTA: preço, medidas, valor de mercado e link de referência
+    // FALTA: valor de mercado e link de referência
     fotos: [
       'images/babyliss/1.jpeg',
       'images/babyliss/2.jpeg',
     ],
     es: {
-      titulo: 'Rizador de pelo',
-      desc: 'En perfecto estado de funcionamiento.',
+      titulo: 'Bucleadora, rizador de pelo',
+      desc: 'Cromada, negra. En perfecto estado de funcionamiento.',
     },
     pt: {
       titulo: 'Modelador de cachos',
-      desc: 'Em perfeito estado de funcionamento.',
+      desc: 'Cromado, preto. Em perfeito estado de funcionamento.',
     },
   },
 
