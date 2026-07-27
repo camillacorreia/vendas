@@ -189,9 +189,9 @@ var App = (function () {
       s.textContent = Core.formatBRL(item.precoMercado) +
         ' (' + Core.formatARS(item.precoMercado, state.cotacao) + ')';
       mercado.appendChild(s);
+      body.appendChild(mercado);
 
       if (item.linkMercado) {
-        mercado.appendChild(document.createTextNode(' '));
         var ref = document.createElement('a');
         ref.className = 'mercado__ref';
         ref.href = item.linkMercado;
@@ -200,10 +200,8 @@ var App = (function () {
         ref.textContent = dict.referencia + ' ↗';
         ref.setAttribute('aria-label',
           dict.referencia + ' (' + (item.modelo || texto.titulo || '') + ')');
-        mercado.appendChild(ref);
+        body.appendChild(ref);
       }
-
-      body.appendChild(mercado);
     }
 
     var metaPartes = [];
