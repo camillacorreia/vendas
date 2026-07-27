@@ -340,6 +340,7 @@ var ITEMS = [
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas e link de referência
+    medidas: { a: 165 },
     fotos: [
       'images/abajur-de-pe/1.jpeg',
       'images/abajur-de-pe/2.jpeg',
