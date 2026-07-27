@@ -317,7 +317,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: medidas e link de referência
+    // FALTA: link de referência
     medidas: { f: 62, a: 155 },
     fotos: [
       'images/espelho/1.jpeg',
