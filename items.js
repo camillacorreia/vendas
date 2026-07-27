@@ -634,11 +634,11 @@ var ITEMS = [
       'images/planta-2/1.jpeg',
     ],
     es: {
-      titulo: 'Potus en maceta de cerámica blanca',
+      titulo: 'Potus en maceta blanca',
       desc: 'Frondosa y bien tupida. Va con la maceta.',
     },
     pt: {
-      titulo: 'Jiboia em vaso de cerâmica branca',
+      titulo: 'Jiboia em vaso branco',
       desc: 'Cheia e bem fechada. Vai com o vaso.',
     },
   },
