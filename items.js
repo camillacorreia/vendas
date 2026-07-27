@@ -79,6 +79,25 @@ var ITEMS = [
     },
   },
 
+  {
+    id: 'apoya-pies',
+    preco: 80,
+    precoMercado: 150,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: fotos, medidas e link de referência
+    fotos: [],
+    es: {
+      titulo: 'Apoyapiés ergonómico para escritorio',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Apoio de pés ergonômico para escritório',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
   /* ---- MODELO PARA COPIAR ----
   {
     id: 'identificador-unico',
