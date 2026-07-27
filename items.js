@@ -153,7 +153,7 @@ var ITEMS = [
     id: 'rack-tv-delos',
     modelo: 'Delos Steel DST03',
     preco: 350,
-    precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    precoMercado: 767,              // AR$ 230.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
