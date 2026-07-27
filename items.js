@@ -176,7 +176,7 @@ var ITEMS = [
   {
     id: 'aire-bgh-bs35wcat',
     modelo: 'BGH Silent Air BSE35WCCR',
-    preco: 1500,
+    preco: 1650,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
                                 // (mercado em jul/2026: AR$ 700.000 a 895.000)
     ano: 2024,
@@ -201,7 +201,7 @@ var ITEMS = [
   {
     id: 'lavarropas-drean-next-709',
     modelo: 'Drean Next 7.09 Eco',
-    preco: 1500,
+    preco: 1650,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
