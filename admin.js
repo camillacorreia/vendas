@@ -92,6 +92,16 @@
       'Valor de mercado', Core.formatBRL(t.mercado),
       Core.formatARS(t.mercado, taxa)));
 
+    var reservados = ITEMS.filter(function (i) {
+      return !i.vendido && typeof RESERVAS === 'object' && RESERVAS[i.id];
+    });
+    if (reservados.length) {
+      var tr_ = Core.totais(reservados);
+      el['resumo'].appendChild(cartao(
+        'Reservado', Core.formatBRL(tr_.bruto),
+        reservados.map(function (i) { return RESERVAS[i.id].por; }).join(', ')));
+    }
+
     var abatimento = t.mercado > 0 ? Math.round((t.economia / t.mercado) * 100) : 0;
     el['resumo'].appendChild(cartao(
       'Abaixo do mercado', Core.formatBRL(t.economia),
@@ -129,11 +139,22 @@
       item.precoMercado ? Core.formatARS(item.precoMercado * unidades, taxa) : '—', 'num'));
     tr.appendChild(celula(desconto === null ? '—' : '−' + desconto + '%', 'num'));
 
+    var reserva = !item.vendido && typeof RESERVAS === 'object' ? RESERVAS[item.id] : null;
+
     var td = document.createElement('td');
     var selo = document.createElement('span');
-    selo.className = 'selo selo--' + (item.vendido ? 'vendido' : 'disponivel');
-    selo.textContent = item.vendido ? 'Vendido' : 'Disponível';
+    var estado = item.vendido ? 'vendido' : (reserva ? 'reservado' : 'disponivel');
+    selo.className = 'selo selo--' + estado;
+    selo.textContent = item.vendido ? 'Vendido' : (reserva ? 'Reservado' : 'Disponível');
     td.appendChild(selo);
+
+    if (reserva) {
+      var quem = document.createElement('span');
+      quem.className = 'reserva__quem';
+      quem.textContent = reserva.por + (reserva.em ? ' · ' + reserva.em : '');
+      if (reserva.nota) quem.title = reserva.nota;
+      td.appendChild(quem);
+    }
     tr.appendChild(td);
 
     return tr;

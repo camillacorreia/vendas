@@ -1,0 +1,20 @@
+/* ============================================================
+   RESERVAS — quem já pediu cada item.
+
+   Só o painel (admin.html) carrega este arquivo. O site público
+   não sabe que ele existe, então o comprador nunca vê estes nomes.
+
+   ATENÇÃO: o repositório é público. Este arquivo fica acessível
+   para quem souber a URL. Use primeiro nome ou iniciais — nunca
+   nome completo, telefone ou endereço.
+
+   Para reservar: acrescente uma linha com o id do item.
+   Para liberar: apague a linha.
+   Item vendido continua marcado como vendido no items.js; a
+   reserva é o passo anterior à venda.
+   ============================================================ */
+
+var RESERVAS = {
+  // 'id-do-item': { por: 'Nome', em: '2026-07-27', nota: '' },
+  'microondas-bgh-b120ds20i': { por: 'Sarah', em: '2026-07-27' },
+};

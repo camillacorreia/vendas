@@ -79,6 +79,8 @@
 }
 .selo--disponivel { background: var(--ok-bg); color: var(--ok-ink); }
 .selo--vendido { background: var(--border); color: var(--muted); }
+.selo--reservado { background: var(--aviso-bg); color: var(--aviso-ink); }
+.reserva__quem { margin-left: 8px; font-size: 12px; color: var(--muted); }
 
 .painel__aviso {
   margin: 28px 0 0; font-size: 12px; color: var(--muted);
