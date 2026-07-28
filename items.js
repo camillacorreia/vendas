@@ -689,10 +689,10 @@ var ITEMS = [
   },
   {
     id: 'planta-5',
-    preco: 95,
+    preco: 90,                      // vendida a AR$ 28.000
     ano: 2024,
     categoria: 'plantas',
-    vendido: false,
+    vendido: true,
     medidas: { a: 100 },
     fotos: [
       'images/planta-5/1.jpeg',
@@ -708,10 +708,10 @@ var ITEMS = [
   },
   {
     id: 'planta-6',
-    preco: 95,
+    preco: 90,                      // vendida a AR$ 28.000
     ano: 2024,
     categoria: 'plantas',
-    vendido: false,
+    vendido: true,
     medidas: { a: 90 },
     fotos: [
       'images/planta-6/1.jpeg',
