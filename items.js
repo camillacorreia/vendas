@@ -157,6 +157,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
     medidas: { f: 166, p: 37, a: 60 },
     fotos: [
@@ -579,6 +580,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/chaleira-eletrica/1.jpeg',
@@ -940,6 +942,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
       'images/babyliss/1.jpeg',

@@ -24,4 +24,7 @@ var RESERVAS = {
   'comedor-escandinavo':      { por: 'Ivan', em: '2026-07-27' },
   'freidora-kanji-kjhaf1404': { por: 'Ivan', em: '2026-07-27' },
   'planta-4':                 { por: 'Gladys', em: '2026-07-27' },
+  'rack-tv-delos':            { por: 'Amanda', em: '2026-07-30' },
+  'babyliss':                 { por: 'Amanda', em: '2026-07-30' },
+  'pava-electrica':           { por: 'Amanda', em: '2026-07-30' },
 };
