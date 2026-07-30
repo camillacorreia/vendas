@@ -321,7 +321,7 @@ var ITEMS = [
     precoMercado: 500,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: link de referência
     medidas: { f: 62, a: 155 },
     fotos: [
