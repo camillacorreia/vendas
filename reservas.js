@@ -27,4 +27,7 @@ var RESERVAS = {
   'rack-tv-delos':            { por: 'Amanda', em: '2026-07-30' },
   'babyliss':                 { por: 'Amanda', em: '2026-07-30' },
   'pava-electrica':           { por: 'Amanda', em: '2026-07-30' },
+  'planchita-pelo':           { por: 'Nanda', em: '2026-07-30' },
+  'bowl':                     { por: 'Nanda', em: '2026-07-30' },
+  'pratos-vajilla':           { por: 'Nanda', em: '2026-07-30' },
 };

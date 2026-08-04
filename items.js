@@ -800,6 +800,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
+    reservado: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
       'images/pratos/1.jpeg',
@@ -840,6 +841,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/bowl/1.jpeg',
@@ -921,6 +923,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
       'images/prancha/1.jpeg',
