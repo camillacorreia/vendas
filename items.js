@@ -156,7 +156,7 @@ var ITEMS = [
     precoMercado: 767,              // AR$ 230.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
     medidas: { f: 166, p: 37, a: 60 },
@@ -343,7 +343,7 @@ var ITEMS = [
     precoMercado: 400,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: link de referência
     medidas: { a: 165 },
     fotos: [
@@ -510,7 +510,7 @@ var ITEMS = [
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas e link de referência
     fotos: [
@@ -533,7 +533,7 @@ var ITEMS = [
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas
     linkMercado: 'https://www.tienda.electrolux.com.ar/cafetera-electrica-electrolux-inox-ecm10-600ml-1/p',
     fotos: [
@@ -579,7 +579,7 @@ var ITEMS = [
     preco: 30,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
