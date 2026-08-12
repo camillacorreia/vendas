@@ -129,6 +129,12 @@
     var unidades = unidadesDe(item);
     tr.appendChild(celula(String(unidades), 'num'));
 
+    /* Só em BRL: você pagou em reais, converter para ARS não diria nada. */
+    tr.appendChild(celula(
+      typeof item.precoCompra === 'number'
+        ? Core.formatBRL(item.precoCompra * unidades)
+        : '—', 'num'));
+
     var temPreco = Core.temPreco(item);
     tr.appendChild(celula(temPreco ? Core.formatBRL(item.preco * unidades) : '—', 'num'));
     tr.appendChild(celula(temPreco ? Core.formatARS(item.preco * unidades, taxa) : '—', 'num'));

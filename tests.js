@@ -253,6 +253,18 @@
     eq('totais contam as duas mesas',
       Core.totais([mesa]).bruto,
       340);
+
+    eq('precoCompra negativo e rejeitado',
+      Core.validateItems([{ id: 'z', preco: 1, categoria: 'casa', vendido: false, precoCompra: -5,
+        es: { titulo: 'z' }, pt: { titulo: 'z' } }], CATEGORIAS).length,
+      1);
+
+    /* precoCompra é por unidade: R$ 208 pelas duas mesas, 104 cada. */
+    eq('mesa de luz guarda o preco de compra por unidade', mesa.precoCompra, 104);
+
+    eq('geladeira guarda o preco de compra',
+      ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].precoCompra,
+      2614.53);
   }
 
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,

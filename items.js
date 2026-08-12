@@ -16,6 +16,7 @@ var ITEMS = [
     modelo: 'Drean HDR420N30B',
     preco: 3100,
     precoMercado: 5000,
+    precoCompra: 2614.53,           // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
@@ -38,6 +39,7 @@ var ITEMS = [
     qtd: 2,
     precoCombo: 300,                // as duas juntas
     precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
+    precoCompra: 104,               // por unidade — R$ 208 pelas duas
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -63,6 +65,7 @@ var ITEMS = [
     modelo: 'Oliver',
     preco: 300,
     precoMercado: 963,              // AR$ 289.000 na cotação de referência de 300
+    precoCompra: 329.03,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -109,6 +112,7 @@ var ITEMS = [
     modelo: 'Epson EcoTank M1120',
     preco: 875,
     precoMercado: 1347,             // AR$ 404.000 na cotação de referência de 300
+    precoCompra: 900,               // o que paguei
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
@@ -131,6 +135,7 @@ var ITEMS = [
     id: 'escritorio-hierro-madera',
     preco: 300,
     precoMercado: 533,              // AR$ 160.000 na cotação de referência de 300
+    precoCompra: 698.35,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -154,6 +159,7 @@ var ITEMS = [
     modelo: 'Delos Steel DST03',
     preco: 350,
     precoMercado: 767,              // AR$ 230.000 na cotação de referência de 300
+    precoCompra: 653.31,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: true,
@@ -180,6 +186,7 @@ var ITEMS = [
     preco: 1650,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
                                 // (mercado em jul/2026: AR$ 700.000 a 895.000)
+    precoCompra: 2932.14,           // compra 2.445,65 + instalação 486,49
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
@@ -206,6 +213,7 @@ var ITEMS = [
     modelo: 'Drean Next 7.09 Eco',
     preco: 1650,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
+    precoCompra: 2161.7,            // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
@@ -228,6 +236,7 @@ var ITEMS = [
     id: 'silla-delphi-premium',
     preco: 380,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    precoCompra: 493.62,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -251,6 +260,7 @@ var ITEMS = [
     modelo: 'BGH B120DS20I',
     preco: 400,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
+    precoCompra: 674.04,            // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
@@ -275,6 +285,7 @@ var ITEMS = [
     modelo: 'TCL 43S5K',
     preco: 1200,
     precoMercado: 1833,             // AR$ 550.000 na cotação de referência de 300
+    precoCompra: 1189.26,           // o que paguei
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
@@ -297,6 +308,7 @@ var ITEMS = [
     id: 'sofa-cama',
     preco: 500,
     precoMercado: 1200,
+    precoCompra: 1363.64,           // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -319,6 +331,7 @@ var ITEMS = [
     id: 'espelho',
     preco: 200,
     precoMercado: 500,
+    precoCompra: 200,               // o que paguei
     ano: 2024,
     categoria: 'casa',
     vendido: true,
@@ -341,6 +354,7 @@ var ITEMS = [
     id: 'lampara-de-pie',
     preco: 250,
     precoMercado: 400,
+    precoCompra: 308.89,            // o que paguei
     ano: 2024,
     categoria: 'casa',
     vendido: true,
@@ -364,6 +378,7 @@ var ITEMS = [
     id: 'respaldo-de-cama',
     preco: 100,
     precoMercado: 300,
+    precoCompra: 278.72,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -387,6 +402,7 @@ var ITEMS = [
     id: 'mueble-columna-cocina',
     preco: 480,
     precoMercado: 833,              // AR$ 250.000 na cotação de referência de 300
+    precoCompra: 508,               // o que paguei
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -410,6 +426,7 @@ var ITEMS = [
     preco: 55,
     precoMercado: 90,               // AR$ 27.000: 20.000 da luminária + ~7.000 da lâmpada
                                 // de filamento, na cotação de referência de 300
+    precoCompra: 100.35,            // o que paguei
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -432,6 +449,7 @@ var ITEMS = [
     id: 'comedor-escandinavo',
     preco: 350,
     precoMercado: 1000,             // AR$ 300.000 na cotação de referência de 300
+    precoCompra: 830.25,            // mesa 191,49 + 4 cadeiras 638,76
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -531,6 +549,7 @@ var ITEMS = [
     modelo: 'Electrolux ECM10',
     preco: 55,
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
+    precoCompra: 78,                // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: true,
@@ -555,6 +574,7 @@ var ITEMS = [
     modelo: 'Atma PAS1217N',
     preco: 35,
     precoMercado: 123,              // AR$ 37.000 na cotação de referência de 300
+    precoCompra: 108.09,            // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: true,

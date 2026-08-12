@@ -74,6 +74,12 @@ var Core = (function () {
       if (item.precoCombo !== undefined && !(item.qtd > 1)) {
         problemas.push(onde + ': precoCombo só faz sentido com qtd > 1');
       }
+      /* precoCompra é por unidade, como preco — a tabela do painel multiplica
+         pela quantidade para mostrar o total da linha. */
+      if (item.precoCompra !== undefined &&
+          (typeof item.precoCompra !== 'number' || item.precoCompra <= 0)) {
+        problemas.push(onde + ': precoCompra inválido');
+      }
       ['es', 'pt'].forEach(function (lang) {
         if (!item[lang] || !item[lang].titulo) problemas.push(onde + ': falta titulo em ' + lang);
       });
