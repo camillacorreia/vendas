@@ -921,7 +921,7 @@ var ITEMS = [
     preco: 40,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
       'images/secador/1.jpeg',
