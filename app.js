@@ -216,7 +216,10 @@ var App = (function () {
       }
     }
 
-    if (item.qtd > 1) {
+    /* Só faz sentido anunciar estoque e combo do que ainda está à venda: uma
+       entrada vendida com qtd > 1 diria "2 unidades disponíveis" para algo que
+       já saiu, e somaria com o card do que sobrou. */
+    if (item.qtd > 1 && !item.vendido) {
       var combo = document.createElement('p');
       combo.className = 'combo';
       var partes = [item.qtd + ' ' + dict.unidades];

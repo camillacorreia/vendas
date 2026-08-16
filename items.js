@@ -323,11 +323,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Sofá cama de dos plazas',
-      desc: 'Atención: el tapizado tiene dos agujeros en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones. Precio negociable.',
+      desc: 'Atención: el tapizado tiene dos hundimientos leves en el medio. Como cama está perfecto y se abre en una cama de dos plazas amplia. Incluye 5 almohadones. Precio negociable.',
     },
     pt: {
       titulo: 'Sofá-cama de casal',
-      desc: 'Atenção: o estofado tem dois furos no meio. Como cama está perfeito e vira uma cama de casal espaçosa. Inclui 5 almofadas. Preço negociável.',
+      desc: 'Atenção: o estofado tem dois buracos no meio, pequenos aprofundamentos. Como cama está perfeito e vira uma cama de casal espaçosa. Inclui 5 almofadas. Preço negociável.',
     },
   },
 
