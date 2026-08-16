@@ -528,7 +528,7 @@ var ITEMS = [
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas e link de referência
     fotos: [
