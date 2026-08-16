@@ -8,7 +8,7 @@ var CONFIG = {
   cotacaoPadrao: 300,         // 1 BRL = N ARS
 };
 
-var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'plantas', 'outros'];
+var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'beleza', 'plantas', 'outros'];
 
 var ITEMS = [
   {
@@ -316,6 +316,8 @@ var ITEMS = [
     medidasTexto: '2 metros × 90 cm',
     fotos: [
       'images/sofa-cama/1.jpeg',
+      'images/sofa-cama/2.jpeg',
+      'images/sofa-cama/3.jpeg',
     ],
     es: {
       titulo: 'Sofá cama de dos plazas',
@@ -978,6 +980,145 @@ var ITEMS = [
     pt: {
       titulo: 'Modelador de cachos',
       desc: 'Cromado, preto. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'blend-mio-capelli',
+    modelo: 'Mio Capelli Blend Mágico 200 ml',
+    preco: 22,                      // por unidade
+    qtd: 2,
+    precoCombo: 40,                 // os dois juntos
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/blend-cabelo/1.jpeg',
+      'images/blend-cabelo/2.jpeg',
+    ],
+    es: {
+      titulo: 'Crema multifuncional sin enjuague 200 ml',
+      desc: 'Producto brasileño, nuevo y sin usar. Hidrata, ablanda y controla el frizz. Protección térmica.',
+    },
+    pt: {
+      titulo: 'Creme multifuncional sem enxágue 200 ml',
+      desc: 'Novo, nunca usado. Hidrata, amacia e controla o frizz. Com proteção térmica.',
+    },
+  },
+
+  {
+    id: 'creme-pentear-beleza-natural',
+    modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
+    preco: 42,                      // por unidade
+    qtd: 4,
+    /* O desconto aqui é por par, não pelas quatro: precoCombo só sabe mostrar
+       o preço do lote inteiro, então a promoção vai na descrição. */
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/creme-de-cabelo/1.jpeg',
+    ],
+    es: {
+      titulo: 'Crema de peinar 1 kg, 7 aceites africanos',
+      desc: 'Producto brasileño, nuevo y sellado. Nutrición, definición y control de frizz para pelo ondulado, rizado y crespo. Llevando 2, R$ 80.',
+    },
+    pt: {
+      titulo: 'Creme de pentear 1 kg, 7 óleos africanos',
+      desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos. Levando 2, R$ 80.',
+    },
+  },
+
+  {
+    id: 'mascaras-lola',
+    modelo: 'Lola Cosmetics 450 g',
+    preco: 42,                      // por unidade
+    qtd: 3,
+    precoCombo: 120,                // as três juntas
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/creme-hidratacao/1.jpeg',
+      'images/creme-hidratacao/2.jpeg',
+    ],
+    es: {
+      titulo: 'Máscaras de pelo Lola 450 g (Xapadinha, Danos Vorazes y Morte Súbita)',
+      desc: 'Tres máscaras brasileñas, nuevas y sin usar: Xapadinha (disciplinante), Danos Vorazes (reparación intensiva) y Morte Súbita (súper hidratante).',
+    },
+    pt: {
+      titulo: 'Máscaras capilares Lola 450 g (Xapadinha, Danos Vorazes e Morte Súbita)',
+      desc: 'Três máscaras novas, nunca usadas: Xapadinha (disciplinante), Danos Vorazes (reparação intensiva) e Morte Súbita (super hidratante).',
+    },
+  },
+
+  {
+    id: 'loiros-mio-capelli',
+    modelo: 'Mio Capelli Loiros 500 ml',
+    preco: 22,                      // por unidade
+    qtd: 3,
+    precoCombo: 60,                 // as três juntas
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/progressiva-cabelo/1.jpeg',
+      'images/progressiva-cabelo/2.jpeg',
+      'images/progressiva-cabelo/3.jpeg',
+    ],
+    es: {
+      titulo: 'Progresiva orgánica para pelo rubio 500 ml',
+      desc: 'Nuevo, sin usar. Funciona también en pelo negro y castaño; en el rubio, ayuda a que el color no se destiña.',
+    },
+    pt: {
+      titulo: 'Progressiva orgânica para cabelos loiros 500 ml',
+      desc: 'Novo, nunca usado. Funciona em cabelos pretos e castanhos também; nos loiros, ajuda a não desbotar a cor.',
+    },
+  },
+
+  {
+    id: 'sabonete-enxofre-granado',
+    modelo: 'Granado Enxofre 90 g',
+    preco: 8,                       // por unidade
+    qtd: 4,
+    precoCombo: 30,                 // os quatro juntos
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/sabonete-enxofre/1.jpeg',
+      'images/sabonete-enxofre/2.jpeg',
+    ],
+    es: {
+      titulo: 'Jabón de azufre 90 g',
+      desc: 'Producto brasileño, nuevo y sellado. Ayuda a controlar el acné y el exceso de grasitud de la piel y del cuero cabelludo.',
+    },
+    pt: {
+      titulo: 'Sabonete de enxofre 90 g',
+      desc: 'Novo e lacrado. Auxilia no controle da acne e do excesso de oleosidade da pele e do couro cabeludo.',
+    },
+  },
+
+  {
+    id: 'tonico-mio-capelli',
+    modelo: 'Mio Capelli Tônico Fortalecedor 100 ml',
+    preco: 22,                      // por unidade
+    qtd: 2,
+    precoCombo: 40,                 // os dois juntos
+    categoria: 'beleza',
+    vendido: false,
+    // FALTA: valor de mercado
+    fotos: [
+      'images/tonico/1.jpeg',
+      'images/tonico/2.jpeg',
+    ],
+    es: {
+      titulo: 'Tónico fortalecedor capilar 100 ml',
+      desc: 'Producto brasileño, nuevo y sin usar. Reduce la grasitud y estimula el crecimiento saludable del pelo.',
+    },
+    pt: {
+      titulo: 'Tônico fortalecedor capilar 100 ml',
+      desc: 'Novo, nunca usado. Reduz a oleosidade e estimula o crescimento saudável dos fios.',
     },
   },
 
