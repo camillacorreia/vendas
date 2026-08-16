@@ -162,7 +162,7 @@ var ITEMS = [
     precoCompra: 653.31,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: true,
+    vendido: false,
     reservado: true,
     // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
     medidas: { f: 166, p: 37, a: 60 },
