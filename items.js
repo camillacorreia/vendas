@@ -281,26 +281,28 @@ var ITEMS = [
   },
 
   {
-    id: 'smart-tv-tcl-43s5k',
-    modelo: 'TCL 43S5K',
-    preco: 1200,
-    precoMercado: 1833,             // AR$ 550.000 na cotação de referência de 300
+    id: 'smart-tv-tcl-l43s5400',
+    modelo: 'TCL L43S5400 (série S5400)',
+    preco: 950,
+    precoMercado: 1333,             // AR$ 400.000 na cotação de referência de 300
     precoCompra: 1189.26,           // o que paguei
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
-    // FALTA: medidas
+    /* Medidas da ficha técnica, sem a base. Com a base ela fica 60,6 cm de
+       altura e 18 cm de profundidade. */
+    medidas: { f: 95.5, p: 9, a: 55.5 },
     fotos: [
       'images/smart-tv/1.jpeg',
     ],
-    linkMercado: 'https://www.cetrogar.com.ar/smart-tv-tcl-qled-43-43s5k-google-tv-tv3261/p',
+    linkMercado: 'https://www.megatone.net/producto/smart-tv-tcl-l43s5400-led-43-fhd-smart-android-tv-quad-core_MKT0243AGE/',
     es: {
-      titulo: 'Smart TV QLED 43" Google TV',
-      desc: 'En perfecto estado de funcionamiento.',
+      titulo: 'Smart TV LED 43" Full HD Android TV',
+      desc: 'En perfecto estado de funcionamiento. HDR10, Dolby Digital, Bluetooth, Wi-Fi y Google Assistant. 2 HDMI y 2 USB.',
     },
     pt: {
-      titulo: 'Smart TV QLED 43" Google TV',
-      desc: 'Em perfeito estado de funcionamento.',
+      titulo: 'Smart TV LED 43" Full HD Android TV',
+      desc: 'Em perfeito estado de funcionamento. HDR10, Dolby Digital, Bluetooth, Wi-Fi e Google Assistente. 2 HDMI e 2 USB.',
     },
   },
 
