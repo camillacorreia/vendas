@@ -298,11 +298,11 @@ var ITEMS = [
     linkMercado: 'https://www.megatone.net/producto/smart-tv-tcl-l43s5400-led-43-fhd-smart-android-tv-quad-core_MKT0243AGE/',
     es: {
       titulo: 'Smart TV LED 43" Full HD Android TV',
-      desc: 'En perfecto estado de funcionamiento. HDR10, Dolby Digital, Bluetooth, Wi-Fi y Google Assistant. 2 HDMI y 2 USB.',
+      desc: 'En perfecto estado de funcionamiento. Tiene Netflix, Disney+, YouTube y las demás apps de la tienda. HDR10, Dolby Digital, Bluetooth, Wi-Fi y Google Assistant. 2 HDMI y 2 USB.',
     },
     pt: {
       titulo: 'Smart TV LED 43" Full HD Android TV',
-      desc: 'Em perfeito estado de funcionamento. HDR10, Dolby Digital, Bluetooth, Wi-Fi e Google Assistente. 2 HDMI e 2 USB.',
+      desc: 'Em perfeito estado de funcionamento. Tem Netflix, Disney+, YouTube e os demais aplicativos da loja. HDR10, Dolby Digital, Bluetooth, Wi-Fi e Google Assistente. 2 HDMI e 2 USB.',
     },
   },
 
@@ -1013,9 +1013,8 @@ var ITEMS = [
     id: 'creme-pentear-beleza-natural',
     modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
     preco: 42,                      // por unidade
-    qtd: 4,
-    /* O desconto aqui é por par, não pelas quatro: precoCombo só sabe mostrar
-       o preço do lote inteiro, então a promoção vai na descrição. */
+    qtd: 2,
+    precoCombo: 80,                 // os dois juntos
     categoria: 'beleza',
     vendido: false,
     // FALTA: valor de mercado
@@ -1024,11 +1023,34 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Crema de peinar 1 kg, 7 aceites africanos',
-      desc: 'Producto brasileño, nuevo y sellado. Nutrición, definición y control de frizz para pelo ondulado, rizado y crespo. Llevando 2, R$ 80.',
+      desc: 'Producto brasileño, nuevo y sellado. Nutrición, definición y control de frizz para pelo ondulado, rizado y crespo.',
     },
     pt: {
       titulo: 'Creme de pentear 1 kg, 7 óleos africanos',
-      desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos. Levando 2, R$ 80.',
+      desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos.',
+    },
+  },
+
+  /* Os quatro potes eram uma entrada só; dois saíram no combo de R$ 80, e
+     `vendido` vale para a entrada inteira — daí a linha separada, que mantém
+     a venda no painel sem esconder os dois que sobraram. */
+  {
+    id: 'creme-pentear-beleza-natural-vendidos',
+    modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
+    preco: 40,                      // R$ 80 pelos dois
+    qtd: 2,
+    categoria: 'beleza',
+    vendido: true,
+    fotos: [
+      'images/creme-de-cabelo/1.jpeg',
+    ],
+    es: {
+      titulo: 'Crema de peinar 1 kg, 7 aceites africanos',
+      desc: 'Producto brasileño, nuevo y sellado. Nutrición, definición y control de frizz para pelo ondulado, rizado y crespo.',
+    },
+    pt: {
+      titulo: 'Creme de pentear 1 kg, 7 óleos africanos',
+      desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos.',
     },
   },
 
