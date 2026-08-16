@@ -663,6 +663,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'plantas',
     vendido: false,
+    reservado: true,
     fotos: [
       'images/planta-2/1.jpeg',
     ],
