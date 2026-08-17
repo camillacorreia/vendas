@@ -625,6 +625,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/torradeira/1.jpeg',
