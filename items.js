@@ -71,8 +71,8 @@ var ITEMS = [
     vendido: false,
     medidas: { f: 62, a: 160 },
     fotos: [
-      'images/cabideiro/1.webp',
-      'images/cabideiro/2.jpeg',
+      'images/cabideiro/1.jpeg',
+      'images/cabideiro/2.webp',
       'images/cabideiro/3.webp',
     ],
     linkMercado: 'https://articulo.mercadolibre.com.ar/MLA-1137845696-perchero-de-pie-oliver-escandinavo-moderno-melamina-roble-_JM',
