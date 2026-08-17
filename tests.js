@@ -152,6 +152,49 @@
       ['a', 'b', 'c']);
   }
 
+  /* Três faixas: disponível, reservado, vendido. Os preços estão escolhidos
+     para que a faixa e a ordenação discordem em toda ordenação — assim o teste
+     falha se a faixa deixar de vir primeiro. */
+  var FIXTURES_FAIXA = [
+    { id: 'disp', preco: 200, precoMercado: 250, categoria: 'casa', vendido: false,
+      es: { titulo: 'd' }, pt: { titulo: 'd' } },
+    { id: 'res', preco: 100, precoMercado: 1000, categoria: 'casa', vendido: false,
+      reservado: true, es: { titulo: 'r' }, pt: { titulo: 'r' } },
+    { id: 'res2', preco: 900, categoria: 'casa', vendido: false,
+      reservado: true, es: { titulo: 'r2' }, pt: { titulo: 'r2' } },
+    { id: 'vend', preco: 5000, categoria: 'casa', vendido: true,
+      es: { titulo: 'v' }, pt: { titulo: 'v' } },
+  ];
+
+  function suiteFaixa() {
+    eq('menor preco: reservado abaixo do disponivel',
+      Core.sortItems(FIXTURES_FAIXA, 'preco-asc').map(function (i) { return i.id; }),
+      ['disp', 'res', 'res2', 'vend']);
+
+    eq('maior preco: reservado abaixo do disponivel',
+      Core.sortItems(FIXTURES_FAIXA, 'preco-desc').map(function (i) { return i.id; }),
+      ['disp', 'res2', 'res', 'vend']);
+
+    eq('maior desconto: reservado abaixo do disponivel',
+      Core.sortItems(FIXTURES_FAIXA, 'desconto-desc').map(function (i) { return i.id; }),
+      ['disp', 'res', 'res2', 'vend']);
+
+    /* Vendido que ficou com reservado: true (o rack, o potus) é vendido. */
+    var vendidoEReservado = [
+      { id: 'so-reservado', preco: 10, categoria: 'casa', vendido: false, reservado: true,
+        es: { titulo: 'a' }, pt: { titulo: 'a' } },
+      { id: 'vendido-e-reservado', preco: 10, categoria: 'casa', vendido: true, reservado: true,
+        es: { titulo: 'b' }, pt: { titulo: 'b' } },
+    ];
+    eq('vendido vence reservado',
+      Core.sortItems(vendidoEReservado, 'preco-asc').map(function (i) { return i.id; }),
+      ['so-reservado', 'vendido-e-reservado']);
+
+    eq('sortItems nao muta o array com reservados',
+      FIXTURES_FAIXA.map(function (i) { return i.id; }),
+      ['disp', 'res', 'res2', 'vend']);
+  }
+
   function suiteWhats() {
     var item = { preco: 3100, es: { titulo: 'Heladera No Frost' }, pt: { titulo: 'Geladeira No Frost' } };
 
@@ -268,6 +311,6 @@
   }
 
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
-             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteWhats, suiteConteudo,
+             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteFaixa, suiteWhats, suiteConteudo,
              suiteControles, suiteTotais, suiteItens]);
 })();

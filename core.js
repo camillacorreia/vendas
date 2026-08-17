@@ -108,11 +108,20 @@ var Core = (function () {
     });
   }
 
+  /* Disponível, reservado, vendido — nessa ordem, antes de qualquer
+     ordenação. Reservado fica no meio porque quem reservou pode desistir:
+     ainda vale mostrar antes do que já saiu. */
+  function faixa(item) {
+    if (item.vendido) return 2;
+    return item.reservado ? 1 : 0;
+  }
+
   function sortItems(items, mode) {
     var copia = items.slice();
     copia.sort(function (a, b) {
-      /* Vendido sempre por último, qualquer que seja a ordenação. */
-      if (a.vendido !== b.vendido) return a.vendido ? 1 : -1;
+      var fa = faixa(a);
+      var fb = faixa(b);
+      if (fa !== fb) return fa - fb;
       if (mode === 'preco-desc') return precoDe(b) - precoDe(a);
       if (mode === 'desconto-desc') {
         var da = calcDesconto(a.preco, a.precoMercado) || 0;
