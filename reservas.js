@@ -30,4 +30,6 @@ var RESERVAS = {
   'planchita-pelo':           { por: 'Nanda', em: '2026-07-30' },
   'bowl':                     { por: 'Nanda', em: '2026-07-30' },
   'pratos-vajilla':           { por: 'Nanda', em: '2026-07-30' },
+  'tostadora':                { por: 'Nanda', em: '2026-08-17' },
+  'loiros-mio-capelli-vendido': { por: 'Nanda', em: '2026-08-17', nota: '1 das 3 unidades' },
 };

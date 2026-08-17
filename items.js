@@ -385,7 +385,7 @@ var ITEMS = [
     precoCompra: 278.72,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: link de referência
     medidas: { f: 145, a: 120 },
@@ -479,12 +479,14 @@ var ITEMS = [
 
   {
     id: 'floreros-vidrio',
-    preco: 30,                      // por unidade
+    /* Saíram os dois no combo de R$ 50. O preço é por unidade e é o que o
+       painel multiplica pela quantidade, então 25 é o que fecha o total. */
+    preco: 25,
     qtd: 2,
     precoCombo: 50,                 // os dois juntos
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
@@ -624,7 +626,7 @@ var ITEMS = [
     preco: 25,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
@@ -825,7 +827,7 @@ var ITEMS = [
     preco: 60,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
@@ -866,7 +868,7 @@ var ITEMS = [
     preco: 10,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
@@ -948,7 +950,7 @@ var ITEMS = [
     preco: 100,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: valor de mercado e link de referência
     fotos: [
@@ -1082,8 +1084,8 @@ var ITEMS = [
     id: 'loiros-mio-capelli',
     modelo: 'Mio Capelli Loiros 500 ml',
     preco: 22,                      // por unidade
-    qtd: 3,
-    precoCombo: 60,                 // as três juntas
+    qtd: 2,
+    precoCombo: 40,                 // as duas juntas
     categoria: 'beleza',
     vendido: false,
     // FALTA: valor de mercado
@@ -1091,6 +1093,28 @@ var ITEMS = [
       'images/progressiva-cabelo/1.jpeg',
       'images/progressiva-cabelo/2.jpeg',
       'images/progressiva-cabelo/3.jpeg',
+    ],
+    es: {
+      titulo: 'Progresiva orgánica para pelo rubio 500 ml',
+      desc: 'Nuevo, sin usar. Funciona también en pelo negro y castaño; en el rubio, ayuda a que el color no se destiña.',
+    },
+    pt: {
+      titulo: 'Progressiva orgânica para cabelos loiros 500 ml',
+      desc: 'Novo, nunca usado. Funciona em cabelos pretos e castanhos também; nos loiros, ajuda a não desbotar a cor.',
+    },
+  },
+
+  /* Uma das três saiu; `vendido` vale para a entrada inteira, daí a linha
+     separada — mesmo arranjo do creme de pentear. */
+  {
+    id: 'loiros-mio-capelli-vendido',
+    modelo: 'Mio Capelli Loiros 500 ml',
+    preco: 22,
+    categoria: 'beleza',
+    vendido: true,
+    reservado: true,
+    fotos: [
+      'images/progressiva-cabelo/1.jpeg',
     ],
     es: {
       titulo: 'Progresiva orgánica para pelo rubio 500 ml',
