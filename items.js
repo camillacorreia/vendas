@@ -665,7 +665,7 @@ var ITEMS = [
     preco: 40,                      // AR$ 12.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'plantas',
-    vendido: false,
+    vendido: true,
     reservado: true,
     fotos: [
       'images/planta-2/1.jpeg',
