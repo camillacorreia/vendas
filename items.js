@@ -1129,11 +1129,11 @@ var ITEMS = [
   {
     id: 'sabonete-enxofre-granado',
     modelo: 'Granado Enxofre 90 g',
-    preco: 8,                       // por unidade
+    preco: 7.5,                     // por unidade — R$ 30 pelos quatro
     qtd: 4,
     precoCombo: 30,                 // os quatro juntos
     categoria: 'beleza',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado
     fotos: [
       'images/sabonete-enxofre/1.jpeg',
