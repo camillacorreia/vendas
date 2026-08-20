@@ -32,4 +32,5 @@ var RESERVAS = {
   'pratos-vajilla':           { por: 'Nanda', em: '2026-07-30' },
   'tostadora':                { por: 'Nanda', em: '2026-08-17' },
   'loiros-mio-capelli-vendido': { por: 'Nanda', em: '2026-08-17', nota: '1 das 3 unidades' },
+  'porta-bolo':               { por: 'Nanda', em: '2026-08-20' },
 };

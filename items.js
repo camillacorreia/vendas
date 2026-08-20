@@ -307,6 +307,30 @@ var ITEMS = [
   },
 
   {
+    id: 'esfera-bluetooth-ditron-speack5',
+    modelo: 'Ditron Speack5',
+    preco: 25,
+    precoMercado: 45,               // AR$ 13.500 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'eletronicos',
+    vendido: false,
+    // FALTA: medidas
+    fotos: [
+      'images/globo-de-luz/1.jpeg',
+      'images/globo-de-luz/2.jpeg',
+    ],
+    linkMercado: 'https://www.mercadolibre.com.ar/esfera-bluetooth-ditron-speack5-rgb-efectos-audioluz-usb-45w/p/MLA24088341',
+    es: {
+      titulo: 'Parlante esfera Bluetooth con luces RGB',
+      desc: '4,5 W, recargable. Bola giratoria con luces que acompañan el ritmo de la música. Reproduce por Bluetooth, USB y MP3. Va con la caja y el control remoto. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Caixa de som esfera Bluetooth com luzes RGB',
+      desc: '4,5 W, recarregável. Bola giratória com luzes que acompanham o ritmo da música. Toca por Bluetooth, USB e MP3. Vai com a caixa e o controle remoto. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
     id: 'sofa-cama',
     preco: 500,
     precoMercado: 1200,
@@ -796,6 +820,49 @@ var ITEMS = [
     pt: {
       titulo: 'Assadeira de vidro',
       desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'porta-bolo',
+    preco: 15,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: true,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/porta-bolo/1.jpeg',
+    ],
+    es: {
+      titulo: 'Porta torta con tapa',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Porta-bolo com tampa',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'huevera-mir',
+    modelo: 'Mir',
+    preco: 10,
+    precoMercado: 20,               // AR$ 6.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas
+    fotos: [
+      'images/porta-ovos/1.jpeg',
+    ],
+    linkMercado: 'https://articulo.mercadolibre.com.ar/MLA-1477885809-huevera-plastica-deslizante-mir-organizador-de-huevos-_JM',
+    es: {
+      titulo: 'Huevera plástica deslizante',
+      desc: 'Nueva, sin usar. Organizador de huevos para la heladera.',
+    },
+    pt: {
+      titulo: 'Porta-ovos plástico deslizante',
+      desc: 'Novo, nunca usado. Organizador de ovos para a geladeira.',
     },
   },
 
