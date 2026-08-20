@@ -33,4 +33,5 @@ var RESERVAS = {
   'tostadora':                { por: 'Nanda', em: '2026-08-17' },
   'loiros-mio-capelli-vendido': { por: 'Nanda', em: '2026-08-17', nota: '1 das 3 unidades' },
   'porta-bolo':               { por: 'Nanda', em: '2026-08-20' },
+  'huevera-mir':              { por: 'Nanda', em: '2026-08-20' },
 };

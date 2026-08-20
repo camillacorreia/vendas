@@ -850,7 +850,7 @@ var ITEMS = [
     precoMercado: 20,               // AR$ 6.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas
     fotos: [
       'images/porta-ovos/1.jpeg',
