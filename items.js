@@ -14,7 +14,7 @@ var ITEMS = [
   {
     id: 'heladera-drean-hdr420',
     modelo: 'Drean HDR420N30B',
-    preco: 3100,
+    preco: 1990,
     precoMercado: 5000,
     precoCompra: 2614.53,           // o que paguei
     ano: 2024,
@@ -35,9 +35,9 @@ var ITEMS = [
 
   {
     id: 'mesa-de-luz-blanca',
-    preco: 170,                     // por unidade
+    preco: 150,                     // por unidade
     qtd: 2,
-    precoCombo: 300,                // as duas juntas
+    precoCombo: 250,                // as duas juntas
     precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
     precoCompra: 104,               // por unidade — R$ 208 pelas duas
     ano: 2024,
@@ -63,7 +63,7 @@ var ITEMS = [
   {
     id: 'perchero-oliver',
     modelo: 'Oliver',
-    preco: 300,
+    preco: 200,
     precoMercado: 963,              // AR$ 289.000 na cotação de referência de 300
     precoCompra: 329.03,            // o que paguei
     ano: 2024,
@@ -88,7 +88,7 @@ var ITEMS = [
 
   {
     id: 'apoya-pies',
-    preco: 45,
+    preco: 25,
     precoMercado: 150,
     ano: 2024,
     categoria: 'casa',
@@ -110,7 +110,7 @@ var ITEMS = [
   {
     id: 'impressora-epson-m1180',
     modelo: 'Epson EcoTank M1120',
-    preco: 875,
+    preco: 500,
     precoMercado: 1347,             // AR$ 404.000 na cotação de referência de 300
     precoCompra: 900,               // o que paguei
     ano: 2024,
@@ -133,7 +133,7 @@ var ITEMS = [
 
   {
     id: 'escritorio-hierro-madera',
-    preco: 300,
+    preco: 250,
     precoMercado: 533,              // AR$ 160.000 na cotação de referência de 300
     precoCompra: 698.35,            // o que paguei
     ano: 2024,
@@ -234,7 +234,7 @@ var ITEMS = [
 
   {
     id: 'silla-delphi-premium',
-    preco: 380,
+    preco: 300,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
     precoCompra: 493.62,            // o que paguei
     ano: 2024,
@@ -283,7 +283,7 @@ var ITEMS = [
   {
     id: 'smart-tv-tcl-l43s5400',
     modelo: 'TCL L43S5400 (série S5400)',
-    preco: 950,
+    preco: 850,
     precoMercado: 1333,             // AR$ 400.000 na cotação de referência de 300
     precoCompra: 1189.26,           // o que paguei
     ano: 2024,
@@ -428,7 +428,7 @@ var ITEMS = [
 
   {
     id: 'mueble-columna-cocina',
-    preco: 480,
+    preco: 400,
     precoMercado: 833,              // AR$ 250.000 na cotação de referência de 300
     precoCompra: 508,               // o que paguei
     ano: 2024,
@@ -668,7 +668,7 @@ var ITEMS = [
 
   {
     id: 'planta-1',
-    preco: 70,
+    preco: 60,
     ano: 2024,
     categoria: 'plantas',
     vendido: false,

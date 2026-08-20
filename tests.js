@@ -274,7 +274,7 @@
 
     eq('mesa de luz existe', !!mesa, true);
     eq('mesa de luz tem duas unidades', mesa.qtd, 2);
-    eq('mesa de luz tem preco de combo', mesa.precoCombo, 300);
+    eq('mesa de luz tem preco de combo', mesa.precoCombo, 250);
     eq('mesa de luz e movel', mesa.categoria, 'moveis');
     eq('medidas sem altura', Core.medidasText(mesa.medidas), 'F 43 × P 37 cm');
 
@@ -295,7 +295,7 @@
 
     eq('totais contam as duas mesas',
       Core.totais([mesa]).bruto,
-      340);
+      300);
 
     eq('precoCompra negativo e rejeitado',
       Core.validateItems([{ id: 'z', preco: 1, categoria: 'casa', vendido: false, precoCompra: -5,
