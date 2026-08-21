@@ -1041,6 +1041,33 @@ var ITEMS = [
   },
 
   {
+    id: 'cesto-organizador',
+    preco: 50,
+    precoMercado: 100,              // AR$ 30.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    /* Da ficha do vendedor, em 4.png: é troncado — 26 × 26 na boca e 21 × 21
+       na base, 26 de altura, e as alças somam outros 6. */
+    medidas: { f: 26, p: 26, a: 26 },
+    fotos: [
+      'images/cesto-organizador/1.jpeg',
+      'images/cesto-organizador/2.jpeg',
+      'images/cesto-organizador/3.jpeg',
+      'images/cesto-organizador/4.png',
+    ],
+    linkMercado: 'https://www.mercadolibre.com.ar/canasto-cesto-organizador-de-mimbre-cajon-cuadrado-n1-color-marron-claro/p/MLA75026945',
+    es: {
+      titulo: 'Canasto organizador de mimbre con tela',
+      desc: 'Cuadrado, con forro de tela y manijas. Boca de 26 × 26, base de 21 × 21 y 26 de alto; las manijas suman 6 cm. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Cesto organizador de vime com forro',
+      desc: 'Quadrado, com forro de tecido e alças. Boca de 26 × 26, base de 21 × 21 e 26 de altura; as alças somam 6 cm. Em perfeito estado.',
+    },
+  },
+
+  {
     id: 'balanza-digital',
     preco: 30,
     ano: 2024,
