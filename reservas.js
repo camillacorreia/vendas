@@ -35,4 +35,5 @@ var RESERVAS = {
   'porta-bolo':               { por: 'Nanda', em: '2026-08-20' },
   'huevera-mir':              { por: 'Nanda', em: '2026-08-20' },
   'escritorio-hierro-madera': { por: 'Nanda', em: '2026-08-20' },
+  'smart-tv-tcl-l43s5400':    { por: 'Thomas', em: '2026-08-21' },
 };

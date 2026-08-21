@@ -314,6 +314,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
+    reservado: true,
     /* Medidas da ficha técnica, sem a base. Com a base ela fica 60,6 cm de
        altura e 18 cm de profundidade. */
     medidas: { f: 95.5, p: 9, a: 55.5 },
