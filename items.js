@@ -1106,9 +1106,7 @@ var ITEMS = [
   {
     id: 'creme-pentear-beleza-natural',
     modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
-    preco: 42,                      // por unidade
-    qtd: 2,
-    precoCombo: 80,                 // os dois juntos
+    preco: 42,
     categoria: 'beleza',
     vendido: false,
     // FALTA: valor de mercado
@@ -1131,8 +1129,8 @@ var ITEMS = [
   {
     id: 'creme-pentear-beleza-natural-vendidos',
     modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
-    preco: 40,                      // R$ 80 pelos dois
-    qtd: 2,
+    preco: 40.67,                   // R$ 80 pelos dois primeiros + R$ 42 = R$ 122
+    qtd: 3,
     categoria: 'beleza',
     vendido: true,
     fotos: [
