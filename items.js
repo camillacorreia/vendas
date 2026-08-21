@@ -895,12 +895,34 @@ var ITEMS = [
   {
     id: 'tacas-de-vinho',
     preco: 8,                       // por unidade
-    qtd: 8,
-    precoCombo: 60,                 // levando as oito
+    qtd: 6,
+    precoCombo: 40,                 // levando as seis
+    /* Saíram 2 das 8, então o combo passou a ser pelas seis que sobraram. As
+       vendidas estão na linha abaixo, como nos outros lotes partidos. */
     ano: 2024,
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/tacas-de-vinho/1.jpeg',
+    ],
+    es: {
+      titulo: 'Copas de vino',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Taças de vinho',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'tacas-de-vinho-vendidas',
+    preco: 8,                       // por unidade
+    qtd: 2,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: true,
     fotos: [
       'images/tacas-de-vinho/1.jpeg',
     ],
@@ -1172,11 +1194,11 @@ var ITEMS = [
   {
     id: 'mascaras-lola',
     modelo: 'Lola Cosmetics 450 g',
-    preco: 42,                      // por unidade
+    preco: 40,                      // R$ 120 pelas três, que foi como saíram
     qtd: 3,
     precoCombo: 120,                // as três juntas
     categoria: 'beleza',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado
     fotos: [
       'images/creme-hidratacao/1.jpeg',
