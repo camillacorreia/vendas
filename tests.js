@@ -54,6 +54,7 @@
   function suiteMedidas() {
     eq('medidasText completo', Core.medidasText({ f: 70, p: 74, a: 160 }), 'F 70 × P 74 × A 160 cm');
     eq('medidasText parcial', Core.medidasText({ f: 70, a: 160 }), 'F 70 × A 160 cm');
+    eq('medidasText sem altura', Core.medidasText({ f: 43, p: 37 }), 'F 43 × P 37 cm');
     eq('medidasText ausente', Core.medidasText(undefined), null);
     eq('medidasText vazio', Core.medidasText({}), null);
   }
@@ -274,7 +275,7 @@
 
     eq('mesa de luz existe', !!mesa, true);
     eq('mesa de luz e movel', mesa.categoria, 'moveis');
-    eq('medidas sem altura', Core.medidasText(mesa.medidas), 'F 43 × P 37 cm');
+    eq('mesa de luz tem as tres medidas', Core.medidasText(mesa.medidas), 'F 42 × P 37 × A 71 cm');
 
     eq('unidades es', I18N.es.unidades, 'unidades disponibles');
     eq('combo pt', I18N.pt.combo, 'As {n} juntas:');

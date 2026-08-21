@@ -44,11 +44,12 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
-    medidas: { f: 43, p: 37 },
+    medidas: { f: 42, p: 37, a: 71 },   // do diagrama em 4.png
     fotos: [
-      'images/mesas-de-luz/1.png',
-      'images/mesas-de-luz/2.png',
+      'images/mesas-de-luz/1.jpeg',
+      'images/mesas-de-luz/2.jpeg',
       'images/mesas-de-luz/3.png',
+      'images/mesas-de-luz/4.png',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
     es: {
@@ -69,9 +70,9 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: true,
-    medidas: { f: 43, p: 37 },
+    medidas: { f: 42, p: 37, a: 71 },
     fotos: [
-      'images/mesas-de-luz/1.png',
+      'images/mesas-de-luz/1.jpeg',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
     es: {
