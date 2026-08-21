@@ -22,7 +22,7 @@ var RESERVAS = {
   'licuadora-top-house-l900fb': { por: 'Itauana', em: '2026-07-27' },
   'aire-bgh-bs35wcat':        { por: 'Ivan', em: '2026-07-27' },
   'comedor-escandinavo':      { por: 'Ivan', em: '2026-07-27' },
-  'freidora-kanji-kjhaf1404': { por: 'Ivan', em: '2026-07-27' },
+  'freidora-kanji-kjhaf1404': { por: 'Bianca', em: '2026-08-20', nota: 'Ivan reservou antes e não levou' },
   'planta-4':                 { por: 'Gladys', em: '2026-07-27' },
   'rack-tv-delos':            { por: 'Amanda', em: '2026-07-30' },
   'babyliss':                 { por: 'Amanda', em: '2026-07-30' },
@@ -34,4 +34,5 @@ var RESERVAS = {
   'loiros-mio-capelli-vendido': { por: 'Nanda', em: '2026-08-17', nota: '1 das 3 unidades' },
   'porta-bolo':               { por: 'Nanda', em: '2026-08-20' },
   'huevera-mir':              { por: 'Nanda', em: '2026-08-20' },
+  'escritorio-hierro-madera': { por: 'Nanda', em: '2026-08-20' },
 };

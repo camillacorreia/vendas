@@ -273,8 +273,6 @@
     var mesa = ITEMS.filter(function (i) { return i.id === 'mesa-de-luz-blanca'; })[0];
 
     eq('mesa de luz existe', !!mesa, true);
-    eq('mesa de luz tem duas unidades', mesa.qtd, 2);
-    eq('mesa de luz tem preco de combo', mesa.precoCombo, 250);
     eq('mesa de luz e movel', mesa.categoria, 'moveis');
     eq('medidas sem altura', Core.medidasText(mesa.medidas), 'F 43 × P 37 cm');
 
@@ -293,16 +291,19 @@
         es: { titulo: 'y' }, pt: { titulo: 'y' } }], CATEGORIAS).length,
       1);
 
-    eq('totais contam as duas mesas',
-      Core.totais([mesa]).bruto,
-      300);
+    /* Numa fixture, e não no catálogo: uma venda parcial muda a quantidade real
+       do item e derrubaria estes dois sem existir defeito algum. */
+    var duasUnidades = { id: 'par', preco: 150, qtd: 2, precoCombo: 250, categoria: 'moveis',
+      vendido: false, es: { titulo: 'p' }, pt: { titulo: 'p' } };
+    eq('qtd valida no schema', Core.validateItems([duasUnidades], CATEGORIAS), []);
+    eq('totais multiplicam pela quantidade', Core.totais([duasUnidades]).bruto, 300);
 
     eq('precoCompra negativo e rejeitado',
       Core.validateItems([{ id: 'z', preco: 1, categoria: 'casa', vendido: false, precoCompra: -5,
         es: { titulo: 'z' }, pt: { titulo: 'z' } }], CATEGORIAS).length,
       1);
 
-    /* precoCompra é por unidade: R$ 208 pelas duas mesas, 104 cada. */
+    /* precoCompra é sempre por unidade, mesmo quando a entrada tem várias. */
     eq('mesa de luz guarda o preco de compra por unidade', mesa.precoCompra, 104);
 
     eq('geladeira guarda o preco de compra',

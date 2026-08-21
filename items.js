@@ -35,11 +35,12 @@ var ITEMS = [
 
   {
     id: 'mesa-de-luz-blanca',
-    preco: 150,                     // por unidade
-    qtd: 2,
-    precoCombo: 250,                // as duas juntas
+    /* Eram duas na mesma entrada e uma saiu; sem par, o preço de combo deixa de
+       existir e a que sobrou vale o preço unitário. A vendida foi pra linha
+       separada abaixo, como o creme de pentear e a progressiva. */
+    preco: 150,
     precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
-    precoCompra: 104,               // por unidade — R$ 208 pelas duas
+    precoCompra: 104,               // o que paguei por unidade
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
@@ -48,6 +49,29 @@ var ITEMS = [
       'images/mesas-de-luz/1.png',
       'images/mesas-de-luz/2.png',
       'images/mesas-de-luz/3.png',
+    ],
+    linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
+    es: {
+      titulo: 'Mesa de luz blanca con desayunador',
+      desc: 'En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Mesa de cabeceira branca com bandeja',
+      desc: 'Em perfeito estado.',
+    },
+  },
+
+  {
+    id: 'mesa-de-luz-blanca-vendida',
+    preco: 150,
+    precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
+    precoCompra: 104,               // o que paguei por unidade
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: true,
+    medidas: { f: 43, p: 37 },
+    fotos: [
+      'images/mesas-de-luz/1.png',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
     es: {
@@ -138,7 +162,7 @@ var ITEMS = [
     precoCompra: 698.35,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     medidas: { f: 120, p: 50, a: 75 },
     fotos: [
       'images/mesa-escritorio/1.jpeg',
@@ -533,7 +557,7 @@ var ITEMS = [
     precoMercado: 233,              // AR$ 70.000 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas
     fotos: [
