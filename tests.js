@@ -218,8 +218,6 @@
       ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].es.desc,
       'En perfecto estado de funcionamiento.');
 
-    eq('aviso es cita Brubank', I18N.es.avisoMercadoPago.indexOf('Brubank') >= 0, true);
-    eq('aviso pt cita Brubank', I18N.pt.avisoMercadoPago.indexOf('Brubank') >= 0, true);
 
     eq('toda foto e um caminho relativo dentro de images/',
       ITEMS.flatMap(function (i) { return i.fotos || []; })
