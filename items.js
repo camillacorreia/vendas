@@ -997,6 +997,27 @@ var ITEMS = [
   },
 
   {
+    id: 'mural-fotos-grade',
+    preco: 30,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    medidas: { f: 30, a: 60 },
+    // FALTA: valor de mercado e link de referência
+    fotos: [
+      'images/mural-fotos/1.jpeg',
+    ],
+    es: {
+      titulo: 'Panel rejilla para fotos 30 × 60 cm',
+      desc: 'Metal negro, para colgar en la pared. Va con los broches de madera. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Mural de fotos com grade 30 × 60 cm',
+      desc: 'Metal preto, para pendurar na parede. Vai com os prendedores de madeira. Em perfeito estado.',
+    },
+  },
+
+  {
     id: 'balanza-digital',
     preco: 30,
     ano: 2024,
