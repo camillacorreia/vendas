@@ -44,6 +44,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     medidas: { f: 42, p: 37, a: 71 },   // do diagrama em 4.png
     fotos: [
       'images/mesas-de-luz/1.jpeg',

@@ -36,4 +36,5 @@ var RESERVAS = {
   'huevera-mir':              { por: 'Nanda', em: '2026-08-20' },
   'escritorio-hierro-madera': { por: 'Nanda', em: '2026-08-20' },
   'smart-tv-tcl-l43s5400':    { por: 'Thomas', em: '2026-08-21' },
+  'mesa-de-luz-blanca':       { por: 'Joab', em: '2026-08-22' },
 };
