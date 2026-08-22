@@ -313,7 +313,7 @@ var ITEMS = [
     precoCompra: 1189.26,           // o que paguei
     ano: 2024,
     categoria: 'eletronicos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     /* Medidas da ficha técnica, sem a base. Com a base ela fica 60,6 cm de
        altura e 18 cm de profundidade. */
@@ -1048,9 +1048,9 @@ var ITEMS = [
 
   {
     id: 'abajur-mesa-madeira',
-    preco: 110,                     // por unidade
+    preco: 100,                     // por unidade
     qtd: 2,
-    precoCombo: 200,                // os dois juntos
+    precoCombo: 180,                // os dois juntos
     /* O anúncio de referência vende o par por AR$ 80.000; aqui o campo é por
        unidade, como o preço, então entra a metade. */
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
