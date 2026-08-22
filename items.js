@@ -1073,6 +1073,46 @@ var ITEMS = [
   },
 
   {
+    id: 'luminaria-mesa-articulada',
+    preco: 20,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/luminaria/1.jpeg',
+    ],
+    es: {
+      titulo: 'Velador de escritorio articulado',
+      desc: 'Negro, cuello flexible e interruptor en la base. Ya viene con la lámpara. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Luminária de mesa articulada',
+      desc: 'Preta, braço flexível e interruptor na base. Já vem com a lâmpada. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'tripe-ferro-vaso',
+    preco: 20,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: altura, valor de mercado e link de referência
+    fotos: [
+      'images/tripe/1.jpeg',
+    ],
+    es: {
+      titulo: 'Trípode de hierro para maceta, aro 15/16',
+      desc: 'Hierro negro. El aro toma macetas de 15 o 16 cm. En perfecto estado.',
+    },
+    pt: {
+      titulo: 'Tripé de ferro para vaso, aro 15/16',
+      desc: 'Ferro preto. O aro serve para vasos de 15 ou 16 cm. Em perfeito estado.',
+    },
+  },
+
+  {
     id: 'balanza-digital',
     preco: 30,
     ano: 2024,
