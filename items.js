@@ -894,35 +894,14 @@ var ITEMS = [
 
   {
     id: 'tacas-de-vinho',
-    preco: 8,                       // por unidade
-    qtd: 6,
-    precoCombo: 40,                 // levando as seis
-    /* Saíram 2 das 8, então o combo passou a ser pelas seis que sobraram. As
-       vendidas estão na linha abaixo, como nos outros lotes partidos. */
-    ano: 2024,
-    categoria: 'casa',
-    vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
-    fotos: [
-      'images/tacas-de-vinho/1.jpeg',
-    ],
-    es: {
-      titulo: 'Copas de vino',
-      desc: 'En perfecto estado.',
-    },
-    pt: {
-      titulo: 'Taças de vinho',
-      desc: 'Em perfeito estado.',
-    },
-  },
-
-  {
-    id: 'tacas-de-vinho-vendidas',
-    preco: 8,                       // por unidade
-    qtd: 2,
+    /* As oito saíram: duas avulsas por R$ 16 e as seis restantes no combo de
+       R$ 40, R$ 56 no total — que é o que 7 por unidade faz o painel somar. */
+    preco: 7,
+    qtd: 8,
     ano: 2024,
     categoria: 'casa',
     vendido: true,
+    // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/tacas-de-vinho/1.jpeg',
     ],
@@ -1068,6 +1047,32 @@ var ITEMS = [
   },
 
   {
+    id: 'abajur-mesa-madeira',
+    preco: 110,                     // por unidade
+    qtd: 2,
+    precoCombo: 200,                // os dois juntos
+    /* O anúncio de referência vende o par por AR$ 80.000; aqui o campo é por
+       unidade, como o preço, então entra a metade. */
+    precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas
+    fotos: [
+      'images/abajur/1.jpeg',
+    ],
+    linkMercado: 'https://www.mercadolibre.com.ar/velador--lampara-de-mesa-nordica-x-2-unidades/up/MLAU3932469950',
+    es: {
+      titulo: 'Velador de mesa, base de madera',
+      desc: 'Pantalla de tela y base de madera. Cada uno con su interruptor en el cable. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Abajur de mesa com base de madeira',
+      desc: 'Cúpula de tecido e base de madeira. Cada um com interruptor no fio. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
     id: 'balanza-digital',
     preco: 30,
     ano: 2024,
@@ -1178,9 +1183,12 @@ var ITEMS = [
   {
     id: 'creme-pentear-beleza-natural',
     modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
-    preco: 42,
+    /* Os quatro saíram: R$ 80 pelos dois primeiros, R$ 42 pelo terceiro e
+       R$ 42 pelo último, R$ 164 no total — 41 por unidade fecha a conta. */
+    preco: 41,
+    qtd: 4,
     categoria: 'beleza',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado
     fotos: [
       'images/creme-de-cabelo/1.jpeg',
@@ -1195,28 +1203,6 @@ var ITEMS = [
     },
   },
 
-  /* Os quatro potes eram uma entrada só; dois saíram no combo de R$ 80, e
-     `vendido` vale para a entrada inteira — daí a linha separada, que mantém
-     a venda no painel sem esconder os dois que sobraram. */
-  {
-    id: 'creme-pentear-beleza-natural-vendidos',
-    modelo: 'Beleza Natural Explosão de Óleos Africanos 1 kg',
-    preco: 40.67,                   // R$ 80 pelos dois primeiros + R$ 42 = R$ 122
-    qtd: 3,
-    categoria: 'beleza',
-    vendido: true,
-    fotos: [
-      'images/creme-de-cabelo/1.jpeg',
-    ],
-    es: {
-      titulo: 'Crema de peinar 1 kg, 7 aceites africanos',
-      desc: 'Producto brasileño, nuevo y sellado. Nutrición, definición y control de frizz para pelo ondulado, rizado y crespo.',
-    },
-    pt: {
-      titulo: 'Creme de pentear 1 kg, 7 óleos africanos',
-      desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos.',
-    },
-  },
 
   {
     id: 'mascaras-lola',
