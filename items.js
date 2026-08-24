@@ -1316,9 +1316,7 @@ var ITEMS = [
   {
     id: 'loiros-mio-capelli',
     modelo: 'Mio Capelli Loiros 500 ml',
-    preco: 22,                      // por unidade
-    qtd: 2,
-    precoCombo: 40,                 // as duas juntas
+    preco: 22,
     categoria: 'beleza',
     vendido: false,
     // FALTA: valor de mercado
@@ -1342,7 +1340,8 @@ var ITEMS = [
   {
     id: 'loiros-mio-capelli-vendido',
     modelo: 'Mio Capelli Loiros 500 ml',
-    preco: 22,
+    preco: 22,                      // as duas saíram a 22 cada
+    qtd: 2,
     categoria: 'beleza',
     vendido: true,
     reservado: true,
