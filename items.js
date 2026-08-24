@@ -260,7 +260,7 @@ var ITEMS = [
 
   {
     id: 'silla-delphi-premium',
-    preco: 300,
+    preco: 200,
     precoMercado: 667,              // AR$ 200.000 na cotação de referência de 300
     precoCompra: 493.62,            // o que paguei
     ano: 2024,
