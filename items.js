@@ -694,6 +694,28 @@ var ITEMS = [
   },
 
   {
+    id: 'sanduicheira-bluesky',
+    modelo: 'Bluesky',
+    preco: 20,
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/sanduicheira/1.jpeg',
+      'images/sanduicheira/2.jpeg',
+    ],
+    es: {
+      titulo: 'Sandwichera tostadora, 2 sándwiches',
+      desc: 'Placas antiadherentes que cortan el sándwich en dos triángulos. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Sanduicheira tostadeira, 2 sanduíches',
+      desc: 'Chapas antiaderentes que cortam o sanduíche em dois triângulos. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
     id: 'planta-1',
     preco: 60,
     ano: 2024,
@@ -1130,6 +1152,27 @@ var ITEMS = [
     pt: {
       titulo: 'Balança digital de banheiro, vidro',
       desc: 'Até 180 kg. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'balanza-cocina-sf400',
+    modelo: 'SF-400',
+    preco: 20,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/balanca-comida/1.jpeg',
+    ],
+    es: {
+      titulo: 'Balanza de cocina digital, hasta 10 kg',
+      desc: 'Plástico blanco. Precisión de 1 g, función tara, en gramos u onzas. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Balança de cozinha digital, até 10 kg',
+      desc: 'Plástico branco. Precisão de 1 g, função tara, em gramas ou onças. Em perfeito estado de funcionamento.',
     },
   },
 
