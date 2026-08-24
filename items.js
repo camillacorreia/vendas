@@ -461,6 +461,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     medidas: { f: 57, a: 200 },
     fotos: [
       'images/armario-cozinha/1.jpeg',
