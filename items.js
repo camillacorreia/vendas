@@ -1120,7 +1120,7 @@ var ITEMS = [
     preco: 20,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: altura, valor de mercado e link de referência
     fotos: [
       'images/tripe/1.jpeg',
