@@ -149,6 +149,24 @@ var Core = (function () {
     return 'https://wa.me/' + phone + '?text=' + encodeURIComponent(msg);
   }
 
+  /* Pagamento pendente. O mapa em reservas.js lista o que ainda não entrou:
+     estar lá é a dívida, e quitar é apagar a linha. `valor` cobre o caso de
+     uma linha vendida em parcelas — as taças saíram 2 avulsas e 6 no combo,
+     mas viraram uma entrada só. */
+  function faltaPagar(item, pagamentos) {
+    var p = pagamentos && pagamentos[item.id];
+    if (!p) return 0;
+    if (typeof p.valor === 'number') return p.valor;
+    var unidades = typeof item.qtd === 'number' && item.qtd > 0 ? item.qtd : 1;
+    return precoDe(item) * unidades;
+  }
+
+  function totalEmAberto(items, pagamentos) {
+    return items.reduce(function (soma, item) {
+      return soma + faltaPagar(item, pagamentos);
+    }, 0);
+  }
+
   function totais(items) {
     var t = { qtd: 0, qtdVendida: 0, bruto: 0, vendido: 0, aVender: 0, mercado: 0, economia: 0 };
     items.forEach(function (item) {
@@ -186,6 +204,8 @@ var Core = (function () {
     sortItems: sortItems,
     categoriasUsadas: categoriasUsadas,
     waLink: waLink,
+    faltaPagar: faltaPagar,
+    totalEmAberto: totalEmAberto,
     totais: totais,
   };
 })();

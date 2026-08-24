@@ -68,6 +68,41 @@
     eq('parseCotacao negativo', Core.parseCotacao('-5', 300), 300);
   }
 
+  function suitePagamentos() {
+    var itens = [
+      { id: 'inteiro', preco: 250, categoria: 'moveis', vendido: true,
+        es: { titulo: 'a' }, pt: { titulo: 'a' } },
+      { id: 'lote', preco: 7, qtd: 8, categoria: 'casa', vendido: true,
+        es: { titulo: 'b' }, pt: { titulo: 'b' } },
+      { id: 'quitado', preco: 100, categoria: 'casa', vendido: true,
+        es: { titulo: 'c' }, pt: { titulo: 'c' } },
+    ];
+    var pagamentos = {
+      'inteiro': { quem: 'Nanda' },
+      'lote': { quem: 'Bianca', valor: 40 },   // 6 das 8, não a linha toda
+      'fantasma': { quem: 'Ninguém' },         // id que não existe mais
+    };
+
+    eq('falta pagar cobre a linha inteira',
+      Core.faltaPagar(itens[0], pagamentos), 250);
+    eq('falta pagar respeita o valor parcial',
+      Core.faltaPagar(itens[1], pagamentos), 40);
+    eq('sem linha no mapa nao falta nada',
+      Core.faltaPagar(itens[2], pagamentos), 0);
+    eq('mapa ausente nao falta nada',
+      Core.faltaPagar(itens[0], undefined), 0);
+
+    /* Sem o valor parcial a linha do lote valeria 7 × 8 = 56. */
+    eq('lote sem valor parcial usa preco x qtd',
+      Core.faltaPagar(itens[1], { 'lote': { quem: 'Bianca' } }), 56);
+
+    eq('total em aberto soma os listados',
+      Core.totalEmAberto(itens, pagamentos), 290);
+    eq('total em aberto ignora id inexistente',
+      Core.totalEmAberto([itens[2]], pagamentos), 0);
+    eq('total em aberto sem mapa', Core.totalEmAberto(itens, undefined), 0);
+  }
+
   function suiteI18n() {
     var keys = Object.keys(I18N.es).sort();
     var keysPt = Object.keys(I18N.pt).sort();
@@ -311,6 +346,6 @@
   }
 
   runSuites([suiteFormat, suiteDesconto, suiteMedidas, suiteCotacao,
-             suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteFaixa, suiteWhats, suiteConteudo,
+             suitePagamentos, suiteI18n, suiteDados, suiteBusca, suiteOrdem, suiteFaixa, suiteWhats, suiteConteudo,
              suiteControles, suiteTotais, suiteItens]);
 })();

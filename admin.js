@@ -103,6 +103,14 @@
         Core.formatARS(tr_.bruto, taxa) + ' · ' + tr_.qtd + ' item(ns)'));
     }
 
+    var aberto = typeof PAGAMENTOS === 'object' ? Core.totalEmAberto(ITEMS, PAGAMENTOS) : 0;
+    if (aberto > 0) {
+      var quantos = ITEMS.filter(function (i) { return Core.faltaPagar(i, PAGAMENTOS) > 0; }).length;
+      el['resumo'].appendChild(cartao(
+        'Falta receber', Core.formatBRL(aberto),
+        Core.formatARS(aberto, taxa) + ' · ' + quantos + ' item(ns)'));
+    }
+
     var abatimento = t.mercado > 0 ? Math.round((t.economia / t.mercado) * 100) : 0;
     el['resumo'].appendChild(cartao(
       'Abaixo do mercado', Core.formatBRL(t.economia),
@@ -171,6 +179,27 @@
       td.appendChild(semNome);
     }
     tr.appendChild(td);
+
+    /* Vendido não quer dizer pago: esta coluna mostra o que ainda não entrou,
+       segundo o mapa PAGAMENTOS do reservas.js. */
+    var falta = typeof PAGAMENTOS === 'object' ? Core.faltaPagar(item, PAGAMENTOS) : 0;
+    var tdPag = document.createElement('td');
+    if (falta > 0) {
+      var pag = PAGAMENTOS[item.id];
+      var selo2 = document.createElement('span');
+      selo2.className = 'selo selo--devendo';
+      selo2.textContent = 'Falta ' + Core.formatBRL(falta);
+      tdPag.appendChild(selo2);
+
+      var dequem = document.createElement('span');
+      dequem.className = 'reserva__quem';
+      dequem.textContent = pag.quem;
+      if (pag.nota) dequem.title = pag.nota;
+      tdPag.appendChild(dequem);
+    } else {
+      tdPag.textContent = '—';
+    }
+    tr.appendChild(tdPag);
 
     return tr;
   }

@@ -38,3 +38,21 @@ var RESERVAS = {
   'smart-tv-tcl-l43s5400':    { por: 'Thomas', em: '2026-08-21' },
   'mesa-de-luz-blanca':       { por: 'Joab', em: '2026-08-22' },
 };
+
+/* ============================================================
+   PAGAMENTOS PENDENTES — vendido, mas o dinheiro não entrou.
+
+   Estar nesta lista é a dívida: quando pagar, apague a linha.
+   `valor` é opcional e só serve quando a entrada do items.js
+   junta várias unidades e só parte delas está em aberto.
+   ============================================================ */
+
+var PAGAMENTOS = {
+  // 'id-do-item': { quem: 'Nome', valor: 0, nota: '' },
+  'freidora-kanji-kjhaf1404':   { quem: 'Bianca' },
+  'escritorio-hierro-madera':   { quem: 'Nanda' },
+  'huevera-mir':                { quem: 'Nanda' },
+  'porta-bolo':                 { quem: 'Nanda' },
+  'tacas-de-vinho':             { quem: 'Bianca', valor: 40, nota: '6 das 8' },
+  'mesa-de-luz-blanca-vendida': { quem: 'Joab' },
+};
