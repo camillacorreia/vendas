@@ -5,7 +5,7 @@
 
 var CONFIG = {
   whatsapp: '5493415827248',  // DDI 54 + 9 (celular AR) + área 341 + número
-  cotacaoPadrao: 300,         // 1 BRL = N ARS
+  cotacaoPadrao: 305,         // 1 BRL = N ARS
 };
 
 var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'beleza', 'plantas', 'outros'];

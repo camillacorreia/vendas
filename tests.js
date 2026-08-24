@@ -83,7 +83,7 @@
 
   function suiteDados() {
     eq('config whatsapp', CONFIG.whatsapp, '5493415827248');
-    eq('config cotacao padrao', CONFIG.cotacaoPadrao, 300);
+    eq('config cotacao padrao', CONFIG.cotacaoPadrao, 305);
     eq('items validos', Core.validateItems(ITEMS, CATEGORIAS), []);
     eq('ids unicos',
       ITEMS.length,
