@@ -455,7 +455,7 @@ var ITEMS = [
 
   {
     id: 'mueble-columna-cocina',
-    preco: 400,
+    preco: 380,
     precoMercado: 833,              // AR$ 250.000 na cotação de referência de 300
     precoCompra: 508,               // o que paguei
     ano: 2024,
@@ -966,7 +966,8 @@ var ITEMS = [
     preco: 10,                      // os dois juntos
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/pratos-2/1.jpeg',
