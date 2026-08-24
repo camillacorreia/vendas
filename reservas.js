@@ -21,7 +21,7 @@ var RESERVAS = {
   'floreros-vidrio':          { por: 'Nanda', em: '2026-07-27' },
   'licuadora-top-house-l900fb': { por: 'Itauana', em: '2026-07-27' },
   'aire-bgh-bs35wcat':        { por: 'Ivan', em: '2026-07-27' },
-  'comedor-escandinavo':      { por: 'Ivan', em: '2026-07-27' },
+  'comedor-escandinavo':      { por: 'Anuah', em: '2026-08-24', nota: 'Ivan reservou antes e não levou' },
   'freidora-kanji-kjhaf1404': { por: 'Bianca', em: '2026-08-20', nota: 'Ivan reservou antes e não levou' },
   'planta-4':                 { por: 'Gladys', em: '2026-07-27' },
   'rack-tv-delos':            { por: 'Amanda', em: '2026-07-30' },
@@ -37,6 +37,7 @@ var RESERVAS = {
   'escritorio-hierro-madera': { por: 'Nanda', em: '2026-08-20' },
   'smart-tv-tcl-l43s5400':    { por: 'Thomas', em: '2026-08-21' },
   'mesa-de-luz-blanca':       { por: 'Joab', em: '2026-08-22' },
+  'abajur-mesa-madeira-vendido': { por: 'Joab', em: '2026-08-24' },
 };
 
 /* ============================================================
@@ -54,5 +55,4 @@ var PAGAMENTOS = {
   'huevera-mir':                { quem: 'Nanda' },
   'porta-bolo':                 { quem: 'Nanda' },
   'tacas-de-vinho':             { quem: 'Bianca', valor: 40, nota: '6 das 8' },
-  'mesa-de-luz-blanca-vendida': { quem: 'Joab' },
 };

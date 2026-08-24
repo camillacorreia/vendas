@@ -35,15 +35,14 @@ var ITEMS = [
 
   {
     id: 'mesa-de-luz-blanca',
-    /* Eram duas na mesma entrada e uma saiu; sem par, o preço de combo deixa de
-       existir e a que sobrou vale o preço unitário. A vendida foi pra linha
-       separada abaixo, como o creme de pentear e a progressiva. */
+    /* As duas saíram, a R$ 150 cada, então a linha volta a ser uma só. */
     preco: 150,
+    qtd: 2,
     precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
     precoCompra: 104,               // o que paguei por unidade
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     medidas: { f: 42, p: 37, a: 71 },   // do diagrama em 4.png
     fotos: [
@@ -51,29 +50,6 @@ var ITEMS = [
       'images/mesas-de-luz/2.jpeg',
       'images/mesas-de-luz/3.png',
       'images/mesas-de-luz/4.png',
-    ],
-    linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
-    es: {
-      titulo: 'Mesa de luz blanca con desayunador',
-      desc: 'En perfecto estado.',
-    },
-    pt: {
-      titulo: 'Mesa de cabeceira branca com bandeja',
-      desc: 'Em perfeito estado.',
-    },
-  },
-
-  {
-    id: 'mesa-de-luz-blanca-vendida',
-    preco: 150,
-    precoMercado: 333,              // AR$ 100.000 na cotação de referência de 300
-    precoCompra: 104,               // o que paguei por unidade
-    ano: 2024,
-    categoria: 'moveis',
-    vendido: true,
-    medidas: { f: 42, p: 37, a: 71 },
-    fotos: [
-      'images/mesas-de-luz/1.jpeg',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/mesa-de-luz-con-desayunador-centro-estant-blanca-color-blanco/p/MLA22649299',
     es: {
@@ -508,7 +484,7 @@ var ITEMS = [
     precoCompra: 830.25,            // mesa 191,49 + 4 cadeiras 638,76
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
     fotos: [
@@ -1072,10 +1048,68 @@ var ITEMS = [
   },
 
   {
+    id: 'varal-de-roupa',
+    preco: 50,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    reservado: true,
+    // Sem foto de propósito. FALTA: medidas, valor de mercado e link.
+    es: {
+      titulo: 'Tendedero de ropa',
+      desc: 'En buen estado.',
+    },
+    pt: {
+      titulo: 'Varal de roupa',
+      desc: 'Em bom estado.',
+    },
+  },
+
+  {
+    id: 'sapateira-madeira',
+    preco: 30,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/sapatero/1.jpeg',
+    ],
+    es: {
+      titulo: 'Zapatero de madera',
+      desc: 'Cajón de madera con divisiones. En buen estado.',
+    },
+    pt: {
+      titulo: 'Sapateira de madeira',
+      desc: 'Caixote de madeira com divisórias. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'estante-madeira',
+    preco: 70,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/estante/1.jpeg',
+      'images/estante/2.jpeg',
+    ],
+    es: {
+      titulo: 'Estantería de madera',
+      desc: 'Madera natural, con estantes. En buen estado.',
+    },
+    pt: {
+      titulo: 'Estante de madeira',
+      desc: 'Madeira natural, com prateleiras. Em bom estado.',
+    },
+  },
+
+  {
     id: 'abajur-mesa-madeira',
-    preco: 100,                     // por unidade
-    qtd: 2,
-    precoCombo: 180,                // os dois juntos
+    preco: 100,
+    /* Um saiu por R$ 85 e está na linha abaixo. Sem par, o combo sai daqui. */
     /* O anúncio de referência vende o par por AR$ 80.000; aqui o campo é por
        unidade, como o preço, então entra a metade. */
     precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
@@ -1094,6 +1128,27 @@ var ITEMS = [
     pt: {
       titulo: 'Abajur de mesa com base de madeira',
       desc: 'Cúpula de tecido e base de madeira. Cada um com interruptor no fio. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'abajur-mesa-madeira-vendido',
+    preco: 85,                      // foi o que ele saiu
+    precoMercado: 133,              // AR$ 40.000 na cotação de referência de 300
+    ano: 2024,
+    categoria: 'casa',
+    vendido: true,
+    fotos: [
+      'images/abajur/1.jpeg',
+    ],
+    linkMercado: 'https://www.mercadolibre.com.ar/velador--lampara-de-mesa-nordica-x-2-unidades/up/MLAU3932469950',
+    es: {
+      titulo: 'Velador de mesa, base de madera',
+      desc: 'Pantalla de tela y base de madera. Con interruptor en el cable. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Abajur de mesa com base de madeira',
+      desc: 'Cúpula de tecido e base de madeira. Com interruptor no fio. Em perfeito estado de funcionamento.',
     },
   },
 
@@ -1288,7 +1343,6 @@ var ITEMS = [
       desc: 'Novo e lacrado. Nutrição, definição e controle de frizz para cabelos ondulados, cacheados e crespos.',
     },
   },
-
 
   {
     id: 'mascaras-lola',
