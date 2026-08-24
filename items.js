@@ -699,7 +699,7 @@ var ITEMS = [
     preco: 20,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/sanduicheira/1.jpeg',
@@ -1100,7 +1100,7 @@ var ITEMS = [
     preco: 20,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/luminaria/1.jpeg',
