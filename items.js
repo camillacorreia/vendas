@@ -241,7 +241,8 @@ var ITEMS = [
     precoCompra: 493.62,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: true,
+    vendido: false,
+    reservado: true,
     // FALTA: medidas
     fotos: [
       'images/cadeira-escritorio/1.jpeg',
@@ -485,7 +486,7 @@ var ITEMS = [
     precoCompra: 830.25,            // mesa 191,49 + 4 cadeiras 638,76
     ano: 2024,
     categoria: 'moveis',
-    vendido: true,
+    vendido: false,
     reservado: true,
     // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
     fotos: [

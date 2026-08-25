@@ -51,7 +51,6 @@ var RESERVAS = {
 var PAGAMENTOS = {
   // 'id-do-item': { quem: 'Nome', valor: 0, nota: '' },
   'escritorio-hierro-madera':   { quem: 'Nanda' },
-  'comedor-escandinavo':        { quem: 'Anuah' },
   'huevera-mir':                { quem: 'Nanda' },
   'abajur-mesa-madeira-vendido': { quem: 'Joab', valor: 35, nota: 'saldo do que levou' },
   'porta-bolo':                 { quem: 'Nanda' },
