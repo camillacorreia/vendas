@@ -1179,7 +1179,7 @@ var ITEMS = [
     id: 'kit-academia',
     /* Vai junto, como um kit: separado, cada peça vale pouco e dá muito
        trabalho de combinar entrega. */
-    preco: 50,
+    preco: 60,
     precoMercado: 197,              // AR$ 60.000 na cotação de referência de 305
     categoria: 'outros',
     vendido: false,
