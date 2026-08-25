@@ -1111,6 +1111,120 @@ var ITEMS = [
   },
 
   {
+    id: 'gaveteiro-3-gavetas',
+    preco: 50,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: altura, valor de mercado e link de referência
+    medidas: { f: 30, p: 30 },
+    fotos: [
+      'images/cajoneira/1.jpeg',
+      'images/cajoneira/2.jpeg',
+    ],
+    es: {
+      titulo: 'Cajonera blanca 30 × 30, 3 cajones',
+      desc: 'Melamina blanca. En buen estado.',
+    },
+    pt: {
+      titulo: 'Gaveteiro branco 30 × 30, 3 gavetas',
+      desc: 'Melamina branca. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'gaveteiro-3-gavetas-avariado',
+    preco: 25,
+    ano: 2024,
+    categoria: 'moveis',
+    vendido: false,
+    // FALTA: altura, valor de mercado e link de referência
+    medidas: { f: 30, p: 30 },
+    fotos: [
+      'images/cajoneira-quebrada/1.jpeg',
+      'images/cajoneira-quebrada/2.jpeg',
+    ],
+    es: {
+      titulo: 'Cajonera blanca 30 × 30, 3 cajones — con arreglo',
+      desc: 'Igual a la otra, pero la tapa de un cajón está suelta: se resuelve con un martillazo. Por eso, la mitad de precio.',
+    },
+    pt: {
+      titulo: 'Gaveteiro branco 30 × 30, 3 gavetas — com reparo',
+      desc: 'Igual ao outro, mas a tampa de uma gaveta está solta: resolve com uma martelada. Por isso, metade do preço.',
+    },
+  },
+
+  {
+    id: 'mixer-mondial-500w',
+    modelo: 'Mondial Power Mixer 500 W',
+    preco: 50,
+    ano: 2024,
+    categoria: 'eletrodomesticos',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/mixer/1.jpeg',
+    ],
+    es: {
+      titulo: 'Mixer de mano 500 W',
+      desc: 'Pie de acero inoxidable, botón turbo. En perfecto estado de funcionamiento.',
+    },
+    pt: {
+      titulo: 'Mixer de mão 500 W',
+      desc: 'Pé de aço inox, botão turbo. Em perfeito estado de funcionamento.',
+    },
+  },
+
+  {
+    id: 'kit-academia',
+    /* Vai junto, como um kit: separado, cada peça vale pouco e dá muito
+       trabalho de combinar entrega. */
+    preco: 50,
+    precoMercado: 197,              // AR$ 60.000 na cotação de referência de 305
+    categoria: 'outros',
+    vendido: false,
+    ano: 2024,
+    linkMercado: 'https://www.mercadolibre.com.ar/kit-entrenamiento-colcho-pesas-rueda-banda-soga-tobilleras-color-violeta-manc-y-tob-1kg/p/MLA67077576',
+    fotos: [
+      'images/kit-academia/1.jpeg',
+      'images/kit-academia/2.jpeg',
+    ],
+    es: {
+      titulo: 'Kit de gimnasio en casa, 6 piezas',
+      desc: 'Pesa rusa de 8 kg · par de mancuernas de 3 kg cada una · tobilleras de 1 kg cada una · colchoneta · soga de salto · rueda abdominal. 16 kg de peso en total. En buen estado.',
+    },
+    pt: {
+      titulo: 'Kit de academia em casa, 6 peças',
+      desc: 'Kettlebell de 8 kg · par de halteres de 3 kg cada · caneleiras de 1 kg cada · colchonete · corda de pular · roda abdominal. 16 kg de carga no total. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'coqueteleira-600ml',
+    preco: 15,
+    precoMercado: 30,               // AR$ 9.150 na cotação de referência de 305
+    ano: 2024,
+    categoria: 'outros',
+    vendido: false,
+    // FALTA: medidas
+    fotos: [
+      'images/squeeze/1.jpeg',
+      'images/squeeze/2.jpeg',
+      'images/squeeze/3.jpeg',
+      'images/squeeze/4.jpeg',
+    ],
+    linkMercado: 'https://www.mercadolivre.com.br/coqueteleira-shaker-academia-compartimento-600ml-suplementos-hermetico-whey-capsulas-comprimidos-fit-shakeira-bpa-free-masterheart/p/MLB55120049',
+    es: {
+      titulo: 'Coctelera de gimnasio 600 ml, con compartimentos',
+      desc: 'Nueva, sin usar. Hermética, libre de BPA, con compartimentos abajo para suplemento o cápsulas.',
+    },
+    pt: {
+      titulo: 'Coqueteleira de academia 600 ml, com compartimentos',
+      desc: 'Nova, nunca usada. Hermética, livre de BPA, com compartimentos embaixo para suplemento ou cápsulas.',
+    },
+  },
+
+  {
     id: 'abajur-mesa-madeira',
     preco: 100,
     /* Um saiu por R$ 85 e está na linha abaixo. Sem par, o combo sai daqui. */
