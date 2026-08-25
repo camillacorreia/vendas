@@ -14,7 +14,7 @@ var ITEMS = [
   {
     id: 'heladera-drean-hdr420',
     modelo: 'Drean HDR420N30B',
-    preco: 1990,
+    preco: 1800,
     precoMercado: 5000,
     precoCompra: 2614.53,           // o que paguei
     ano: 2024,
@@ -213,7 +213,7 @@ var ITEMS = [
   {
     id: 'lavarropas-drean-next-709',
     modelo: 'Drean Next 7.09 Eco',
-    preco: 1650,
+    preco: 1550,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
     precoCompra: 2161.7,            // o que paguei
     ano: 2024,
