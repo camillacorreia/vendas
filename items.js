@@ -1072,7 +1072,7 @@ var ITEMS = [
     preco: 30,
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
@@ -1093,7 +1093,7 @@ var ITEMS = [
     preco: 70,
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
