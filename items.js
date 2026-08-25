@@ -241,7 +241,7 @@ var ITEMS = [
     precoCompra: 493.62,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas
     fotos: [
       'images/cadeira-escritorio/1.jpeg',
