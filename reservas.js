@@ -50,9 +50,7 @@ var RESERVAS = {
 
 var PAGAMENTOS = {
   // 'id-do-item': { quem: 'Nome', valor: 0, nota: '' },
-  'freidora-kanji-kjhaf1404':   { quem: 'Bianca' },
   'escritorio-hierro-madera':   { quem: 'Nanda' },
   'huevera-mir':                { quem: 'Nanda' },
   'porta-bolo':                 { quem: 'Nanda' },
-  'tacas-de-vinho':             { quem: 'Bianca', valor: 40, nota: '6 das 8' },
 };

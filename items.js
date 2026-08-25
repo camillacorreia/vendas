@@ -1072,6 +1072,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/sapatero/1.jpeg',
@@ -1092,6 +1093,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/estante/1.jpeg',
