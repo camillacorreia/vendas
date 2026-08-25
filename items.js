@@ -28,7 +28,7 @@ var ITEMS = [
       desc: 'En perfecto estado de funcionamiento.',
     },
     pt: {
-      titulo: 'Geladeira No Frost 420 Lts Branca',
+      titulo: 'Geladeira Frost Free 420 Lts Branca',
       desc: 'Em perfeito estado de funcionamento.',
     },
   },
