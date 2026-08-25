@@ -94,7 +94,7 @@ var ITEMS = [
     precoMercado: 150,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas e link de referência
     fotos: [
       'images/apoio-de-pes/1.jpeg',
