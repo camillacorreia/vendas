@@ -341,6 +341,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     medidas: { f: 200, p: 90 },
     medidasTexto: '2 metros × 90 cm',
     fotos: [
