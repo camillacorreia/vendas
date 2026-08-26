@@ -65,7 +65,7 @@ var ITEMS = [
   {
     id: 'perchero-oliver',
     modelo: 'Oliver',
-    preco: 200,
+    preco: 150,
     precoMercado: 963,              // AR$ 289.000 na cotação de referência de 300
     precoCompra: 329.03,            // o que paguei
     ano: 2024,
@@ -696,7 +696,7 @@ var ITEMS = [
 
   {
     id: 'planta-1',
-    preco: 60,
+    preco: 40,
     ano: 2024,
     categoria: 'plantas',
     vendido: false,
@@ -831,9 +831,9 @@ var ITEMS = [
   {
     id: 'assadeira-marinex',
     modelo: 'Marinex',
-    preco: 25,                      // por unidade
+    preco: 10,                      // por unidade
     qtd: 4,
-    precoCombo: 90,                 // levando as quatro
+    precoCombo: 35,                 // levando as quatro
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -1003,7 +1003,7 @@ var ITEMS = [
 
   {
     id: 'mural-fotos-grade',
-    preco: 30,
+    preco: 20,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
@@ -1225,8 +1225,108 @@ var ITEMS = [
   },
 
   {
+    id: 'tacas-vidro-lavrado',
+    preco: 50,                      // as seis juntas
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/copos-1/1.jpeg',
+    ],
+    es: {
+      titulo: '6 copas de vidrio labrado con pie',
+      desc: 'Las seis juntas. En buen estado.',
+    },
+    pt: {
+      titulo: '6 taças de vidro lavrado com pé',
+      desc: 'As seis juntas. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'copos-altos-e-xicara',
+    preco: 20,                      // os quatro juntos
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/copos-2/1.jpeg',
+    ],
+    es: {
+      titulo: '3 vasos altos + 1 taza de capuchino',
+      desc: 'Los cuatro juntos. La taza de capuchino es de vidrio con pie y asa. En buen estado.',
+    },
+    pt: {
+      titulo: '3 copos altos + 1 xícara de cappuccino',
+      desc: 'Os quatro juntos. A xícara de cappuccino é de vidro, com pé e alça. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'potes-vidro-tampa-bambu',
+    preco: 50,                      // os cinco juntos
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/potes-madeira/1.jpeg',
+    ],
+    es: {
+      titulo: '5 frascos de vidrio con tapa y cuchara de bambú',
+      desc: 'Los cinco juntos. Cada uno con su cuchara de bambú al costado. En buen estado.',
+    },
+    pt: {
+      titulo: '5 potes de vidro com tampa e colher de bambu',
+      desc: 'Os cinco juntos. Cada um com a colher de bambu na lateral. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'kit-mesa-3-pecas',
+    preco: 10,                      // as três peças juntas
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/kit-1/1.jpeg',
+    ],
+    es: {
+      titulo: 'Kit de mesa: palillero, servilletero y harinera',
+      desc: 'Las tres piezas juntas. El servilletero es de metal. En buen estado.',
+    },
+    pt: {
+      titulo: 'Kit de mesa: porta-palito, porta-guardanapo e farinheira',
+      desc: 'As três peças juntas. O porta-guardanapo é de metal. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'porta-macarrao',
+    preco: 3,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas, valor de mercado e link de referência
+    fotos: [
+      'images/porta-macarrao/1.jpeg',
+    ],
+    es: {
+      titulo: 'Frasco para fideos, con tapa a presión',
+      desc: 'Plástico transparente, alto, con traba en la tapa. En buen estado.',
+    },
+    pt: {
+      titulo: 'Porta-macarrão com tampa de trava',
+      desc: 'Plástico transparente, alto, com trava na tampa. Em bom estado.',
+    },
+  },
+
+  {
     id: 'abajur-mesa-madeira',
-    preco: 100,
+    preco: 85,
     /* Um saiu por R$ 85 e está na linha abaixo. Sem par, o combo sai daqui. */
     /* O anúncio de referência vende o par por AR$ 80.000; aqui o campo é por
        unidade, como o preço, então entra a metade. */
@@ -1333,7 +1433,7 @@ var ITEMS = [
   {
     id: 'balanza-cocina-sf400',
     modelo: 'SF-400',
-    preco: 20,
+    preco: 10,
     ano: 2024,
     categoria: 'casa',
     vendido: false,
