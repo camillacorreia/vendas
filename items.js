@@ -1115,7 +1115,7 @@ var ITEMS = [
     preco: 50,
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     // FALTA: altura, valor de mercado e link de referência
     medidas: { f: 30, p: 30 },
     fotos: [
@@ -1140,7 +1140,10 @@ var ITEMS = [
     vendido: false,
     // FALTA: altura, valor de mercado e link de referência
     medidas: { f: 30, p: 30 },
+    /* A capa é a foto do outro, que é o mesmo modelo e mostra melhor a peça
+       montada; as duas seguintes são deste, com a gaveta aberta. */
     fotos: [
+      'images/cajoneira/1.jpeg',
       'images/cajoneira-quebrada/1.jpeg',
       'images/cajoneira-quebrada/2.jpeg',
     ],
@@ -1269,7 +1272,7 @@ var ITEMS = [
     preco: 50,                      // os cinco juntos
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/potes-madeira/1.jpeg',
