@@ -318,6 +318,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'eletronicos',
     vendido: false,
+    reservado: true,
     // FALTA: medidas
     fotos: [
       'images/globo-de-luz/1.jpeg',
@@ -1008,6 +1009,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
+    reservado: true,
     medidas: { f: 30, a: 60 },
     // FALTA: valor de mercado e link de referência
     fotos: [
@@ -1139,6 +1141,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     // FALTA: altura, valor de mercado e link de referência
     medidas: { f: 30, p: 30 },
     /* A capa é a foto do outro, que é o mesmo modelo e mostra melhor a peça
@@ -1295,6 +1298,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
+    reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/kit-1/1.jpeg',
