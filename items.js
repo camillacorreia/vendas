@@ -1238,8 +1238,11 @@ var ITEMS = [
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas e valor de mercado
+    /* Capa: um copo de perto, onde se vê o lavrado. A segunda mostra as seis,
+       que é o que está sendo vendido. */
     fotos: [
       'images/copos-1/1.jpeg',
+      'images/copos-1/2.jpeg',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/set-x6-copas-mtl-de-vidrio-tallado-estilo-vintage/up/MLAU3732859864',
     es: {
@@ -1321,11 +1324,9 @@ var ITEMS = [
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas e valor de mercado
-    /* A capa é a foto dele em uso: sozinho, um organizador transparente não
-       diz muita coisa. */
     fotos: [
-      'images/porta-livros/2.jpeg',
       'images/porta-livros/1.jpeg',
+      'images/porta-livros/2.jpeg',
     ],
     linkMercado: 'https://www.mercadolivre.com.br/suporte-organizador-de-mesa-com-3-divisorias-para-livros-jogos-e-filmes/p/MLB65818739',
     es: {
