@@ -1149,11 +1149,11 @@ var ITEMS = [
     ],
     es: {
       titulo: 'Cajonera blanca 30 × 30, 3 cajones — con arreglo',
-      desc: 'Igual a la otra, pero la tapa de un cajón está suelta: se resuelve con un martillazo. Por eso, la mitad de precio.',
+      desc: 'La tapa de un cajón está un poco suelta: se resuelve con un martillazo.',
     },
     pt: {
       titulo: 'Gaveteiro branco 30 × 30, 3 gavetas — com reparo',
-      desc: 'Igual ao outro, mas a tampa de uma gaveta está solta: resolve com uma martelada. Por isso, metade do preço.',
+      desc: 'A tampa de uma gaveta está um pouco solta: resolve com uma martelada.',
     },
   },
 
@@ -1288,42 +1288,23 @@ var ITEMS = [
   },
 
   {
-    id: 'kit-mesa-3-pecas',
-    preco: 10,                      // as três peças juntas
+    id: 'kit-mesa-4-pecas',
+    preco: 10,                      // as quatro peças juntas
     ano: 2024,
     categoria: 'casa',
     vendido: false,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/kit-1/1.jpeg',
-    ],
-    es: {
-      titulo: 'Kit de mesa: palillero, servilletero y harinera',
-      desc: 'Las tres piezas juntas. El servilletero es de metal. En buen estado.',
-    },
-    pt: {
-      titulo: 'Kit de mesa: porta-palito, porta-guardanapo e farinheira',
-      desc: 'As três peças juntas. O porta-guardanapo é de metal. Em bom estado.',
-    },
-  },
-
-  {
-    id: 'porta-macarrao',
-    preco: 3,
-    ano: 2024,
-    categoria: 'casa',
-    vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
-    fotos: [
       'images/porta-macarrao/1.jpeg',
     ],
     es: {
-      titulo: 'Frasco para fideos, con tapa a presión',
-      desc: 'Plástico transparente, alto, con traba en la tapa. En buen estado.',
+      titulo: 'Kit de cocina: palillero, servilletero, harinera y frasco para fideos',
+      desc: 'Las cuatro piezas juntas. El servilletero es de metal y el frasco de fideos tiene traba en la tapa. En buen estado.',
     },
     pt: {
-      titulo: 'Porta-macarrão com tampa de trava',
-      desc: 'Plástico transparente, alto, com trava na tampa. Em bom estado.',
+      titulo: 'Kit de cozinha: porta-palito, porta-guardanapo, farinheira e porta-macarrão',
+      desc: 'As quatro peças juntas. O porta-guardanapo é de metal e o porta-macarrão tem trava na tampa. Em bom estado.',
     },
   },
 
