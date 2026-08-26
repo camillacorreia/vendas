@@ -1160,7 +1160,7 @@ var ITEMS = [
     preco: 50,
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/mixer/1.jpeg',
@@ -1182,7 +1182,7 @@ var ITEMS = [
     preco: 60,
     precoMercado: 197,              // AR$ 60.000 na cotação de referência de 305
     categoria: 'outros',
-    vendido: false,
+    vendido: true,
     ano: 2024,
     linkMercado: 'https://www.mercadolibre.com.ar/kit-entrenamiento-colcho-pesas-rueda-banda-soga-tobilleras-color-violeta-manc-y-tob-1kg/p/MLA67077576',
     fotos: [
