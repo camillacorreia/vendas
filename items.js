@@ -700,6 +700,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'plantas',
     vendido: false,
+    reservado: true,
     // FALTA: altura (do chão até a folha mais alta)
     fotos: [
       'images/planta-1/1.jpeg',
@@ -1033,9 +1034,9 @@ var ITEMS = [
        na base, 26 de altura, e as alças somam outros 6. */
     medidas: { f: 26, p: 26, a: 26 },
     fotos: [
+      'images/cesto-organizador/3.jpeg',
       'images/cesto-organizador/1.jpeg',
       'images/cesto-organizador/2.jpeg',
-      'images/cesto-organizador/3.jpeg',
       'images/cesto-organizador/4.png',
     ],
     linkMercado: 'https://www.mercadolibre.com.ar/canasto-cesto-organizador-de-mimbre-cajon-cuadrado-n1-color-marron-claro/p/MLA75026945',
@@ -1233,16 +1234,17 @@ var ITEMS = [
     ano: 2024,
     categoria: 'casa',
     vendido: false,
-    // FALTA: medidas, valor de mercado e link de referência
+    // FALTA: medidas e valor de mercado
     fotos: [
       'images/copos-1/1.jpeg',
     ],
+    linkMercado: 'https://www.mercadolibre.com.ar/set-x6-copas-mtl-de-vidrio-tallado-estilo-vintage/up/MLAU3732859864',
     es: {
-      titulo: '6 copas de vidrio labrado con pie',
+      titulo: 'Set X6 Copas De Vidrio Tallado Estilo Vintage',
       desc: 'Las seis juntas. En buen estado.',
     },
     pt: {
-      titulo: '6 taças de vidro lavrado com pé',
+      titulo: 'Jogo de 6 copos de vidro trabalhado estilo vintage',
       desc: 'As seis juntas. Em bom estado.',
     },
   },
@@ -1305,6 +1307,51 @@ var ITEMS = [
     pt: {
       titulo: 'Kit de cozinha: porta-palito, porta-guardanapo, farinheira e porta-macarrão',
       desc: 'As quatro peças juntas. O porta-guardanapo é de metal e o porta-macarrão tem trava na tampa. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'porta-livros-3-divisorias',
+    preco: 30,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas e valor de mercado
+    /* A capa é a foto dele em uso: sozinho, um organizador transparente não
+       diz muita coisa. */
+    fotos: [
+      'images/porta-livros/2.jpeg',
+      'images/porta-livros/1.jpeg',
+    ],
+    linkMercado: 'https://www.mercadolivre.com.br/suporte-organizador-de-mesa-com-3-divisorias-para-livros-jogos-e-filmes/p/MLB65818739',
+    es: {
+      titulo: 'Organizador de escritorio acrílico, 3 divisiones',
+      desc: 'Para libros, cuadernos o juegos. En buen estado.',
+    },
+    pt: {
+      titulo: 'Suporte organizador de mesa com 3 divisórias',
+      desc: 'Para livros, cadernos, jogos ou filmes. Em bom estado.',
+    },
+  },
+
+  {
+    id: 'kit-escritorio-porta-canetas',
+    preco: 20,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: false,
+    // FALTA: medidas e valor de mercado
+    fotos: [
+      'images/kit-escritorio/1.jpeg',
+    ],
+    linkMercado: 'https://produto.mercadolivre.com.br/MLB-2150098446-kit-porta-caneta-organizador-de-mesa-escritorio-aramada-_JM',
+    es: {
+      titulo: 'Kit de escritorio: 2 portalápices',
+      desc: 'Los dos juntos: uno de metal calado con dos compartimentos y otro de plástico verde agua. En buen estado.',
+    },
+    pt: {
+      titulo: 'Kit de escritório: 2 porta-canetas',
+      desc: 'Os dois juntos: um aramado de metal com dois compartimentos e outro de plástico verde-água. Em bom estado.',
     },
   },
 
@@ -1420,7 +1467,7 @@ var ITEMS = [
     preco: 10,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
       'images/balanca-comida/1.jpeg',
@@ -1507,7 +1554,7 @@ var ITEMS = [
     qtd: 2,
     precoCombo: 40,                 // os dois juntos
     categoria: 'beleza',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado
     fotos: [
       'images/blend-cabelo/1.jpeg',
@@ -1644,7 +1691,7 @@ var ITEMS = [
     qtd: 2,
     precoCombo: 40,                 // os dois juntos
     categoria: 'beleza',
-    vendido: false,
+    vendido: true,
     // FALTA: valor de mercado
     fotos: [
       'images/tonico/1.jpeg',
