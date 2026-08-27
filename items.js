@@ -112,12 +112,12 @@ var ITEMS = [
   {
     id: 'impressora-epson-m1180',
     modelo: 'Epson EcoTank M1120',
-    preco: 500,
+    preco: 400,                     // foi o que ela saiu, anunciada a 500
     precoMercado: 1347,             // AR$ 404.000 na cotação de referência de 300
     precoCompra: 900,               // o que paguei
     ano: 2024,
     categoria: 'eletronicos',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas
     fotos: [
       'images/impressora/1.jpeg',
