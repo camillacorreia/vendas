@@ -38,6 +38,7 @@ var RESERVAS = {
   'smart-tv-tcl-l43s5400':    { por: 'Thomas', em: '2026-08-21' },
   'mesa-de-luz-blanca':       { por: 'Joab', em: '2026-08-22' },
   'planta-1':                 { por: 'Anielly', em: '2026-08-26' },
+  'assadeira-marinex':        { por: 'Ana Luiza', em: '2026-08-28' },
   'esfera-bluetooth-ditron-speack5': { por: 'Joab', em: '2026-08-26' },
   'gaveteiro-3-gavetas-avariado':    { por: 'Joab', em: '2026-08-26' },
   'mural-fotos-grade':               { por: 'Joab', em: '2026-08-26' },
