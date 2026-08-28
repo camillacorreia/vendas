@@ -71,6 +71,7 @@ var ITEMS = [
     ano: 2024,
     categoria: 'moveis',
     vendido: false,
+    reservado: true,
     medidas: { f: 62, a: 160 },
     fotos: [
       'images/cabideiro/1.jpeg',
