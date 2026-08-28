@@ -164,7 +164,7 @@ var ITEMS = [
     precoCompra: 653.31,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: fotos. Altura veio do anúncio; frente e profundidade foram medidas.
     medidas: { f: 166, p: 37, a: 60 },
@@ -191,7 +191,7 @@ var ITEMS = [
     precoCompra: 2932.14,           // compra 2.445,65 + instalação 486,49
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas
     fotos: [
@@ -439,7 +439,7 @@ var ITEMS = [
     precoCompra: 508,               // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     medidas: { f: 57, a: 200 },
     fotos: [

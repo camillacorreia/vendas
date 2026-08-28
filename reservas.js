@@ -55,6 +55,7 @@ var RESERVAS = {
 
 var PAGAMENTOS = {
   // 'id-do-item': { quem: 'Nome', valor: 0, nota: '' },
+  'rack-tv-delos':              { quem: 'Amanda' },
   'escritorio-hierro-madera':   { quem: 'Nanda' },
   'huevera-mir':                { quem: 'Nanda' },
   'abajur-mesa-madeira-vendido': { quem: 'Joab', valor: 35, nota: 'saldo do que levou' },
