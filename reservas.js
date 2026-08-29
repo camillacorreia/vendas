@@ -61,5 +61,9 @@ var PAGAMENTOS = {
   'escritorio-hierro-madera':   { quem: 'Nanda' },
   'huevera-mir':                { quem: 'Nanda' },
   'abajur-mesa-madeira-vendido': { quem: 'Joab', valor: 35, nota: 'saldo do que levou' },
+  'gaveteiro-3-gavetas-avariado': { quem: 'Joab' },
+  'mural-fotos-grade':            { quem: 'Joab' },
+  'kit-mesa-4-pecas':             { quem: 'Joab' },
+  'esfera-bluetooth-ditron-speack5': { quem: 'Joab' },
   'porta-bolo':                 { quem: 'Nanda' },
 };

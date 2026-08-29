@@ -242,7 +242,7 @@ var ITEMS = [
     precoCompra: 493.62,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas
     fotos: [
@@ -318,7 +318,7 @@ var ITEMS = [
     precoMercado: 45,               // AR$ 13.500 na cotação de referência de 300
     ano: 2024,
     categoria: 'eletronicos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas
     fotos: [
@@ -701,7 +701,7 @@ var ITEMS = [
     preco: 40,
     ano: 2024,
     categoria: 'plantas',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: altura (do chão até a folha mais alta)
     fotos: [
@@ -1010,7 +1010,7 @@ var ITEMS = [
     preco: 20,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     medidas: { f: 30, a: 60 },
     // FALTA: valor de mercado e link de referência
@@ -1142,7 +1142,7 @@ var ITEMS = [
     preco: 25,
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: altura, valor de mercado e link de referência
     medidas: { f: 30, p: 30 },
@@ -1302,7 +1302,7 @@ var ITEMS = [
     preco: 10,                      // as quatro peças juntas
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas, valor de mercado e link de referência
     fotos: [
