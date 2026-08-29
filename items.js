@@ -70,7 +70,7 @@ var ITEMS = [
     precoCompra: 329.03,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     medidas: { f: 62, a: 160 },
     fotos: [
@@ -343,7 +343,7 @@ var ITEMS = [
     precoCompra: 1363.64,           // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     medidas: { f: 200, p: 90 },
     medidasTexto: '2 metros × 90 cm',
@@ -488,7 +488,7 @@ var ITEMS = [
     precoCompra: 830.25,            // mesa 191,49 + 4 cadeiras 638,76
     ano: 2024,
     categoria: 'moveis',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: fotos. Os 120 cm vieram do anúncio de referência — conferir.
     fotos: [
@@ -1238,7 +1238,7 @@ var ITEMS = [
     preco: 50,                      // as seis juntas
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     // FALTA: medidas e valor de mercado
     /* Capa: um copo de perto, onde se vê o lavrado. A segunda mostra as seis,
        que é o que está sendo vendido. */
