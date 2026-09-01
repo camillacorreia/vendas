@@ -58,7 +58,7 @@ var RESERVAS = {
 var PAGAMENTOS = {
   // 'id-do-item': { quem: 'Nome', valor: 0, nota: '' },
   'rack-tv-delos':              { quem: 'Amanda', valor: 175, nota: 'pagou 175 dos 350' },
-  'escritorio-hierro-madera':   { quem: 'Nanda' },
+  'microondas-bgh-b120ds20i':   { quem: 'Sarah', valor: 200, nota: 'pagou 200 dos 400' },
   'huevera-mir':                { quem: 'Nanda' },
   'abajur-mesa-madeira-vendido': { quem: 'Joab', valor: 35, nota: 'saldo do que levou' },
   'gaveteiro-3-gavetas-avariado': { quem: 'Joab' },

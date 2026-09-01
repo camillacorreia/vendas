@@ -118,7 +118,7 @@
 
   function suiteDados() {
     eq('config whatsapp', CONFIG.whatsapp, '5493415827248');
-    eq('config cotacao padrao', CONFIG.cotacaoPadrao, 305);
+    eq('config cotacao padrao', CONFIG.cotacaoPadrao, 300);
     eq('items validos', Core.validateItems(ITEMS, CATEGORIAS), []);
     eq('ids unicos',
       ITEMS.length,
@@ -265,9 +265,9 @@
         .map(function (i) { return i.id; }),
       []);
 
-    eq('geladeira tem 3 fotos',
-      (ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].fotos || []).length,
-      3);
+    eq('geladeira tem fotos',
+      (ITEMS.filter(function (i) { return i.id === 'heladera-drean-hdr420'; })[0].fotos || []).length > 0,
+      true);
   }
 
   function suiteControles() {

@@ -5,7 +5,7 @@
 
 var CONFIG = {
   whatsapp: '5493415827248',  // DDI 54 + 9 (celular AR) + área 341 + número
-  cotacaoPadrao: 305,         // 1 BRL = N ARS
+  cotacaoPadrao: 300,         // 1 BRL = N ARS
 };
 
 var CATEGORIAS = ['eletrodomesticos', 'moveis', 'eletronicos', 'casa', 'beleza', 'plantas', 'outros'];
@@ -14,14 +14,19 @@ var ITEMS = [
   {
     id: 'heladera-drean-hdr420',
     modelo: 'Drean HDR420N30B',
-    preco: 1800,
+    preco: 1350,
     precoMercado: 5000,
     precoCompra: 2614.53,           // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
     vendido: false,
     medidas: { f: 70, p: 74, a: 160 },
-    fotos: ['images/geladeira/1.webp', 'images/geladeira/2.jpeg', 'images/geladeira/3.jpeg'],
+    fotos: [
+      'images/geladeira/1.jpeg',
+      'images/geladeira/2.jpeg',
+      'images/geladeira/3.jpeg',
+      'images/geladeira/4.jpeg',
+    ],
     linkMercado: 'https://www.mercadolibre.com.ar/heladera-no-frost-420-lts-blanca-drean-hdr420n30b-blanco/p/MLA22452572',
     es: {
       titulo: 'Heladera No Frost 420 Lts Blanca',
@@ -136,12 +141,12 @@ var ITEMS = [
 
   {
     id: 'escritorio-hierro-madera',
-    preco: 250,
+    preco: 150,
     precoMercado: 533,              // AR$ 160.000 na cotação de referência de 300
     precoCompra: 698.35,            // o que paguei
     ano: 2024,
     categoria: 'moveis',
-    vendido: true,
+    vendido: false,
     medidas: { f: 120, p: 50, a: 75 },
     fotos: [
       'images/mesa-escritorio/1.jpeg',
@@ -214,7 +219,7 @@ var ITEMS = [
   {
     id: 'lavarropas-drean-next-709',
     modelo: 'Drean Next 7.09 Eco',
-    preco: 1550,
+    preco: 1250,
     precoMercado: 2667,             // AR$ 800.000 na cotação de referência de 300
     precoCompra: 2161.7,            // o que paguei
     ano: 2024,
@@ -267,7 +272,7 @@ var ITEMS = [
     precoCompra: 674.04,            // o que paguei
     ano: 2024,
     categoria: 'eletrodomesticos',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // FALTA: medidas
     fotos: [
@@ -1059,7 +1064,7 @@ var ITEMS = [
     preco: 50,
     ano: 2024,
     categoria: 'casa',
-    vendido: false,
+    vendido: true,
     reservado: true,
     // Sem foto de propósito. FALTA: medidas, valor de mercado e link.
     es: {
@@ -1240,12 +1245,7 @@ var ITEMS = [
     categoria: 'casa',
     vendido: true,
     // FALTA: medidas e valor de mercado
-    /* Capa: um copo de perto, onde se vê o lavrado. A segunda mostra as seis,
-       que é o que está sendo vendido. */
-    fotos: [
-      'images/copos-1/1.jpeg',
-      'images/copos-1/2.jpeg',
-    ],
+    // As fotos foram apagadas depois da venda; o card fica com o placeholder.
     linkMercado: 'https://www.mercadolibre.com.ar/set-x6-copas-mtl-de-vidrio-tallado-estilo-vintage/up/MLAU3732859864',
     es: {
       titulo: 'Set X6 Copas De Vidrio Tallado Estilo Vintage',
@@ -1711,6 +1711,25 @@ var ITEMS = [
     pt: {
       titulo: 'Tônico fortalecedor capilar 100 ml',
       desc: 'Novo, nunca usado. Reduz a oleosidade e estimula o crescimento saudável dos fios.',
+    },
+  },
+
+  {
+    id: 'panelas-e-pressao',
+    /* Nunca chegou a ser anunciado: saiu antes de entrar no catálogo, e está
+       aqui para o painel contar a venda. */
+    preco: 200,
+    ano: 2024,
+    categoria: 'casa',
+    vendido: true,
+    // Sem foto: vendido antes de fotografar.
+    es: {
+      titulo: 'Juego de ollas + olla a presión',
+      desc: 'Vendido junto.',
+    },
+    pt: {
+      titulo: 'Conjunto de panelas + panela de pressão',
+      desc: 'Vendido junto.',
     },
   },
 
